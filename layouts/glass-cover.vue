@@ -1,30 +1,44 @@
 <template>
-  <div class="slidev-layout glass-cover h-full w-full bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950 text-white p-10 flex flex-col justify-center items-center relative overflow-hidden">
-    <!-- Animated background accents -->
-    <div class="absolute top-[-20%] left-[-20%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-[120px] animate-pulse"></div>
-    <div class="absolute bottom-[-20%] right-[-20%] w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1s"></div>
+  <div class="slidev-layout aura-hero h-full w-full bg-[#050505] text-white p-16 flex flex-col justify-center relative overflow-hidden">
+    <!-- Background grid/pattern if possible, but keep it simple with gradients first -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/10 to-transparent"></div>
     
-    <div class="relative z-10 flex flex-col items-center text-center space-y-6">
-      <div class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-purple-200 uppercase bg-purple-500/10 border border-purple-500/20 rounded-full backdrop-blur-sm">
-        幸福校園提案：課業議題
+    <!-- Left-aligned content -->
+    <div class="relative z-10 max-w-2xl">
+      <div class="flex items-center gap-2 mb-6 opacity-60 font-mono text-xs uppercase tracking-[0.2em]">
+        <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+        Enable Audio Reactivity
       </div>
       <slot />
     </div>
-    
-    <div class="absolute bottom-12 flex flex-col items-center opacity-50">
-      <div class="text-sm font-medium tracking-widest uppercase mb-2">溫暖校園的行動力量</div>
-      <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+
+    <!-- Bottom label -->
+    <div class="absolute bottom-10 left-16 flex items-center gap-4 opacity-20 font-mono text-[10px] tracking-widest uppercase">
+      <span>© 2026 Aura Dynamics</span>
+      <span class="w-1 h-1 bg-white rounded-full"></span>
+      <span>Final Project</span>
     </div>
   </div>
 </template>
 
 <style scoped>
 :deep(h1) {
-  @apply text-7xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent;
-  filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.3));
+  @apply text-8xl font-black tracking-tighter mb-2 leading-[0.9] text-white uppercase;
+}
+
+:deep(h3) {
+  @apply text-5xl font-black tracking-tighter mb-8 leading-[0.9] text-blue-400 uppercase;
 }
 
 :deep(p) {
-  @apply text-xl text-slate-300 max-w-2xl mx-auto;
+  @apply text-lg text-slate-400 max-w-lg leading-relaxed mb-10;
+}
+
+:deep(.btn) {
+  @apply inline-block px-8 py-3 bg-white text-black font-bold rounded-full text-xs uppercase tracking-widest mr-4 transition-transform hover:scale-105;
+}
+
+:deep(.btn-outline) {
+  @apply inline-block px-8 py-3 border border-white/20 text-white font-bold rounded-full text-xs uppercase tracking-widest transition-colors hover:bg-white/5;
 }
 </style>

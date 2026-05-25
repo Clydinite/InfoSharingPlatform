@@ -10,165 +10,229 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+fonts:
+  sans: 'Inter'
+  mono: 'JetBrains Mono'
 ---
+
+# slides.md
 
 ---
 layout: glass-cover
 ---
 
-# Break the Bubble
-### 校園資訊平權計畫
+# Break the
+### Bubble.
 
-<div class="mt-8 text-slate-400">
-  校園溫度設計師 團隊製作
+<p>
+大學裡的成績競爭，往往不是「努力程度」的競爭，而是「人脈與資訊」的競爭。
+</p>
+
+<div class="mt-10">
+  <a class="btn">Explore Project</a>
+  <a class="btn-outline">Documentation</a>
 </div>
 
 ---
-layout: glass
+layout: aura-log
 ---
 
-# 【提案前言】定義議題
+# Context is
+# Everything.
 
-<div class="grid grid-cols-2 gap-8 mt-8">
-  <GlassCard>
-    <GlassBadge class="mb-2">痛點分析</GlassBadge>
-    <h3 class="text-xl font-bold mb-2 text-white">資源斷層焦慮</h3>
-    <p class="text-sm opacity-80">大學裡的成績競爭，往往不是「努力程度」的競爭，而是「人脈與資訊」的競爭。沒有拿到的「秘笈」，讓努力顯得廉價。</p>
-  </GlassCard>
-  
-  <GlassCard>
-    <GlassBadge class="mb-2">目標願景</GlassBadge>
-    <h3 class="text-xl font-bold mb-2 text-white">幸福校園連結</h3>
-    <p class="text-sm opacity-80">消除資訊不平等，讓校園從「零和競爭」變成「共好互助」。當努力能獲得對等回報，壓力才能減輕。</p>
-  </GlassCard>
-</div>
+<p>
+現行課程安排存在「量多質重複」的現象。許多課程在單一學期內塞入過度飽和的知識點，造成學生消化不良。
+</p>
 
----
-layout: glass
----
+- 120Hz Biometric Sampling
+- Spatial Audio Processing
+- Sub-10ms Latency
 
-# 第一階段：同理與釐清 (Empathize & Define)
+::log::
 
-## 大學生的真實困境
-
-- **碎片的資源**：筆記、考古題散落在私人人脈中，缺乏共享。
-- **低 CP 值的勞動**：實驗預報、結報耗時巨大，卻僅有 1 學分。
-- **無所適從的迷失**：教授減少教材，初衷是強迫聽課，卻讓學生像無頭蒼蠅。
+<SystemLog :logs="[
+  { time: '08:42', msg: '資源斷層焦慮：秘笈壟斷中。' },
+  { time: '09:15', msg: '1 學分實驗課：投入與回報失衡。' },
+  { time: '12:30', msg: '資訊孤島：缺乏學長姐人脈。' }
+]" />
 
 ---
-layout: glass
+layout: aura-log
+---
+
+# Empathy.
+# The Reality.
+
+<p>
+針對課業議題，我們訪談了三位未選課同學，挖掘深層痛點。
+</p>
+
+- **破碎的資源**
+- **低 CP 值的勞動**
+- **資訊孤島**
+
+::log::
+
+<SystemLog :logs="[
+  { time: 'USER_01', msg: '沒有拿到秘笈，覺得競爭極度不公平。' },
+  { time: 'USER_02', msg: '實驗課只有 1 學分，投資報酬率極低。' },
+  { time: 'USER_03', msg: '教授減少教材，反而讓學生迷失方向。' }
+]" />
+
+---
+layout: aura-default
 ---
 
 # 第一階段：科技對照 (AI 賦能)
 
 ## 從表面的抱怨，抓出深層痛點
 
-- **傳統思維**：僅看到表面的抱怨（實驗很累、不公平）。
-- **AI 賦能**：分析逐字稿，抓出深層需求 —— **「公平競爭的安心感」** 與 **「努力方向的確定感」**。
-
----
-layout: glass
----
-
-# 第二階段：發想 (Ideate)
-
-<div class="flex flex-col items-center justify-center h-full text-center mt-4">
-  <GlassBadge class="mb-4">核心解決方案</GlassBadge>
-  <h2 class="text-3xl font-bold mb-8">Open-Campus 匿名知識扭蛋池</h2>
+<div class="grid grid-cols-2 gap-8 mt-10">
+  <GlassCard>
+    <div class="text-xs uppercase tracking-widest text-blue-400 mb-2">Traditional</div>
+    <div class="font-bold text-lg mb-2 text-white">傳統思維</div>
+    <p class="text-sm opacity-60">僅看到表面的抱怨（實驗很累、不公平），將訪談整理成靜態表格。</p>
+  </GlassCard>
   
-  <div class="grid grid-cols-3 gap-6 w-full px-4">
-    <GlassCard v-click>
-      <div class="text-4xl mb-3">🎁</div>
-      <div class="font-bold text-white">匿名扭蛋</div>
-      <div class="text-xs opacity-60 mt-2 leading-relaxed">去中心化共享<br/>筆記與重點</div>
-    </GlassCard>
-    <GlassCard v-click>
-      <div class="text-4xl mb-3">🪙</div>
-      <div class="font-bold text-white">代幣機制</div>
-      <div class="text-xs opacity-60 mt-2 leading-relaxed">貢獻愈多獲取愈多<br/>正向回饋循環</div>
-    </GlassCard>
-    <GlassCard v-click>
-      <div class="text-4xl mb-3">🤖</div>
-      <div class="font-bold text-white">AI 助教</div>
-      <div class="text-xs opacity-60 mt-2 leading-relaxed">自動統整課堂指示<br/>消除資訊落差</div>
-    </GlassCard>
-  </div>
+  <GlassCard>
+    <div class="text-xs uppercase tracking-widest text-pink-400 mb-2">AI Enhanced</div>
+    <div class="font-bold text-lg mb-2 text-white">AI 賦能</div>
+    <p class="text-sm opacity-60">運用 AI 分析背後未被滿足的需求：學生渴望的是「公平競爭的安心感」與「努力方向的確定感」。</p>
+  </GlassCard>
 </div>
 
 ---
-layout: glass
+layout: aura-specs
 ---
 
-# 第三階段：原型與驗證 - 情感故事
+::header::
 
-## 【破繭：從孤島到群島的 1 學分生存戰】
+# Engineering
+# Solution.
 
-- **主角**：林小宇（大一新生，內向，無人脈）。
-- **轉機**：在崩潰邊緣發現「知識扭蛋池」。
-- **感動**：第一次發現，自己的努力能接住另一個無助的靈魂。
-- **結局**：不再重複摸索，奪回「時間主權」。
+<p>
+我們開發了 Open-Campus 匿名知識扭蛋池，旨在打破校園資訊壁壘，重建公平競爭的環境。
+</p>
+
+::default::
+
+<GlassCard>
+  <div class="text-blue-400 font-mono text-xl mb-2">🎁</div>
+  <div class="font-bold text-lg text-white mb-2">匿名扭蛋</div>
+  <p class="text-xs opacity-60">將修課筆記、重點、考題趨勢匿名上傳共享。</p>
+</GlassCard>
+
+<GlassCard>
+  <div class="text-blue-400 font-mono text-xl mb-2">🪙</div>
+  <div class="font-bold text-lg text-white mb-2">代幣機制</div>
+  <p class="text-xs opacity-60">鼓勵貢獻，上傳者可獲得點數解鎖其他科目資源。</p>
+</GlassCard>
+
+<GlassCard>
+  <div class="text-blue-400 font-mono text-xl mb-2">🤖</div>
+  <div class="font-bold text-lg text-white mb-2">AI 助教</div>
+  <p class="text-xs opacity-60">自動統整教授零碎的課堂指示，消除資訊落差。</p>
+</GlassCard>
 
 ---
-layout: glass
+layout: aura-log
+---
+
+# The Story.
+# Breaking Out.
+
+<p>
+林小宇，一位沒有人脈的大一新生，在崩潰邊緣透過「知識扭蛋池」找回了學習的動力。
+</p>
+
+- **起：深淵與孤島**
+- **承：微弱的星光**
+- **轉：被接住的瞬間**
+- **合：奪回時間主權**
+
+::log::
+
+<SystemLog :logs="[
+  { time: '02:00', msg: '林小宇在圖書館熬夜，感到窒息。' },
+  { time: '02:15', msg: '發現 Open-Campus QR Code。' },
+  { time: '02:30', msg: '上傳筆記，意外獲得感謝與代幣。' }
+]" />
+
+---
+layout: aura-default
 ---
 
 # 第三階段：驗證回饋 (Pressure Test)
 
 ## 透過 AI 進行極端角色模擬
 
-- **挑戰者 1**：擁有大量考古題、不想分享的資深學長。
-- **挑戰者 2**：極度擔心被抓抄襲的教授。
-- **迭代方案**：加入「社群回報」與「開源審核機制」，防範惡意錯誤資訊。
-
----
-layout: glass
----
-
-# 【A4 提案單】視覺預覽
-
-<div class="grid grid-cols-2 gap-8 h-full">
-  <div class="flex flex-col justify-center">
-    <GlassBadge class="w-fit mb-4">擺攤現場主視覺</GlassBadge>
-    <h2 class="text-3xl font-bold mb-4">漏斗圖：從壟斷到公共</h2>
-    <p class="opacity-70 text-sm leading-relaxed mb-6">
-      展示「知識扭蛋池」如何將散落在私域的「祖傳秘笈」，轉化為校園整體的「公共資產」。
-    </p>
-    <ul class="space-y-3">
-      <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-purple-400"></div> 資訊壟斷者 vs 資訊孤島者</li>
-      <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div> 扭蛋機制轉換流程</li>
-      <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-pink-400"></div> 幸福實踐指南</li>
-    </ul>
+<div class="space-y-6 mt-10">
+  <div class="flex items-center gap-6">
+    <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-mono text-xs opacity-50">01</div>
+    <GlassCard class="flex-1 py-4">
+      <div class="text-xs uppercase tracking-widest text-blue-400 mb-1">Role: Senior Student</div>
+      <div class="font-bold text-white">擁有大量考古題且不想分享的資深學長</div>
+    </GlassCard>
   </div>
   
-  <div class="flex items-center justify-center p-4">
-    <div class="w-full aspect-[1/1.414] bg-white/10 rounded-lg border border-white/20 shadow-inner flex items-center justify-center text-slate-500 italic text-sm text-center p-8">
-      [ A4 宣傳單視覺預覽區 ]<br/>
-      (包含 Info-graphic 與 痛點圖解)
-    </div>
+  <div class="flex items-center gap-6">
+    <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-mono text-xs opacity-50">02</div>
+    <GlassCard class="flex-1 py-4">
+      <div class="text-xs uppercase tracking-widest text-blue-400 mb-1">Role: Professor</div>
+      <div class="font-bold text-white">極度擔心被抓抄襲、希望強迫聽課的教授</div>
+    </GlassCard>
+  </div>
+
+  <div class="flex items-center gap-6">
+    <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-mono text-xs opacity-50">03</div>
+    <GlassCard class="flex-1 py-4">
+      <div class="text-xs uppercase tracking-widest text-pink-400 mb-1">Solution</div>
+      <div class="font-bold text-white">加入「社群回報」與「開源審核機制」</div>
+    </GlassCard>
   </div>
 </div>
 
 ---
-layout: glass
+layout: aura-default
+class: flex flex-col items-center justify-center text-center
 ---
 
-# 第四階段：最終展現與幸福實踐
+<div class="font-mono text-xs text-blue-400 uppercase tracking-[0.3em] mb-4">[ INITIALIZING SEQUENCE ]</div>
 
-## 議題 MV：孤島連成群
+# The Future is
+# Connecting.
 
-> 「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
+<div class="mt-10">
+  <a class="btn px-12">Final Delivery</a>
+</div>
 
-- **自我照護**：認知到成績不完全代表價值。
-- **支持他人**：降低求助門檻，接住那些沒有人脈網路支援的同學。
+<p class="mt-10 text-xs opacity-40 italic max-w-sm">
+  「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
+</p>
 
 ---
-layout: glass
+layout: aura-default
 ---
 
 # 附錄：AI 協作紀錄
 
-- **工具**：Gemini, Suno, Midjourney.
-- **關鍵 Prompt**：
-  - 「請扮演深受社交焦慮困擾的學生...」
-  - 「分析隱藏在言語背後的情緒關鍵字...」
-  - 「生成具備情感起伏的故事大綱...」
+## 科技與情感的交匯
+
+<div class="grid grid-cols-3 gap-6 mt-10">
+  <div class="space-y-4">
+    <div class="font-mono text-[10px] text-blue-400 uppercase tracking-widest">Phase 1</div>
+    <p class="text-xs text-slate-300"><b>Gemini</b> 分析訪談情緒，找出「公平競爭」的核心需求。</p>
+  </div>
+  <div class="space-y-4">
+    <div class="font-mono text-[10px] text-blue-400 uppercase tracking-widest">Phase 2</div>
+    <p class="text-xs text-slate-300"><b>Midjourney</b> 生成療癒系 App 介面，並優化故事大綱。</p>
+  </div>
+  <div class="space-y-4">
+    <div class="font-mono text-[10px] text-blue-400 uppercase tracking-widest">Phase 3</div>
+    <p class="text-xs text-slate-300"><b>Suno</b> 生成《連上彼此》主題曲，記錄影音迭代過程。</p>
+  </div>
+</div>
+
+<div class="mt-12 bg-white/5 border border-white/10 p-6 rounded-lg font-mono text-[10px] text-slate-400">
+  PROMPT_EXAMPLE: "你現在是一位深受社交焦慮困擾的大二學生..."
+</div>

@@ -1,38 +1,45 @@
 <template>
-  <div class="slidev-layout glass h-full w-full bg-gradient-to-br from-slate-900 to-slate-800 text-white p-10 flex flex-col justify-center items-center relative overflow-hidden">
-    <!-- Background Accents -->
-    <div class="absolute top-[-10%] left-[-10%] w-80 h-80 bg-purple-600/30 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-80 h-80 bg-blue-600/30 rounded-full blur-[100px] pointer-events-none"></div>
+  <div class="slidev-layout aura-default h-full w-full bg-[#050505] text-white p-16 flex flex-col relative overflow-hidden">
+    <!-- Subtle side accent -->
+    <div class="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-600/50 via-blue-600/10 to-transparent"></div>
     
-    <!-- Main Content Card -->
-    <div class="glass-card w-full h-full p-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-2xl flex flex-col relative z-10 overflow-auto">
+    <div class="relative z-10">
       <slot />
+    </div>
+
+    <!-- Slide Number / Footer -->
+    <div class="absolute bottom-10 right-16 flex items-center gap-4 opacity-30 font-mono text-[10px] tracking-widest uppercase">
+      <span>{{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}</span>
     </div>
   </div>
 </template>
 
 <style scoped>
-.glass-card {
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-}
-
 :deep(h1) {
-  @apply text-5xl font-bold mb-8 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent;
+  @apply text-5xl font-black tracking-tighter mb-8 leading-tight uppercase text-white border-b border-white/10 pb-4;
 }
 
 :deep(h2) {
-  @apply text-3xl font-semibold mb-6 text-purple-300;
+  @apply text-2xl font-bold tracking-tight mb-4 text-blue-400 uppercase;
 }
 
-:deep(p), :deep(li) {
-  @apply text-lg text-slate-200 leading-relaxed;
+:deep(p) {
+  @apply text-base text-slate-400 leading-relaxed mb-6;
 }
 
 :deep(ul) {
-  @apply list-disc list-inside space-y-2;
+  @apply space-y-4 mb-8;
 }
 
-:deep(strong) {
-  @apply text-white font-bold;
+:deep(li) {
+  @apply text-slate-200 flex items-start gap-3;
+}
+
+:deep(li strong) {
+  @apply text-blue-400 font-bold block mb-1 uppercase text-sm tracking-wide;
+}
+
+:deep(blockquote) {
+  @apply border-l-2 border-blue-500 pl-6 py-2 italic text-slate-300 bg-blue-500/5;
 }
 </style>
