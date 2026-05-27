@@ -1,14 +1,15 @@
 <template>
   <div class="slidev-layout aura-default h-full w-full bg-[#050505] text-white p-16 flex flex-col relative overflow-hidden">
+    <AuraBackground />
     <!-- Subtle side accent -->
     <div class="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-600/50 via-blue-600/10 to-transparent"></div>
     
-    <div class="relative z-10">
+    <div class="relative z-10 text-white">
       <slot />
     </div>
 
     <!-- Slide Number / Footer -->
-    <div class="absolute bottom-10 right-16 flex items-center gap-4 opacity-30 font-mono text-[10px] tracking-widest uppercase">
+    <div class="absolute bottom-10 right-16 flex items-center gap-4 opacity-30 font-mono text-[10px] tracking-widest uppercase text-white">
       <span>{{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}</span>
     </div>
   </div>

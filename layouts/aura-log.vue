@@ -1,11 +1,11 @@
 <template>
   <div class="slidev-layout aura-log h-full w-full bg-[#050505] text-white p-16 relative overflow-hidden grid grid-cols-2 gap-12 items-start">
-    <div class="relative z-10 flex flex-col justify-center h-full">
+    <AuraBackground />
+    <div class="relative z-10 flex flex-col justify-center h-full text-white">
       <slot name="default" />
     </div>
-    <div class="relative z-10 flex flex-col justify-center h-full">
+    <div class="relative z-10 flex flex-col justify-center h-full text-white">
       <slot name="log" />
-      <!-- Small specs at the bottom of the right column if needed -->
       <div class="mt-8 space-y-4">
         <slot name="specs" />
       </div>
@@ -15,7 +15,7 @@
 
 <style scoped>
 :deep(h1) {
-  @apply text-6xl font-black tracking-tighter mb-6 leading-tight uppercase;
+  @apply text-6xl font-black tracking-tighter mb-6 leading-tight uppercase text-white;
 }
 
 :deep(h2) {

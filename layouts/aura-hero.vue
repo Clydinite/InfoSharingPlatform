@@ -1,7 +1,7 @@
 <template>
   <div class="slidev-layout aura-hero h-full w-full bg-[#050505] text-white p-16 flex flex-col justify-center relative overflow-hidden">
-    <!-- Background grid/pattern if possible, but keep it simple with gradients first -->
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/10 to-transparent"></div>
+    <AuraBackground />
+    <AuraGlobe />
     
     <!-- Left-aligned content -->
     <div class="relative z-10 max-w-2xl">
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Bottom label -->
-    <div class="absolute bottom-10 left-16 flex items-center gap-4 opacity-20 font-mono text-[10px] tracking-widest uppercase">
+    <div class="absolute bottom-10 left-16 flex items-center gap-4 opacity-20 font-mono text-[10px] tracking-widest uppercase text-white">
       <span>© 2026 Aura Dynamics</span>
       <span class="w-1 h-1 bg-white rounded-full"></span>
       <span>Final Project</span>
