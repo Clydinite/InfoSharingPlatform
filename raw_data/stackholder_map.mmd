@@ -1,0 +1,47 @@
+graph TB
+    %% 核心核心
+    subgraph Core [【 核心圈：直接體驗與互助層 】]
+        XY((林小宇<br>大一化學系新生))
+        QQ((晴晴<br>同屆新生/受助者))
+        ANON_SJ((匿名學長姐<br>開源筆記提供者))
+        OC_PLAT[Open-Campus<br>匿名資訊分享平台]
+    end
+
+    %% 外部直接圈
+    subgraph Direct [【 直接圈：校園人際與對比生態 】]
+        TA((實驗課助教 TA<br>掌管結報評分/隱藏標準))
+        GHOST_SJ((幽靈直屬學長<br>不回訊息/斷裂的傳承))
+        XC_PEERS((班上現充同學<br>靠人脈拿模板/輕鬆 All Pass))
+    end
+
+    %% 間接制度圈
+    subgraph Indirect [【 間接圈：制度與壓力來源 】]
+        PROF((化學系教授<br>訂定硬核必修/範圍模糊))
+        SYS((大學體制<br>畢業門檻/1學分的西西弗斯苦役))
+    end
+
+    %% 關係連結
+    XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
+    ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
+    OC_PLAT -->|解救實驗數據| QQ
+    XY -.->|深夜螢幕共鳴 / 被理解| QQ
+
+    GHOST_SJ -.->|冷漠/零互動| XY
+    XC_PEERS -->|限動炫耀考古題| XY
+    
+    TA -->|狂扣結報分數| XY
+    TA -.->|私下傳承完美模板| XC_PEERS
+    
+    PROF -->|出題與評分施壓| TA
+    SYS -->|1學分沉重負擔| XY
+
+    %% 樣式設定
+    classDef coreFill fill:#fff2cc,stroke:#d6b656,stroke-width:2px,color:#000;
+    classDef directFill fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#000;
+    classDef indirectFill fill:#f5f5f5,stroke:#9e9e9e,stroke-width:2px,color:#000;
+    classDef platformFill fill:#e8f5e9,stroke:#388e3c,stroke-width:3px,color:#000;
+
+    class XY,QQ,ANON_SJ coreFill;
+    class TA,GHOST_SJ,XC_PEERS directFill;
+    class PROF,SYS indirectFill;
+    class OC_PLAT platformFill;
