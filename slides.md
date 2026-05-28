@@ -43,35 +43,35 @@ layout: aura-specs
 
 <AuraStatus>Phase_01 // Empathy</AuraStatus>
 
-# Real Pain
-# Points.
+# Team
+# Brainstorming.
 
-<p>我們訪談了不同背景的同學，發現「努力」在現有制度下正面臨崩解。</p>
+<p>團隊成員從各自的學業經驗出發，挖掘出校園制度中普遍存在的痛點。</p>
 
 ::default::
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">小宇 / 化學系新生</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「消失的 6 小時」</div>
-  <p class="text-[10px] opacity-60">每週需花費 6+ 小時手寫 MSDS 預報，僅換取 1 學分。努力在繁重瑣碎的勞動中被磨損。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">郭彥均 / 化學系</div>
+  <div class="text-[11px] text-white mb-2 italic">「破碎的資源與低投報勞動」</div>
+  <p class="text-[9px] opacity-60">資源不共享、英文課本障礙。1 學分實驗課卻需耗費大量時間抄寫 MSDS 預報，心理極度不平衡。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">幽靈直屬 / 斷裂傳承</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「孤島式的生存」</div>
-  <p class="text-[10px] opacity-60">抽到不回訊息的幽靈直屬，導致無法獲取考古題與地雷解析，在資訊戰中徹底孤立。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">吳柏宏 / 課程架構</div>
+  <div class="text-[11px] text-white mb-2 italic">「量多質重複的窒息感」</div>
+  <p class="text-[9px] opacity-60">必修課與選修內容高度重疊，學生淪為瑣碎知識的背誦機器，而非 AI 無法取代的高階人才。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">隱藏標準 / 挫折循環</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「摸不透的扣分」</div>
-  <p class="text-[10px] opacity-60">按部就班卻拿不到高分，看著人脈廣的同學拿模板輕鬆過關，對「公平」產生深刻懷疑。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">徐愉皓 / 學習選擇權</div>
+  <div class="text-[11px] text-white mb-2 italic">「同儕競爭下的知識工具化」</div>
+  <p class="text-[9px] opacity-60">必修比例過高，學習淪為應付考試。不同系所資源分配極度不均，實作與理論嚴重斷裂。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">制度反思 / 勞動真空</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「時間貧窮的隱憂」</div>
-  <p class="text-[10px] opacity-60">學習被異化為無償且無上限的勞動，侵蝕了學生的休息權與多元探索的空間。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">洪楷傑 / 資訊壁壘</div>
+  <div class="text-[11px] text-white mb-2 italic">「人脈決定公平性」</div>
+  <p class="text-[9px] opacity-60">有無考古題極大影響成績。教授刻意隱藏教材規則以強迫聽課，卻讓學生陷入混亂迷失。</p>
 </GlassCard>
 
 ---
@@ -82,20 +82,60 @@ layout: aura-log
 # Summary.
 
 <p>
-大學生的困境，不在於不努力，而在於「資訊的不對稱」與「制度的結構性疲勞」。
+我們發現問題並非個案，而是「制度瑕疵」由「學生個體」獨自承擔。
 </p>
 
-- **資源門檻化**：知識變成社交工具而非學習目的。
-- **時間貧窮**：高強度課後負擔侵蝕了學生的休息權。
-- **孤島效應**：缺乏人脈支持的同學在資訊真空裡打轉。
+<div class="grid grid-cols-3 gap-4 mt-6">
+  <div class="text-center">
+    <div class="text-blue-400 text-xs mb-1 font-bold italic">「沒有人告訴我怎麼活」</div>
+    <div class="text-[10px] opacity-60">資訊不對稱與孤立</div>
+  </div>
+  <div class="text-center">
+    <div class="text-blue-400 text-xs mb-1 font-bold italic">「青春花在錯的地方」</div>
+    <div class="text-[10px] opacity-60">投入與回報嚴重失衡</div>
+  </div>
+  <div class="text-center">
+    <div class="text-blue-400 text-xs mb-1 font-bold italic">「我一個人扛制度問題」</div>
+    <div class="text-[10px] opacity-60">結構性問題的個體化</div>
+  </div>
+</div>
 
 ::log::
 
 <SystemLog :logs="[
-  { time: 'LOG_ANALYSIS', msg: '痛點：公平競爭的安心感缺失。' },
-  { time: 'ROOT_CAUSE', msg: '評鑑制度與法律框架脫節。' },
-  { time: 'HMW', msg: '如何打破人脈壁壘，建立共享機制？' }
+  { time: 'INSIGHT_01', msg: '核心痛點：資源壟斷導致努力貶值。' },
+  { time: 'INSIGHT_02', msg: '情感核心：孤立、耗損與無力感。' },
+  { time: 'STRATEGY', msg: '我們需要一個能打破壁壘的出口。' }
 ]" />
+
+---
+layout: aura-default
+class: flex flex-col items-center justify-center
+---
+
+<div class="flex flex-col items-center gap-12">
+  <div class="grid grid-cols-4 gap-4 opacity-50">
+    <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">郭彥均</div>
+    <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">吳柏宏</div>
+    <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">徐愉皓</div>
+    <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">洪楷傑</div>
+  </div>
+  
+  <div class="flex flex-col items-center animate-pulse text-blue-400">
+    <div class="i-carbon:arrow-down text-4xl mb-2" />
+    <div class="font-mono text-xs tracking-widest uppercase">Synthesizing Data Points</div>
+  </div>
+
+  <div class="flex items-center gap-8">
+    <AuraFrame class="px-12 py-6">
+      <div class="text-center">
+        <AuraStatus>Virtual Persona created</AuraStatus>
+        <div class="text-4xl font-black tracking-tighter uppercase mt-2">Lin Xiao Yu</div>
+        <div class="text-xs opacity-50 mt-1">化學系大一新生</div>
+      </div>
+    </AuraFrame>
+  </div>
+</div>
 
 ---
 layout: aura-log
@@ -105,7 +145,7 @@ layout: aura-log
 # Lin Xiao Yu.
 
 <p>
-化學系大一新生，內向，抽到「幽靈直屬」，在圖書館熬夜到雙眼發紅的邊緣人。
+他是我們四人共同生命經驗的投影，代表了所有在資訊戰中掙扎的學生。
 </p>
 
 <AuraFrame>
@@ -241,29 +281,29 @@ layout: aura-specs
 ::header::
 
 <AuraStatus>Phase_04 // Delivery</AuraStatus>
-# Knowledge
-# Capsule.
+# Open-Campus
+# Portal.
 
-<p>我們不只是要做一個平台，而是要重建校園的「幸福韌性」。</p>
+<p>我們不只是要做一個平台，而是要重建校園的「幸福傳承」。</p>
 
 ::default::
 
 <GlassCard>
-  <div class="text-blue-400 font-mono text-xl mb-2">🎁</div>
-  <div class="font-bold text-lg text-white mb-2">匿名扭蛋</div>
-  <p class="text-xs opacity-60">打破私藏潛規則，讓筆記與趨勢成為開放的校園資產。</p>
+  <div class="text-blue-400 font-mono text-xl mb-2">📡</div>
+  <div class="font-bold text-lg text-white mb-2">匿名傳送門</div>
+  <p class="text-xs opacity-60">打破私藏潛規則，透過 QR Code 讓筆記與趨勢成為真正自由流動的校園資產。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-mono text-xl mb-2">🪙</div>
-  <div class="font-bold text-lg text-white mb-2">幸運代幣</div>
-  <p class="text-xs opacity-60">「讓你的努力，成為別人的幸運」。正向回饋循環。</p>
+  <div class="text-blue-400 font-mono text-xl mb-2">📝</div>
+  <div class="font-bold text-lg text-white mb-2">電子便利貼</div>
+  <p class="text-xs opacity-60">「加油，你一定能撐過這學期」。透過匿名的溫暖留言，建立跨時空的互助連結。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-mono text-xl mb-2">🤖</div>
-  <div class="font-bold text-lg text-white mb-2">AI 導航</div>
-  <p class="text-xs opacity-60">自動統整零散課室資訊，讓學生拿回「時間主權」。</p>
+  <div class="text-blue-400 font-mono text-xl mb-2">🔗</div>
+  <div class="font-bold text-lg text-white mb-2">星網效應</div>
+  <p class="text-xs opacity-60">當微光連成群，校園不再是惡性競爭的叢林，而是互相支撐、一起成長的共創圈。</p>
 </GlassCard>
 
 ---
@@ -281,7 +321,7 @@ layout: aura-default
     </p>
     <ul class="space-y-3">
       <li><strong>資訊對比</strong>：壟斷者 vs 孤島者</li>
-      <li><strong>扭蛋機制</strong>：匿名上傳與幸運代幣</li>
+      <li><strong>傳送機制</strong>：匿名分享與電子便利貼</li>
       <li><strong>幸福願景</strong>：讓努力重回對等價值</li>
     </ul>
   </div>
