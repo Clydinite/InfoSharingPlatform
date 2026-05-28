@@ -30,7 +30,7 @@ layout: aura-hero
 
 <div class="mt-10">
   <div class="flex items-center gap-4">
-    <AuraPill variant="solid">Start Presentation</AuraPill>
+    <AuraPill status="active">Initialize Presentation</AuraPill>
     <AuraStatus>Version 1.0.5 // Design_Thinking_Flow</AuraStatus>
   </div>
 </div>
@@ -41,7 +41,7 @@ layout: aura-specs
 
 ::header::
 
-<AuraPill class="mb-4">Phase 1: Empathy & Define</AuraPill>
+<AuraPill status="info" class="mb-4">Phase 1: Empathy & Define</AuraPill>
 
 # Team
 # Brainstorming.
