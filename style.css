@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --aura-bg: #050505;
+  --aura-primary: #60a5fa;
+  --aura-secondary: #f472b6;
+  --aura-accent: #10b981;
+  --aura-text-main: #94a3b8;
+  --aura-text-dim: #475569;
+  --aura-heading: #ffffff;
+}
+
+body {
+  background-color: var(--aura-bg);
+  color: var(--aura-text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", "微软雅黑";
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slidev-layout {
+  width: 100%;
+  height: 100%;
+  background-color: var(--aura-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--aura-heading);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+code, kbd, pre, .font-mono {
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--aura-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: var(--aura-primary);
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.5rem;
+  border-left: 4px solid var(--aura-primary);
+  background: rgba(255, 255, 255, 0.05);
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Scrollbar reset */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Transitions */
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slidev-vclick-faded {
+  opacity: 0.1;
+}
