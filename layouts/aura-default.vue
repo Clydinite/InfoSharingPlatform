@@ -7,11 +7,6 @@
     <div class="relative z-10 text-white">
       <slot />
     </div>
-
-    <!-- Slide Number / Footer -->
-    <div class="absolute bottom-10 right-16 flex items-center gap-4 opacity-30 font-mono text-[10px] tracking-widest uppercase text-white">
-      <span>{{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}</span>
-    </div>
   </div>
 </template>
 

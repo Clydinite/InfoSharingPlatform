@@ -15,7 +15,7 @@
 
 <style scoped>
 :deep(h1) {
-  @apply text-6xl font-black tracking-tighter mb-6 leading-tight uppercase text-white;
+  @apply text-5xl font-black tracking-tighter mb-6 leading-tight uppercase text-white;
 }
 
 :deep(h2) {
