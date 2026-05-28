@@ -51,27 +51,27 @@ layout: aura-specs
 ::default::
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">郭同學 / 化學系</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「投報率極低的勞動」</div>
-  <p class="text-[10px] opacity-60">實驗課僅 1 學分，卻需耗費整天抄寫藥品資訊與結報，投入與產出嚴重不成正比。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">小宇 / 化學系新生</div>
+  <div class="text-sm font-bold text-white mb-2 italic">「消失的 6 小時」</div>
+  <p class="text-[10px] opacity-60">每週需花費 6+ 小時手寫 MSDS 預報，僅換取 1 學分。努力在繁重瑣碎的勞動中被磨損。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">吳同學 / 通識觀察</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「量多質重複的窒息」</div>
-  <p class="text-[10px] opacity-60">課程架構重疊，缺乏實作導向。學生在 AI 時代仍被迫背誦瑣碎知識，而非培養判斷力。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">幽靈直屬 / 斷裂傳承</div>
+  <div class="text-sm font-bold text-white mb-2 italic">「孤島式的生存」</div>
+  <p class="text-[10px] opacity-60">抽到不回訊息的幽靈直屬，導致無法獲取考古題與地雷解析，在資訊戰中徹底孤立。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">洪同學 / 資源斷層</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「人脈即分數的壟斷」</div>
-  <p class="text-[10px] opacity-60">有無學長姐提供「考古題」極大影響競爭公平性。資訊落差讓校園變成零和競爭的叢林。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">隱藏標準 / 挫折循環</div>
+  <div class="text-sm font-bold text-white mb-2 italic">「摸不透的扣分」</div>
+  <p class="text-[10px] opacity-60">按部就班卻拿不到高分，看著人脈廣的同學拿模板輕鬆過關，對「公平」產生深刻懷疑。</p>
 </GlassCard>
 
 <GlassCard>
-  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">團隊總結 / 制度透視</div>
-  <div class="text-sm font-bold text-white mb-2 italic">「結構性的剥削」</div>
-  <p class="text-[10px] opacity-60">教授評鑑偏重研究，實作資源匱乏。學生承擔了制度瑕疵導致的「無償隱形勞動」。</p>
+  <div class="text-blue-400 font-bold mb-2 uppercase text-xs">制度反思 / 勞動真空</div>
+  <div class="text-sm font-bold text-white mb-2 italic">「時間貧窮的隱憂」</div>
+  <p class="text-[10px] opacity-60">學習被異化為無償且無上限的勞動，侵蝕了學生的休息權與多元探索的空間。</p>
 </GlassCard>
 
 ---
@@ -105,22 +105,22 @@ layout: aura-log
 # Lin Xiao Yu.
 
 <p>
-大一新生，內向，交友圈尚未建立，沒有抽到直屬學長姐的「邊緣人」。
+化學系大一新生，內向，抽到「幽靈直屬」，在圖書館熬夜到雙眼發紅的邊緣人。
 </p>
 
 <AuraFrame>
   <!-- <img src="/images/lin_xiao_yu.png" class="opacity-80 rounded shadow-2xl" /> -->
-  <div class="h-40 flex items-center justify-center text-slate-500 italic text-sm">
-    [ Image Placeholder: A tired student in library, blue lighting ]
+  <div class="h-40 flex items-center justify-center text-slate-500 italic text-sm text-center">
+    [ Image Placeholder: Xiao Yu buried in MSDS handbooks,<br/>screen glowing cold blue ]
   </div>
 </AuraFrame>
 
 ::log::
 
 <SystemLog :logs="[
-  { time: 'NAME', msg: '林小宇 (18歲, 新生)' },
-  { time: 'GOAL', msg: '不求高分，只求不被資源差擊潰。' },
-  { time: 'FEAR', msg: '熬夜的努力，敵不過別人的模板。' }
+  { time: 'NAME', msg: '林小宇 (18歲, 化學系)' },
+  { time: 'GOAL', msg: '奪回時間主權，不再被資源差擊潰。' },
+  { time: 'FEAR', msg: '努力成了最廉價的東西。' }
 ]" />
 
 ---
@@ -167,20 +167,20 @@ layout: aura-log
 # Breaking Out.
 
 <p>
-從一座注定被淹沒的孤島，到發現微弱的星光。
+從一座注定被淹沒的孤島，到發現彼此連結的星網。
 </p>
 
-- **深淵**：凌晨兩點，看著別人拿模板輕鬆交卷。
-- **轉機**：掃描實驗桌角那串亂碼般的 QR Code。
-- **震撼**：自己整理的「防呆筆記」竟然接住了另外幾個無助的靈魂。
-- **合流**：拿回「時間主權」，與夥伴在陽光下討論。
+- **深淵**：小宇熬夜手寫 MSDS，看著別人拿模板輕鬆宵夜。
+- **微光**：發現 Open-Campus QR Code，看見陌生學長姐留下的溫暖筆記。
+- **接住**：小宇將防呆筆記匿名上傳，成功「接住」了同樣崩潰的晴晴。
+- **共創**：校園不再是零和競爭的叢林，而是互相支撐的共好圈。
 
 ::log::
 
 <SystemLog :logs="[
-  { time: 'STATUS', msg: '孤島效應解除中...' },
-  { time: 'EVENT', msg: '林小宇上傳了實驗心得。' },
-  { time: 'RESULT', msg: '獲得 3 位同學的匿名感謝。' }
+  { time: 'EVENT_01', msg: '林小宇上傳普通化學實驗重點。' },
+  { time: 'EVENT_02', msg: '晴晴回覆：你的筆記救了我的實驗！' },
+  { time: 'ANALYSIS', msg: '互助連結突破 100 次，孤島連成群。' }
 ]" />
 
 ---
@@ -265,6 +265,34 @@ layout: aura-specs
   <div class="font-bold text-lg text-white mb-2">AI 導航</div>
   <p class="text-xs opacity-60">自動統整零散課室資訊，讓學生拿回「時間主權」。</p>
 </GlassCard>
+
+---
+layout: aura-default
+---
+
+# 【A4 提案單】視覺預覽
+
+<div class="grid grid-cols-2 gap-8 h-full">
+  <div class="flex flex-col justify-center">
+    <AuraStatus class="mb-4">擺攤現場主視覺</AuraStatus>
+    <h2 class="text-3xl font-bold mb-4">從壟斷到公共</h2>
+    <p class="opacity-70 text-sm leading-relaxed mb-6 text-slate-300">
+      視覺化展示「Open-Campus」如何將私藏的「內線考古題」，轉化為校園整體的「公共傳承」。
+    </p>
+    <ul class="space-y-3">
+      <li><strong>資訊對比</strong>：壟斷者 vs 孤島者</li>
+      <li><strong>扭蛋機制</strong>：匿名上傳與幸運代幣</li>
+      <li><strong>幸福願景</strong>：讓努力重回對等價值</li>
+    </ul>
+  </div>
+  
+  <div class="flex items-center justify-center p-4">
+    <AuraFrame class="w-full aspect-[1/1.414] flex items-center justify-center text-slate-500 italic text-sm text-center p-8">
+      [ A4 Proposal Sheet Preview ]<br/>
+      (Info-graphic & Pain Point Analysis)
+    </AuraFrame>
+  </div>
+</div>
 
 ---
 layout: aura-hero
