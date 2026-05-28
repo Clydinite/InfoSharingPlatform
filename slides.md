@@ -114,7 +114,7 @@ class: flex flex-col items-center justify-center
 ---
 
 <div class="flex flex-col items-center gap-12">
-  <div class="grid grid-cols-4 gap-4 opacity-50">
+  <div class="grid grid-cols-4 gap-4 opacity-70">
     <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">郭彥均</div>
     <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">吳柏宏</div>
     <div class="w-20 h-20 border border-blue-400/30 rounded flex items-center justify-center text-[10px]">徐愉皓</div>
@@ -130,7 +130,7 @@ class: flex flex-col items-center justify-center
     <AuraFrame class="px-12 py-6">
       <div class="text-center">
         <AuraStatus>Virtual Persona created</AuraStatus>
-        <div class="text-4xl font-black tracking-tighter uppercase mt-2">Lin Xiao Yu</div>
+        <div class="text-4xl font-black tracking-tighter uppercase mt-2">林小宇</div>
         <div class="text-xs opacity-50 mt-1">化學系大一新生</div>
       </div>
     </AuraFrame>
@@ -141,15 +141,14 @@ class: flex flex-col items-center justify-center
 layout: aura-log
 ---
 
-# Persona:
-# Lin Xiao Yu.
+# Persona
 
 <p>
 他是我們四人共同生命經驗的投影，代表了所有在資訊戰中掙扎的學生。
 </p>
 
 <AuraFrame>
-  <!-- <img src="/images/lin_xiao_yu.png" class="opacity-80 rounded shadow-2xl" /> -->
+  <img src="./raw_data/images/user_persona.png" class="opacity-80 rounded shadow-2xl" />
   <div class="h-40 flex items-center justify-center text-slate-500 italic text-sm text-center">
     [ Image Placeholder: Xiao Yu buried in MSDS handbooks,<br/>screen glowing cold blue ]
   </div>
