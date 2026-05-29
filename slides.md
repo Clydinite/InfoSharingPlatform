@@ -14,10 +14,6 @@ fonts:
   mono: 'JetBrains Mono'
 ---
 
-# slides.md
-
----
-
 <div class="h-full w-full p-16 flex flex-col justify-center text-left relative overflow-hidden text-white">
   <div class="relative z-10 max-w-4xl">
     <AuraPill status="active" class="mb-8 text-white">Initialize Presentation</AuraPill>
@@ -478,9 +474,9 @@ graph LR
   </div>
 </div>
 
----
+<!-- --- -->
 
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+<!-- <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill class="mb-8">Appendix B: Division of Labor</AuraPill>
   
   <div class="grid grid-cols-2 gap-12 mt-12 flex-1 text-white">
@@ -515,7 +511,7 @@ graph LR
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 ---
 
