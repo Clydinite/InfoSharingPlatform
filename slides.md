@@ -33,7 +33,7 @@ fonts:
 
 ---
 
-<!-- add more colors and icons -->
+<!-- TODO: add more colors and icons -->
 
 <div class="h-full w-full p-12 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-4">Phase 1: Empathize & Define</AuraPill>
@@ -165,7 +165,52 @@ fonts:
 
 ---
 
-TODO: add stackholder map here
+<!-- add mermaid -->
+
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Stakeholder Map</h1>
+  
+  <div class="grid grid-cols-3 gap-8 h-full">
+    <!-- Core -->
+    <div class="space-y-4">
+      <div class="text-[10px] font-mono text-blue-400 uppercase tracking-widest border-b border-white/10 pb-2">01 // Core_Circle</div>
+      <AuraCard class="p-4 border-blue-400/20 bg-blue-400/5">
+        <div class="font-bold text-white text-sm mb-1">林小宇 & 晴晴</div>
+        <div class="text-[9px] opacity-60">直接體驗者與互助受助者</div>
+      </AuraCard>
+      <AuraCard class="p-4 border-emerald-400/20 bg-emerald-400/5">
+        <div class="font-bold text-white text-sm mb-1">Open-Campus 平台</div>
+        <div class="text-[9px] opacity-60">去中心化的資訊傳送門</div>
+      </AuraCard>
+    </div>
+    <!-- Direct -->
+    <div class="space-y-4 pt-12">
+      <div class="text-[10px] font-mono text-pink-400 uppercase tracking-widest border-b border-white/10 pb-2">02 // Direct_Circle</div>
+      <AuraCard class="p-4">
+        <div class="font-bold text-white text-sm mb-1">實驗課助教 (TA)</div>
+        <div class="text-[9px] opacity-60">掌控結報評分與隱藏標準</div>
+      </AuraCard>
+      <AuraCard class="p-4">
+        <div class="font-bold text-white text-sm mb-1">幽靈直屬 / 現充同學</div>
+        <div class="text-[9px] opacity-60">資訊傳承的斷裂與壟斷者</div>
+      </AuraCard>
+    </div>
+    <!-- Indirect -->
+    <div class="space-y-4 pt-24">
+      <div class="text-[10px] font-mono text-slate-500 uppercase tracking-widest border-b border-white/10 pb-2">03 // Indirect_Circle</div>
+      <AuraCard class="p-4 border-white/5 bg-white/5">
+        <div class="font-bold text-white text-sm mb-1">系所教授</div>
+        <div class="text-[9px] opacity-60">必修課程規則的制定者</div>
+      </AuraCard>
+      <AuraCard class="p-4 border-white/5 bg-white/5">
+        <div class="font-bold text-white text-sm mb-1">大學體制</div>
+        <div class="text-[9px] opacity-60">制度與學分壓力的最終來源</div>
+      </AuraCard>
+    </div>
+  </div>
+</div>
+
 
 ---
 
@@ -242,11 +287,11 @@ TODO: add stackholder map here
 
 ---
 
-TODO: persona verification
+<!-- TODO: persona verification -->
 
 ---
 
-TODO: replace data to @raw_data/persona_interview.md
+<!-- TODO: replace data to @raw_data/persona_interview.md -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
@@ -311,7 +356,7 @@ TODO: replace data to @raw_data/persona_interview.md
 
 ---
 
-<!-- Add more content about the methodology here. -->
+<!-- TODO: Add more content about the methodology here. -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center text-white">
   <AuraPill status="active" class="mb-12">Process Roadmap</AuraPill>
@@ -523,7 +568,7 @@ graph LR
 
 ---
 
-<!-- Use a similar layout as before -->
+<!-- TODO: Use a similar layout as before -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center overflow-hidden text-white">
   <AuraBackground />
