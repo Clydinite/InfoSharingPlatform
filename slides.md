@@ -167,50 +167,58 @@ fonts:
 
 ---
 
-<!-- TODO: add mermaid on a separate slide -->
-
+<!-- Stakeholder Map -->
+<!-- Stakeholder Map -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Stakeholder Map</h1>
-  
-  <div class="grid grid-cols-3 gap-8 h-full">
-    <!-- Core -->
-    <div class="space-y-4">
-      <div class="text-[10px] font-mono text-blue-400 uppercase tracking-widest border-b border-white/10 pb-2">01 // Core_Circle</div>
-      <AuraCard class="p-4 border-blue-400/20 bg-blue-400/5">
-        <div class="font-bold text-white text-sm mb-1">林小宇 & 晴晴</div>
-        <div class="text-[9px] opacity-60">直接體驗者與互助受助者</div>
-      </AuraCard>
-      <AuraCard class="p-4 border-emerald-400/20 bg-emerald-400/5">
-        <div class="font-bold text-white text-sm mb-1">Open-Campus 平台</div>
-        <div class="text-[9px] opacity-60">去中心化的資訊傳送門</div>
-      </AuraCard>
-    </div>
-    <!-- Direct -->
-    <div class="space-y-4 pt-12">
-      <div class="text-[10px] font-mono text-pink-400 uppercase tracking-widest border-b border-white/10 pb-2">02 // Direct_Circle</div>
-      <AuraCard class="p-4">
-        <div class="font-bold text-white text-sm mb-1">實驗課助教 (TA)</div>
-        <div class="text-[9px] opacity-60">掌控結報評分與隱藏標準</div>
-      </AuraCard>
-      <AuraCard class="p-4">
-        <div class="font-bold text-white text-sm mb-1">幽靈直屬 / 現充同學</div>
-        <div class="text-[9px] opacity-60">資訊傳承的斷裂與壟斷者</div>
-      </AuraCard>
-    </div>
-    <!-- Indirect -->
-    <div class="space-y-4 pt-24">
-      <div class="text-[10px] font-mono text-slate-500 uppercase tracking-widest border-b border-white/10 pb-2">03 // Indirect_Circle</div>
-      <AuraCard class="p-4 border-white/5 bg-white/5">
-        <div class="font-bold text-white text-sm mb-1">系所教授</div>
-        <div class="text-[9px] opacity-60">必修課程規則的制定者</div>
-      </AuraCard>
-      <AuraCard class="p-4 border-white/5 bg-white/5">
-        <div class="font-bold text-white text-sm mb-1">大學體制</div>
-        <div class="text-[9px] opacity-60">制度與學分壓力的最終來源</div>
-      </AuraCard>
-    </div>
+  <div class="h-[45vh] flex items-center justify-center">
+  <div class="scale-250%">
+
+```mermaid
+graph LR
+    subgraph Core [【 核心圈：直接體驗與互助層 】]
+        XY((林小宇<br>大一化學系新生))
+        QQ((晴晴<br>同屆新生/受助者))
+        ANON_SJ((匿名學長姐<br>開源筆記提供者))
+        OC_PLAT[Open-Campus<br>匿名資訊分享平台]
+    end
+
+    subgraph Direct [【 直接圈：校園人際與對比生態 】]
+        TA((實驗課助教 TA<br>掌管結報評分))
+        GHOST_SJ((幽靈直屬學長<br>斷裂的傳承))
+        XC_PEERS((班上現充同學<br>靠人脈拿模板))
+    end
+
+    subgraph Indirect [【 間接圈：制度與壓力來源 】]
+        PROF((化學系教授<br>訂定評分規則))
+        SYS((大學體制<br>畢業門檻/學分壓力))
+    end
+
+    XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
+    ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
+    OC_PLAT -->|解救實驗數據| QQ
+    XY -.->|深夜螢幕共鳴| QQ
+    GHOST_SJ -.->|冷漠/零互動| XY
+    XC_PEERS -->|限動炫耀考古題| XY
+    TA -->|狂扣結報分數| XY
+    TA -.->|私下傳承模板| XC_PEERS
+    PROF -->|評分標準施壓| TA
+    SYS -->|必修課負擔| XY
+
+    style OC_PLAT fill:#34d399,stroke:#065f46,color:#fff
+    style XY fill:#60a5fa,stroke:#1e3a8a,color:#fff
+    style QQ fill:#60a5fa,stroke:#1e3a8a,color:#fff
+    style ANON_SJ fill:#60a5fa,stroke:#1e3a8a,color:#fff
+    style TA fill:#f472b6,stroke:#831843,color:#fff
+    style GHOST_SJ fill:#f472b6,stroke:#831843,color:#fff
+    style XC_PEERS fill:#f472b6,stroke:#831843,color:#fff
+    style PROF fill:#9ca3af,stroke:#374151,color:#fff
+    style SYS fill:#9ca3af,stroke:#374151,color:#fff
+```
+
   </div>
+</div>
 </div>
 
 
@@ -338,41 +346,41 @@ graph LR
 
 <!-- Full Interview Interaction -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interaction Log</h1>
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test // 深度對話紀錄</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">對話紀錄</h1>
   
-  <div class="space-y-4 overflow-y-auto max-h-[45vh] pr-4">
+  <div class="space-y-6 overflow-y-auto max-h-[50vh] pr-4">
     <!-- 1 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-3 bg-white/10 rounded-lg text-sm italic">"What is the core problem that you faced as a freshman?"</div>
+      <div class="p-4 bg-white/10 rounded-lg text-sm italic">"你知道當初直屬制度安排一個學長姐的本意，與匿名平台的差異嗎？"</div>
     </div>
     <div class="flex flex-col gap-1 items-end">
       <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-3 bg-blue-600 border border-pink-500/20 rounded-lg text-sm">
-        「我覺得……最核心的問題是『資訊不對稱帶來的強烈剝奪感』……那種孤立無援、被制度和人脈排擠的無力感，就是我大一最大的噩夢。」
+      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm">
+        「直屬制度的本意是希望新生能有個溫暖依靠，透過革命情感薪火相傳。但它太依賴運氣，如果遇到『幽靈直屬』，線就斷了。匿名平台是為了接住這些被制度漏掉的靈魂。」
       </div>
     </div>
     <!-- 2 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-3 bg-white/10 rounded-lg text-sm italic">"But what's the reason you still go on?"</div>
+      <div class="p-4 bg-white/10 rounded-lg text-sm italic">"你覺得直屬制度是不是為了隱蔽集體抄襲的防彈衣？"</div>
     </div>
     <div class="flex flex-col gap-1 items-end">
       <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-3 bg-blue-600 border border-pink-500/20 rounded-lg text-sm">
-        「之所以還能繼續撐著，很大一部分是因為不甘心吧……直到看到那個 QR Code，拿到筆記，才感覺自己不是一個人在黑暗裡瞎摸。」
+      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm">
+        「這觀點太諷刺但也太真實了。實體直屬網絡變成了『分散式作弊系統』，每個模板都不同，教授很難抓。而平台集中化後，如果全班抄同份筆記，就是把脖子伸到刀口下。」
       </div>
     </div>
     <!-- 3 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-3 bg-white/10 rounded-lg text-sm italic">"How is it being anonymous of any relevance to you?"</div>
+      <div class="p-4 bg-white/10 rounded-lg text-sm italic">"這聽起來很不樂觀，你覺得該怎麼辦？"</div>
     </div>
     <div class="flex flex-col gap-1 items-end">
       <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-3 bg-blue-600 border border-pink-500/20 rounded-lg text-sm">
-        「『匿名』就像是一件保護衣，是我唯一能卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為我跟每個人都一樣平等。」
+      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm">
+        「我們得鼓勵『拿了火把，自己探路』的文化。平台只應提供地圖與指南，而非直接給答案。唯有保持獨立思考，我們才能在匿名的保護下，安全地存活在教授的雷達之外。」
       </div>
     </div>
   </div>
