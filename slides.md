@@ -33,6 +33,8 @@ fonts:
 
 ---
 
+<!-- add more colors and icons -->
+
 <div class="h-full w-full p-12 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-4">Phase 1: Empathize & Define</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-left">
@@ -211,13 +213,13 @@ TODO: add stackholder map here
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
-  <div class="grid grid-cols-2 gap-12 items-center h-full">
+  <div class="grid grid-cols-2 gap-12 items-center">
     <div class="flex flex-col justify-center">
-      <h1 class="text-8xl font-black tracking-tighter mb-8 uppercase text-white leading-[0.85]">The<br/><span class="text-blue-400">Story.</span></h1>
+      <h1 class="text-7xl font-black tracking-tighter mb-8 uppercase text-white leading-[0.85]">The<br/><span class="text-blue-400">Story</span></h1>
       <p class="text-lg text-slate-300 mb-10 leading-relaxed border-l-4 border-blue-500 pl-6 bg-blue-500/5 py-4 text-white opacity-90">
         「從一座注定被淹沒的孤島，到發現彼此連結的星網。」
       </p>
-      <div class="space-y-6">
+      <div class="space-y-4">
         <div v-for="(item, i) in ['深淵：小宇熬夜手寫預報，眼看別人輕鬆宵夜。', '微光：發現 QR Code，看見陌生學長姐留下的溫暖。', '接住：小宇上傳防呆筆記，接住了同樣崩潰的晴晴。', '共創：校園不再是叢林，而是互相支撐的共好圈。']" 
              :key="i" v-click class="flex gap-4 items-center">
           <div class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,1)]"></div>
@@ -225,11 +227,9 @@ TODO: add stackholder map here
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-8 justify-center h-full">
+    <div class="flex flex-col gap-4 justify-center">
       <AuraFrame class="p-0 overflow-hidden bg-black/60 aspect-video flex items-center justify-center border-white/5">
-        <div class="text-slate-500 text-sm p-12 text-center text-white opacity-60">
-          [ 視覺焦點：鵝黃色的溫暖光芒照亮了疲憊的面容 ]
-        </div>
+        <img src="./raw_data/images/light.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity" />
       </AuraFrame>
       <SystemLog :logs="[
         { time: 'EVENT_01', msg: '林小宇掃描了匿名分享傳送門。' },
@@ -245,6 +245,8 @@ TODO: add stackholder map here
 TODO: persona verification
 
 ---
+
+TODO: replace data to @raw_data/persona_interview.md
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
@@ -424,7 +426,7 @@ graph LR
   <div class="grid grid-cols-2 gap-8 mt-4 text-white">
     <div class="space-y-6">
       <AuraCard class="p-8 border-l-4 border-l-blue-400 bg-blue-400/5">
-        <div class="text-blue-400 font-black text-xl mb-4 uppercase tracking-tighter text-white opacity-100">自我照護 (Self-Care)</div>
+        <div class="text-blue-400 font-bold text-xl mb-4 uppercase text-white opacity-100">自我照護 (Self-Care)</div>
         <p class="text-xs text-slate-300 leading-loose text-white opacity-80">
           認知到成績不完全代表個人價值，有時候只是系統性的「資訊差」。<br/><br/>
           透過開發本專案，成員學習到如何調節「無法掌控結果」的焦慮，並確信問題根源於體制，減少對自我的質疑與自責。
@@ -433,7 +435,7 @@ graph LR
     </div>
     <div class="space-y-6 text-white">
       <AuraCard class="p-8 border-l-4 border-l-pink-400 bg-pink-400/5">
-        <div class="text-pink-400 font-black text-xl mb-4 uppercase tracking-tighter text-white opacity-100">支持他人 (Caring for Others)</div>
+        <div class="text-pink-400 font-bold text-xl mb-4 uppercase text-white opacity-100">支持他人 (Caring for Others)</div>
         <p class="text-xs text-slate-300 leading-loose text-white opacity-80">
           方案本質是「接住」那些沒有人脈網路支援的同學。透過匿名便利貼降低求助門檻。<br/><br/>
           讓校園中不再有資訊邊緣人，將私有的「秘笈」轉化為公共資產，讓每個發光的努力都能被彼此看見。
