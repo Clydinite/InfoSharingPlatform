@@ -24,8 +24,10 @@ fonts:
     <p class="text-xl text-slate-400 max-w-lg leading-relaxed mb-10 text-white opacity-80">
       大學裡的成績競爭，往往不是「努力程度」的競爭，而是「人脈與資訊」的競爭。
     </p>
-    <AuraStatus class="text-white opacity-60">Version 1.0.6 // Design_Thinking_Final</AuraStatus> 
-    <!-- replace with our names -->
+    <AuraStatus class="text-white opacity-60">Version 1.0.7 // Design_Thinking_Phase_Focus</AuraStatus> 
+    <div class="mt-4 text-[10px] font-mono tracking-widest text-slate-500 uppercase font-bold">
+      Designers: 郭彥均 / 吳柏宏 / 徐愉皓 / 洪楷傑
+    </div>
   </div>
 </div>
 
@@ -37,18 +39,18 @@ fonts:
     Team Brainstorming
   </h1>
   
-  <div class="grid grid-cols-2 gap-6 flex-1">
+  <div class="grid grid-cols-2 gap-6 flex-1 text-white">
     <AuraCard v-for="m in [
-      { name: '郭彥均', major: '化學系', title: '破碎資源與低投報勞動', desc: '實驗課僅 1 學分，卻需耗費 6+ 小時抄寫結預報，心理與投入極度不平衡。' },
-      { name: '吳柏宏', major: '課程架構', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊，學生淪為瑣碎知識的背誦機器，而非培養高階判斷力。' },
-      { name: '徐愉皓', major: '機械系', title: '同儕競爭與知識工具化', desc: '必修比例過高，學習淪為應付考試與獎學金排名，資源分配不均，實作與理論斷裂。' },
-      { name: '洪楷傑', major: '資訊壁壘', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓學生陷入混亂迷失。' }
-    ]" :key="m.name" class="p-6">
-      <div class="flex justify-between items-start mb-4 border-b border-white/5 pb-2">
-        <div class="text-blue-400 font-bold uppercase text-xs tracking-widest text-white opacity-90">{{ m.name }} / {{ m.major }}</div>
+      { name: '郭彥均', major: '化學系', title: '破碎資源與低投報勞動', desc: '實驗課僅 1 學分，卻需耗費 6+ 小時抄寫結預報。資源破碎不共享，努力在繁瑣勞動中被磨損。' },
+      { name: '吳柏宏', major: '課程架構', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。' },
+      { name: '徐愉皓', major: '機械系', title: '同儕競爭與知識工具化', desc: '必修比例過高導致學習淪為應付考試。資源分配不均，理論與實作斷裂，學了卻不知道怎麼用。' },
+      { name: '洪楷傑', major: '資訊壁壘', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓沒人脈的學生陷入迷失。' }
+    ]" :key="m.name" class="p-8 transition-all hover:bg-white/10 hover:border-blue-400/40 hover:-translate-y-1">
+      <div class="flex justify-between items-start mb-4 border-b border-white/10 pb-2">
+        <div class="text-blue-400 font-semibold uppercase text-[10px] tracking-[0.3em] text-white opacity-100">{{ m.name }} // {{ m.major }}</div>
       </div>
-      <div class="text-lg font-semibold text-white mb-2 leading-tight uppercase">{{ m.title }}</div>
-      <p class="text-[11px] opacity-70 leading-relaxed text-slate-300">{{ m.desc }}</p>
+      <div class="text-lg font-semibold text-white mb-2 leading-tight uppercase tracking-tighter">{{ m.title }}</div>
+      <p class="text-[11px] opacity-80 leading-relaxed text-slate-300 font-bold">{{ m.desc }}</p>
     </AuraCard>
   </div>
 </div>
@@ -57,7 +59,7 @@ fonts:
 
 <div class="h-full w-full p-8 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-8">Phase 1: Empathize & Define</AuraPill>
-  <h1 class="text-7xl font-black tracking-tighter mb-6 leading-tight uppercase text-white">Issue Summary</h1>
+  <h1 class="text-7xl font-semibold tracking-tighter mb-6 leading-tight uppercase text-white">Issue Summary</h1>
   <p class="text-base text-slate-400 leading-relaxed mb-10 text-white opacity-80">
     問題根源：高教制度與社會期待的錯位，導致學生承擔了結構性的「隱形勞動」。
   </p>
@@ -68,21 +70,21 @@ fonts:
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
             <div class="text-white font-bold text-sm uppercase">資源門檻化</div>
-            <div class="text-[10px] text-slate-500 italic text-white opacity-60">人脈與資訊差取代了努力的價值。</div>
+            <div class="text-[10px] text-slate-500 text-white opacity-60">人脈與資訊差取代了努力的價值。</div>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
             <div class="text-white font-bold text-sm uppercase">時間貧窮</div>
-            <div class="text-[10px] text-slate-500 italic text-white opacity-60">高強度課後負擔侵蝕了學生的自主權。</div>
+            <div class="text-[10px] text-slate-500 text-white opacity-60">高強度課後負擔侵蝕了學生的自主權。</div>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
             <div class="text-white font-bold text-sm uppercase">孤島效應</div>
-            <div class="text-[10px] text-slate-500 italic text-white opacity-60">缺乏人脈支持的同學淪為資訊邊緣人。</div>
+            <div class="text-[10px] text-slate-500 text-white opacity-60">缺乏人脈支持的同學淪為資訊邊緣人。</div>
           </div>
         </div>
       </div>
@@ -100,22 +102,23 @@ fonts:
 ---
 
 <div class="h-full w-full p-16 flex flex-col items-center justify-center relative text-white">
+  <AuraPill status="info" class="mb-12 text-white">Phase 1: Empathy & Define</AuraPill>
   <div class="flex flex-col items-center gap-8">
     <div class="grid grid-cols-4 gap-8">
       <div v-for="name in ['郭彥均', '吳柏宏', '徐愉皓', '洪楷傑']" :key="name" 
-           class="w-32 h-24 border border-blue-400/50 bg-blue-400/5 rounded-lg flex items-center justify-center text-md text-white font-semibold tracking-widest transition-all hover:bg-blue-400/20">
+           class="w-32 h-24 border border-blue-400/50 bg-blue-400/5 rounded-lg flex items-center justify-center text-md text-white font-semibold tracking-widest transition-all hover:bg-blue-400/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
         {{ name }}
       </div>
     </div>
     <div class="flex flex-col items-center animate-pulse text-blue-400">
-      <div class="i-carbon:arrow-down text-5xl mb-4" />
-      <div class="font-mono text-sm tracking-[0.4em] uppercase font-bold text-white opacity-60">Synthesizing Data Points</div>
+      <div class="i-carbon:arrow-down text-5xl mb-4 text-blue-400 opacity-80" />
+      <div class="font-mono text-sm tracking-[0.4em] uppercase font-bold text-white opacity-60 italic text-white shadow-black">Synthesizing Data Points</div>
     </div>
-    <AuraFrame class="px-20 py-8 bg-black/60 shadow-[0_0_50px_rgba(59,130,246,0.1)] border-blue-400/20 rounded-">
+    <AuraFrame class="px-20 py-8 bg-black/60 shadow-[0_0_50px_rgba(59,130,246,0.1)] border-blue-400/20 rounded-xl backdrop-blur-md">
       <div class="flex flex-col gap-2 items-center text-center">
-        <AuraStatus class="mb-2 text-white font-mono">Virtual Persona Synthesized</AuraStatus>
-        <div class="text-6xl font-black tracking-tighter uppercase mt-2 text-white">林小宇</div>
-        <div class="text-sm opacity-60 mt-1 tracking-widest text-white uppercase font-mono">Student Persona</div>
+        <AuraStatus class="mb-2 text-white font-mono opacity-80">Virtual Persona Synthesized</AuraStatus>
+        <div class="text-6xl font-semibold tracking-tighter uppercase mt-2 text-white italic shadow-black drop-shadow-2xl">林小宇</div>
+        <div class="text-sm opacity-60 mt-1 tracking-widest text-white uppercase font-mono font-bold tracking-[0.2em]">Student Persona Alpha</div>
       </div>
     </AuraFrame>
   </div>
@@ -126,37 +129,41 @@ fonts:
 <!-- we should add more context here. -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 1: Empathize & Define</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 leading-tight uppercase text-white">Persona Context</h1>
-  <div class="grid grid-cols-2 gap-12 items-start">
-    <div class="flex flex-col justify-center">
-      <p class="text-base text-slate-300 leading-relaxed mb-6 text-white opacity-80">
-        林小宇抽到了不回訊息的「幽靈直屬」，面對 1 學分卻需耗費 6 小時的實驗課，他必須獨自查閱繁雜的 MSDS 資訊並手寫預報。
+  <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
+  
+  <div class="grid grid-cols-2 gap-12 items-start h-full text-white opacity-100">
+    <div class="flex flex-col justify-center h-full text-white">
+      <h1 class="text-6xl font-black tracking-tighter mb-6 leading-tight uppercase text-white font-black italic shadow-blue-500/20 drop-shadow-xl text-white">Persona<br/>Backstory</h1>
+      <p class="text-base text-slate-300 leading-relaxed mb-6 text-white opacity-90 font-bold border-l-4 border-blue-400 pl-6 bg-white/5 py-4 rounded-r-lg text-white">
+        林小宇代表了在資訊壟斷制度下，那群「不是不努力，而是沒工具」的靈魂。
       </p>
-      <div class="space-y-4">
-        <div class="p-4 border-l-2 border-blue-400 bg-white/5 rounded-r">
-          <div class="text-blue-400 text-[10px] font-bold uppercase mb-1 font-mono tracking-widest opacity-90 text-white">The Frustration</div>
-          <div class="text-xs text-white opacity-80 leading-relaxed text-white">
-            "按部就班每一步都很合理，卻摸不透教授隱藏的扣分標準，總是得不到應有的分數。"
+      <div class="space-y-4 text-white opacity-100">
+        <div class="p-4 border border-white/5 bg-white/5 rounded-lg transition-all hover:bg-white/10 text-white">
+          <div class="text-blue-400 text-[10px] font-semibold uppercase mb-1 font-mono tracking-[0.2em] italic text-white opacity-100">The Motivation Gap</div>
+          <div class="text-xs text-white opacity-80 leading-relaxed font-medium text-white">
+            "如果努力是一場沒有正確答案的徒勞，那我該拿什麼去跟別人的『捷徑』競爭？"
           </div>
         </div>
-        <div class="p-4 border-l-2 border-pink-400 bg-white/5 rounded-r">
-          <div class="text-pink-400 text-[10px] font-bold uppercase mb-1 font-mono tracking-widest opacity-90 text-white">The Gap</div>
-          <div class="text-xs text-white opacity-80 leading-relaxed text-white">
-            "同班那些跟學長姐混得很熟的同學，拿著內線考古題與模板提早交卷，去慶祝勝利。"
+        <div class="p-4 border border-white/5 bg-white/5 rounded-lg transition-all hover:bg-white/10 text-white">
+          <div class="text-pink-400 text-[10px] font-black uppercase mb-1 font-mono tracking-[0.2em] italic text-white opacity-100">The Structural Isolation</div>
+          <div class="text-xs text-white opacity-80 leading-relaxed font-medium text-white">
+            習慣在凌晨 2 點的圖書館獨自奮戰，遇到瓶頸時無處問、沒人答，深陷自我懷疑的谷底。
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-6 h-full justify-center">
-      <AuraFrame class="aspect-[4/3] flex items-center justify-center bg-black/80 overflow-hidden relative group border-white/5">
-         <img src="./raw_data/images/user_persona.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity" />
-         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div class="flex flex-col gap-6 h-full justify-center text-white opacity-100">
+      <AuraFrame class="aspect-[4/3] flex items-center justify-center bg-black/80 overflow-hidden relative group border-white/10 p-0 rounded-2xl text-white">
+         <img src="./raw_data/images/user_persona.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100 text-white" />
+         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 text-white"></div>
+         <div class="absolute bottom-8 left-8 text-left text-white opacity-100">
+            <div class="text-white font-black text-3xl uppercase tracking-tighter italic shadow-black drop-shadow-lg text-white opacity-100">Night_Behavior_Pattern</div>
+            <div class="text-blue-400 font-mono text-xs tracking-widest uppercase mt-1 font-bold text-white opacity-100">Status: Isolated_Search_Active</div>
          </div>
       </AuraFrame>
       <SystemLog :logs="[
-        { time: 'ROLE', msg: '化學系新生 // 資訊孤島' },
-        { time: 'STATUS', msg: '在深夜的圖書館發出沒人回答的訊號' }
+        { time: 'GOAL', msg: '撐過繁重必修，不被隱藏標準擊潰。' },
+        { time: 'FEAR', msg: '努力被廉價化 // 資訊差導致的自責感。' }
       ]" />
     </div>
   </div>
@@ -211,7 +218,7 @@ fonts:
   <div class="grid grid-cols-2 gap-12 items-center h-full">
     <div class="flex flex-col justify-center">
       <h1 class="text-8xl font-black tracking-tighter mb-8 uppercase text-white leading-[0.85]">The<br/><span class="text-blue-400">Story.</span></h1>
-      <p class="text-lg text-slate-300 mb-10 leading-relaxed italic border-l-4 border-blue-500 pl-6 bg-blue-500/5 py-4 text-white opacity-90">
+      <p class="text-lg text-slate-300 mb-10 leading-relaxed border-l-4 border-blue-500 pl-6 bg-blue-500/5 py-4 text-white opacity-90">
         「從一座注定被淹沒的孤島，到發現彼此連結的星網。」
       </p>
       <div class="space-y-6">
@@ -224,7 +231,7 @@ fonts:
     </div>
     <div class="flex flex-col gap-8 justify-center h-full">
       <AuraFrame class="p-0 overflow-hidden bg-black/60 aspect-video flex items-center justify-center border-white/5">
-        <div class="text-slate-500 italic text-sm p-12 text-center text-white opacity-60">
+        <div class="text-slate-500 text-sm p-12 text-center text-white opacity-60">
           [ 視覺焦點：鵝黃色的溫暖光芒照亮了疲憊的面容 ]
         </div>
       </AuraFrame>
@@ -281,7 +288,7 @@ fonts:
   <div class="grid grid-cols-2 gap-12 items-center h-full">
     <div class="flex flex-col justify-center text-white">
       <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Lyrics:<br/><span class="text-blue-400 text-white opacity-100">連上彼此</span></h1>
-      <p class="text-base text-slate-400 leading-relaxed mb-8 italic border-l-2 border-blue-400 pl-6 text-white opacity-90">
+      <p class="text-base text-slate-400 leading-relaxed mb-8 border-l-2 border-blue-400 pl-6 text-white opacity-90">
         「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
       </p>
       <div class="flex gap-4">
@@ -291,7 +298,7 @@ fonts:
     </div>
     <div class="flex flex-col gap-4">
       <AuraCard class="p-8 bg-black/40">
-        <blockquote class="text-sm leading-loose m-0 border-none bg-transparent p-0 text-white italic opacity-90">
+        <blockquote class="text-sm leading-loose m-0 border-none bg-transparent p-0 text-white opacity-90">
           凌晨兩點的圖書館，螢幕亮著還沒關<br/>
           一學分像一座山，壓得人快失去方向<br/>
           有人早就拿到答案，而我還在反覆試算<br/>
@@ -361,16 +368,16 @@ graph LR
       <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Student Response</h1>
       <p class="text-base text-slate-400 mb-10 text-white opacity-80">對原型（Prototype）的真實反饋與洞察紀錄。</p>
       <div class="space-y-4">
-        <div class="p-4 border-l-2 border-emerald-400 bg-white/5 rounded-r italic text-xs text-white/70 text-white opacity-90">
+        <div class="p-4 border-l-2 border-emerald-400 bg-white/5 rounded-r text-xs text-white/70 text-white opacity-90">
           "這正是我們需要的！看到有人願意匿名分享扣分標準，真的很有安全感。"
         </div>
-        <div class="p-4 border-l-2 border-amber-400 bg-white/5 rounded-r italic text-xs text-white/70 text-white opacity-90">
+        <div class="p-4 border-l-2 border-amber-400 bg-white/5 rounded-r text-xs text-white/70 text-white opacity-90">
           "如果能確保資料不會過期或錯誤就更好了。"
         </div>
       </div>
     </div>
     <div class="flex items-center justify-center">
-      <AuraFrame class="w-full h-64 border border-dashed border-white/20 flex flex-col items-center justify-center text-slate-500 italic text-sm text-center p-8 bg-black/40 text-white">
+      <AuraFrame class="w-full h-64 border border-dashed border-white/20 flex flex-col items-center justify-center text-slate-500 text-sm text-center p-8 bg-black/40 text-white">
         <div class="i-carbon:user-talk text-5xl mb-4 opacity-50 text-blue-400 text-white shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
         <div class="opacity-60">[ 填寫區：訪談真實同學的回饋紀錄 ]</div>
       </AuraFrame>
@@ -400,7 +407,7 @@ graph LR
     </AuraFrame>
   </div>
 
-  <div class="text-[10px] opacity-40 text-left italic font-mono uppercase tracking-[0.2em] text-white">
+  <div class="text-[10px] opacity-40 text-left font-mono uppercase tracking-[0.2em] text-white">
     // Checkpoint: Recording visual composition ideas & AI iteration process.
   </div>
 </div>
@@ -415,7 +422,7 @@ graph LR
   <div class="grid grid-cols-2 gap-8 mt-4 text-white">
     <div class="space-y-6">
       <AuraCard class="p-8 border-l-4 border-l-blue-400 bg-blue-400/5">
-        <div class="text-blue-400 font-black text-xl mb-4 uppercase tracking-tighter italic text-white opacity-100">自我照護 (Self-Care)</div>
+        <div class="text-blue-400 font-black text-xl mb-4 uppercase tracking-tighter text-white opacity-100">自我照護 (Self-Care)</div>
         <p class="text-xs text-slate-300 leading-loose text-white opacity-80">
           認知到成績不完全代表個人價值，有時候只是系統性的「資訊差」。<br/><br/>
           透過開發本專案，成員學習到如何調節「無法掌控結果」的焦慮，並確信問題根源於體制，減少對自我的質疑與自責。
@@ -424,7 +431,7 @@ graph LR
     </div>
     <div class="space-y-6 text-white">
       <AuraCard class="p-8 border-l-4 border-l-pink-400 bg-pink-400/5">
-        <div class="text-pink-400 font-black text-xl mb-4 uppercase tracking-tighter italic text-white opacity-100">支持他人 (Caring for Others)</div>
+        <div class="text-pink-400 font-black text-xl mb-4 uppercase tracking-tighter text-white opacity-100">支持他人 (Caring for Others)</div>
         <p class="text-xs text-slate-300 leading-loose text-white opacity-80">
           方案本質是「接住」那些沒有人脈網路支援的同學。透過匿名便利貼降低求助門檻。<br/><br/>
           讓校園中不再有資訊邊緣人，將私有的「秘笈」轉化為公共資產，讓每個發光的努力都能被彼此看見。
@@ -453,17 +460,17 @@ graph LR
       <tbody class="text-slate-300 text-[11px] text-white opacity-80">
         <tr class="border-b border-white/5">
           <td class="py-4 font-bold uppercase text-white">同理 / Persona</td>
-          <td class="py-4 italic text-white">"你現在是一位深受社交焦慮困擾的..."</td>
+          <td class="py-4 text-white">"你現在是一位深受社交焦慮困擾的..."</td>
           <td class="py-4 text-white">將雜亂訪談收斂成「林小宇」核心情緒</td>
         </tr>
         <tr class="border-b border-white/5">
           <td class="py-4 font-bold uppercase text-white">發想 / Ideate</td>
-          <td class="py-4 italic text-white">"請提供 10 個結合心理健康與遊戲化的..."</td>
+          <td class="py-4 text-white">"請提供 10 個結合心理健康與遊戲化的..."</td>
           <td class="py-4 text-white">突破團隊思維限制，生成傳送門概念</td>
         </tr>
         <tr class="border-b border-white/5">
           <td class="py-4 font-bold uppercase text-white">原型 / Test</td>
-          <td class="py-4 italic text-white">"請扮演一位極度挑剔的資深學長..."</td>
+          <td class="py-4 text-white">"請扮演一位極度挑剔的資深學長..."</td>
           <td class="py-4 text-white">提前預判執行盲點並完成機制優化</td>
         </tr>
       </tbody>
