@@ -310,21 +310,22 @@ fonts:
 <!-- Methodology Diagram -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Research Methodology</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interaction Diagram</h1>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">互動流程圖</h1>
   <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
-  <div class="scale-250">
+  <div class="scale-200">
 
 ```mermaid
 graph LR
     A[Persona 資料] --> C((Gemini AI))
-    B[角色故事] --> C
-    C --> D[互動對話]
-    D --> E((Feedback Loop))
+    B[角色故事與情境] --> C
+    C --> D[互動對話輸出]
+    D --> E((回饋迭代))
     E --> C
-    style C fill:#1e3a8a,stroke:#3b82f6,color:#fff
+    style C fill:#1e3a8a,stroke:#60a5fa,color:#fff
     style A fill:#4c1d95,stroke:#8b5cf6,color:#fff
     style B fill:#4c1d95,stroke:#8b5cf6,color:#fff
     style D fill:#831843,stroke:#ec4899,color:#fff
+    style E fill:#065f46,stroke:#34d399,color:#fff
 ```
 
   </div>
@@ -336,45 +337,42 @@ graph LR
 <!-- FIXME: Not readable, it's not scrolling. on click it should scroll? or if you can't just add it on the next slide. Also, please pick 3 representative continious interactions. -->
 
 <!-- Full Interview Interaction -->
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white overflow-y-auto">
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-5 uppercase text-white">Full Interaction Log</h1>
+  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interaction Log</h1>
   
-  <div class="space-y-8">
-    <div class="flex flex-col gap-2">
-      <div class="text-[10px] text-blue-400 uppercase tracking-widest font-bold">User / Interviewer</div>
-      <div class="p-4 bg-white/10 rounded-xl rounded-tl-none border border-white/10 text-sm italic">
-        "What is the core problem that you faced as a freshman?"
-      </div>
+  <div class="space-y-4 overflow-y-auto max-h-[45vh] pr-4">
+    <!-- 1 -->
+    <div class="flex flex-col gap-1">
+      <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
+      <div class="p-3 bg-white/10 rounded-lg text-sm italic">"What is the core problem that you faced as a freshman?"</div>
     </div>
-    <div class="flex flex-col gap-2 items-end">
-      <div class="text-[10px] text-pink-400 uppercase tracking-widest font-bold">林小宇 / Persona</div>
-      <div class="p-4 bg-pink-900/30 rounded-xl rounded-tr-none border border-pink-500/30 text-sm">
+    <div class="flex flex-col gap-1 items-end">
+      <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
+      <div class="p-3 bg-blue-600 border border-pink-500/20 rounded-lg text-sm">
         「我覺得……最核心的問題是『資訊不對稱帶來的強烈剝奪感』……那種孤立無援、被制度和人脈排擠的無力感，就是我大一最大的噩夢。」
       </div>
     </div>
-    <div class="flex flex-col gap-2">
-      <div class="text-[10px] text-blue-400 uppercase tracking-widest font-bold">User / Interviewer</div>
-      <div class="p-4 bg-white/10 rounded-xl rounded-tl-none border border-white/10 text-sm italic">
-        "But what's the reason you still go on?"
+    <!-- 2 -->
+    <div class="flex flex-col gap-1">
+      <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
+      <div class="p-3 bg-white/10 rounded-lg text-sm italic">"But what's the reason you still go on?"</div>
+    </div>
+    <div class="flex flex-col gap-1 items-end">
+      <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
+      <div class="p-3 bg-blue-600 border border-pink-500/20 rounded-lg text-sm">
+        「之所以還能繼續撐著，很大一部分是因為不甘心吧……直到看到那個 QR Code，拿到筆記，才感覺自己不是一個人在黑暗裡瞎摸。」
       </div>
     </div>
-    <div class="flex flex-col gap-2 items-end">
-      <div class="text-[10px] text-pink-400 uppercase tracking-widest font-bold">林小宇 / Persona</div>
-      <div class="p-4 bg-pink-900/30 rounded-xl rounded-tr-none border border-pink-500/30 text-sm">
-        「之所以還能繼續撐著，很大一部分是因為不甘心吧。我不相信認真的人注定只能被淹沒……直到看到那個 QR Code，拿到筆記，才感覺自己不是一個人在黑暗裡瞎摸。」
-      </div>
+    <!-- 3 -->
+    <div class="flex flex-col gap-1">
+      <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
+      <div class="p-3 bg-white/10 rounded-lg text-sm italic">"How is it being anonymous of any relevance to you?"</div>
     </div>
-    <div class="flex flex-col gap-2">
-      <div class="text-[10px] text-blue-400 uppercase tracking-widest font-bold">User / Interviewer</div>
-      <div class="p-4 bg-white/10 rounded-xl rounded-tl-none border border-white/10 text-sm italic">
-        "How is it being anonymous of any relevance to you?"
-      </div>
-    </div>
-    <div class="flex flex-col gap-2 items-end">
-      <div class="text-[10px] text-pink-400 uppercase tracking-widest font-bold">林小宇 / Persona</div>
-      <div class="p-4 bg-pink-900/30 rounded-xl rounded-tr-none border border-pink-500/30 text-sm">
-        「『匿名』就像是一件保護衣，也是唯一能讓我卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為我跟每個人都一樣平等。」
+    <div class="flex flex-col gap-1 items-end">
+      <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
+      <div class="p-3 bg-blue-600 border border-pink-500/20 rounded-lg text-sm">
+        「『匿名』就像是一件保護衣，是我唯一能卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為我跟每個人都一樣平等。」
       </div>
     </div>
   </div>
@@ -593,7 +591,7 @@ graph LR
   </div>
 </div>
 
----
+<!-- ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill class="mb-8">Appendix A: AI Collaboration Log</AuraPill>
@@ -632,37 +630,38 @@ graph LR
 
 <!-- --- -->
 
-<!-- <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill class="mb-8">Appendix B: Division of Labor</AuraPill>
+<!-- Appendix B: Division of Labor -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill class="mb-8" status="info">Appendix B: Division of Labor</AuraPill>
   
   <div class="grid grid-cols-2 gap-12 mt-12 flex-1 text-white">
     <div class="text-white">
-      <div class="text-xs text-blue-400 mb-6 uppercase tracking-[0.4em] font-black italic text-white opacity-90">// Iteration_Log</div>
+      <div class="text-xs text-blue-400 mb-6 uppercase tracking-[0.4em] font-black italic opacity-90">// 專案迭代歷程</div>
       <div class="space-y-4 border-l border-white/10 pl-6">
         <div class="relative">
           <div class="absolute -left-[27px] top-1 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,1)]"></div>
-          <div class="text-xs font-bold text-white uppercase">V1.0 Concept</div>
-          <div class="text-[9px] opacity-40 italic mt-1 font-mono uppercase tracking-widest text-white">Initial Brainstorming Complete</div>
+          <div class="text-xs font-bold text-white uppercase">V1.0 概念期</div>
+          <div class="text-[9px] opacity-60 italic mt-1 font-mono uppercase tracking-widest text-white">完成初期腦力激盪</div>
         </div>
         <div class="relative">
           <div class="absolute -left-[27px] top-1 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,1)]"></div>
-          <div class="text-xs font-bold text-white uppercase">V1.5 AI Pivot</div>
-          <div class="text-[9px] opacity-40 italic mt-1 font-mono uppercase tracking-widest text-white">Added Knowledge Portal & Persona</div>
+          <div class="text-xs font-bold text-white uppercase">V1.5 AI 轉向</div>
+          <div class="text-[9px] opacity-60 italic mt-1 font-mono uppercase tracking-widest text-white">新增知識傳送門與使用者角色</div>
         </div>
         <div class="relative">
           <div class="absolute -left-[27px] top-1 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,1)]"></div>
-          <div class="text-xs font-bold text-white uppercase">V2.0 Final Draft</div>
-          <div class="text-[9px] opacity-40 italic mt-1 font-mono uppercase tracking-widest text-white">MV & Story Integration Complete</div>
+          <div class="text-xs font-bold text-white uppercase">V2.0 最終稿</div>
+          <div class="text-[9px] opacity-60 italic mt-1 font-mono uppercase tracking-widest text-white">完成故事整合與視覺產出</div>
         </div>
       </div>
     </div>
     <div class="text-white">
-      <div class="text-xs text-pink-400 mb-6 uppercase tracking-[0.4em] font-black italic text-white opacity-90">// Division_of_Labor</div>
+      <div class="text-xs text-pink-400 mb-6 uppercase tracking-[0.4em] font-black italic opacity-90">// 團隊分工</div>
       <div class="grid grid-cols-1 gap-3">
         <div v-for="name in ['郭彥均', '吳柏宏', '徐愉皓', '洪楷傑']" :key="name" 
-             class="flex justify-between items-center p-3 bg-white/5 border border-white/5 rounded transition-all hover:bg-white/10">
+             class="flex justify-between items-center p-3 bg-white/5 border border-white/10 rounded transition-all hover:bg-white/10">
           <span class="text-xs font-bold text-white">{{ name }}</span>
-          <span class="text-[9px] font-mono text-slate-500 uppercase tracking-tighter italic text-white opacity-60 font-bold tracking-widest">Research & Production (25%)</span>
+          <span class="text-[9px] font-mono text-slate-400 uppercase tracking-tighter italic opacity-60 font-bold tracking-widest">研究與產出 (25%)</span>
         </div>
       </div>
     </div>
