@@ -38,8 +38,7 @@ fonts:
   <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-left">
     Team Brainstorming
   </h1>
-  
-  <div class="grid grid-cols-2 gap-6 flex-1 text-white">
+  <div class="grid grid-cols-2 gap-4 flex-1 text-white">
     <AuraCard v-for="m in [
       { name: '郭彥均', major: '化學系', title: '破碎資源與低投報勞動', desc: '實驗課僅 1 學分，卻需耗費 6+ 小時抄寫結預報。資源破碎不共享，努力在繁瑣勞動中被磨損。' },
       { name: '吳柏宏', major: '課程架構', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。' },
@@ -69,22 +68,22 @@ fonts:
         <div class="flex items-start gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
-            <div class="text-white font-bold text-sm uppercase">資源門檻化</div>
-            <div class="text-[10px] text-slate-500 text-white opacity-60">人脈與資訊差取代了努力的價值。</div>
+            <div class="text-white font-bold text-md uppercase">資源門檻化</div>
+            <div class="text-sm text-slate-500 text-white opacity-60">人脈與資訊差取代了努力的價值。</div>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
-            <div class="text-white font-bold text-sm uppercase">時間貧窮</div>
-            <div class="text-[10px] text-slate-500 text-white opacity-60">高強度課後負擔侵蝕了學生的自主權。</div>
+            <div class="text-white font-bold text-md uppercase">時間貧窮</div>
+            <div class="text-sm text-slate-500 text-white opacity-60">高強度課後負擔侵蝕了學生的自主權。</div>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
-            <div class="text-white font-bold text-sm uppercase">孤島效應</div>
-            <div class="text-[10px] text-slate-500 text-white opacity-60">缺乏人脈支持的同學淪為資訊邊緣人。</div>
+            <div class="text-white font-bold text-md uppercase">孤島效應</div>
+            <div class="text-sm text-slate-500 text-white opacity-60">缺乏人脈支持的同學淪為資訊邊緣人。</div>
           </div>
         </div>
       </div>
@@ -102,7 +101,6 @@ fonts:
 ---
 
 <div class="h-full w-full p-16 flex flex-col items-center justify-center relative text-white">
-  <AuraPill status="info" class="mb-12 text-white">Phase 1: Empathy & Define</AuraPill>
   <div class="flex flex-col items-center gap-8">
     <div class="grid grid-cols-4 gap-8">
       <div v-for="name in ['郭彥均', '吳柏宏', '徐愉皓', '洪楷傑']" :key="name" 
@@ -112,12 +110,12 @@ fonts:
     </div>
     <div class="flex flex-col items-center animate-pulse text-blue-400">
       <div class="i-carbon:arrow-down text-5xl mb-4 text-blue-400 opacity-80" />
-      <div class="font-mono text-sm tracking-[0.4em] uppercase font-bold text-white opacity-60 italic text-white shadow-black">Synthesizing Data Points</div>
+      <div class="font-mono text-sm tracking-[0.4em] uppercase font-bold text-white opacity-60 text-white shadow-black">Synthesizing Data Points</div>
     </div>
     <AuraFrame class="px-20 py-8 bg-black/60 shadow-[0_0_50px_rgba(59,130,246,0.1)] border-blue-400/20 rounded-xl backdrop-blur-md">
       <div class="flex flex-col gap-2 items-center text-center">
         <AuraStatus class="mb-2 text-white font-mono opacity-80">Virtual Persona Synthesized</AuraStatus>
-        <div class="text-6xl font-semibold tracking-tighter uppercase mt-2 text-white italic shadow-black drop-shadow-2xl">林小宇</div>
+        <div class="text-6xl font-bold tracking-tighter uppercase mt-2 text-white shadow-black drop-shadow-2xl">林小宇</div>
         <div class="text-sm opacity-60 mt-1 tracking-widest text-white uppercase font-mono font-bold tracking-[0.2em]">Student Persona Alpha</div>
       </div>
     </AuraFrame>
@@ -126,48 +124,46 @@ fonts:
 
 ---
 
-<!-- we should add more context here. -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
-  
-  <div class="grid grid-cols-2 gap-12 items-start h-full text-white opacity-100">
-    <div class="flex flex-col justify-center h-full text-white">
-      <h1 class="text-6xl font-black tracking-tighter mb-6 leading-tight uppercase text-white font-black italic shadow-blue-500/20 drop-shadow-xl text-white">Persona<br/>Backstory</h1>
-      <p class="text-base text-slate-300 leading-relaxed mb-6 text-white opacity-90 font-bold border-l-4 border-blue-400 pl-6 bg-white/5 py-4 rounded-r-lg text-white">
-        林小宇代表了在資訊壟斷制度下，那群「不是不努力，而是沒工具」的靈魂。
+  <AuraPill status="info" class="mb-8">Phase 1: Empathize & Define</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 leading-tight uppercase text-white">Persona Context</h1>
+  <div class="grid grid-cols-2 gap-12 items-start">
+    <div class="flex flex-col justify-center">
+      <p class="text-base text-slate-300 leading-relaxed mb-6 text-white opacity-80">
+        林小宇抽到了不回訊息的「幽靈直屬」，面對 1 學分卻需耗費 6 小時的實驗課，他必須獨自查閱繁雜的 MSDS 資訊並手寫預報。
       </p>
-      <div class="space-y-4 text-white opacity-100">
-        <div class="p-4 border border-white/5 bg-white/5 rounded-lg transition-all hover:bg-white/10 text-white">
-          <div class="text-blue-400 text-[10px] font-semibold uppercase mb-1 font-mono tracking-[0.2em] italic text-white opacity-100">The Motivation Gap</div>
-          <div class="text-xs text-white opacity-80 leading-relaxed font-medium text-white">
-            "如果努力是一場沒有正確答案的徒勞，那我該拿什麼去跟別人的『捷徑』競爭？"
+      <div class="space-y-4">
+        <div class="p-4 border-l-2 border-blue-400 bg-white/5 rounded-r">
+          <div class="text-blue-400 text-[10px] font-bold uppercase mb-1 font-mono tracking-widest opacity-90 text-white">The Frustration</div>
+          <div class="text-xs text-white opacity-80 leading-relaxed text-white">
+            "按部就班每一步都很合理，卻摸不透教授隱藏的扣分標準，總是得不到應有的分數。"
           </div>
         </div>
-        <div class="p-4 border border-white/5 bg-white/5 rounded-lg transition-all hover:bg-white/10 text-white">
-          <div class="text-pink-400 text-[10px] font-black uppercase mb-1 font-mono tracking-[0.2em] italic text-white opacity-100">The Structural Isolation</div>
-          <div class="text-xs text-white opacity-80 leading-relaxed font-medium text-white">
-            習慣在凌晨 2 點的圖書館獨自奮戰，遇到瓶頸時無處問、沒人答，深陷自我懷疑的谷底。
+        <div class="p-4 border-l-2 border-pink-400 bg-white/5 rounded-r">
+          <div class="text-pink-400 text-[10px] font-bold uppercase mb-1 font-mono tracking-widest opacity-90 text-white">The Gap</div>
+          <div class="text-xs text-white opacity-80 leading-relaxed text-white">
+            "同班那些跟學長姐混得很熟的同學，拿著內線考古題與模板提早交卷，去慶祝勝利。"
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-6 h-full justify-center text-white opacity-100">
-      <AuraFrame class="aspect-[4/3] flex items-center justify-center bg-black/80 overflow-hidden relative group border-white/10 p-0 rounded-2xl text-white">
-         <img src="./raw_data/images/user_persona.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100 text-white" />
-         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 text-white"></div>
-         <div class="absolute bottom-8 left-8 text-left text-white opacity-100">
-            <div class="text-white font-black text-3xl uppercase tracking-tighter italic shadow-black drop-shadow-lg text-white opacity-100">Night_Behavior_Pattern</div>
-            <div class="text-blue-400 font-mono text-xs tracking-widest uppercase mt-1 font-bold text-white opacity-100">Status: Isolated_Search_Active</div>
+    <div class="flex flex-col gap-6 h-full justify-center">
+      <AuraFrame class="aspect-[4/3] flex items-center justify-center bg-black/80 overflow-hidden relative group border-white/5">
+         <img src="./raw_data/images/user_persona.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity" />
+         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
          </div>
       </AuraFrame>
       <SystemLog :logs="[
-        { time: 'GOAL', msg: '撐過繁重必修，不被隱藏標準擊潰。' },
-        { time: 'FEAR', msg: '努力被廉價化 // 資訊差導致的自責感。' }
+        { time: 'ROLE', msg: '化學系新生 // 資訊孤島' },
+        { time: 'STATUS', msg: '在深夜的圖書館發出沒人回答的訊號' }
       ]" />
     </div>
   </div>
 </div>
+
+---
+
+TODO: add stackholder map here
 
 ---
 
@@ -246,6 +242,10 @@ fonts:
 
 ---
 
+TODO: persona verification
+
+---
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
@@ -283,34 +283,33 @@ fonts:
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="active" class="mb-8">Phase 4: Delivery & Caring</AuraPill>
+  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
-  <div class="grid grid-cols-2 gap-12 items-center h-full">
-    <div class="flex flex-col justify-center text-white">
-      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Lyrics:<br/><span class="text-blue-400 text-white opacity-100">連上彼此</span></h1>
-      <p class="text-base text-slate-400 leading-relaxed mb-8 border-l-2 border-blue-400 pl-6 text-white opacity-90">
-        「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
-      </p>
-      <div class="flex gap-4">
-        <AuraPill variant="glass" status="active">▶ AUDIO_PLAYBACK_V3</AuraPill>
-        <AuraPill variant="outline">VIEW_ITERATIONS</AuraPill>
-      </div>
-    </div>
-    <div class="flex flex-col gap-4">
-      <AuraCard class="p-8 bg-black/40">
-        <blockquote class="text-sm leading-loose m-0 border-none bg-transparent p-0 text-white opacity-90">
-          凌晨兩點的圖書館，螢幕亮著還沒關<br/>
-          一學分像一座山，壓得人快失去方向<br/>
-          有人早就拿到答案，而我還在反覆試算<br/>
-          努力是不是太廉價？孤單的人沒人回答
-        </blockquote>
-      </AuraCard>
-      <div class="text-[10px] opacity-40 font-mono text-center uppercase tracking-widest text-white">Suno AI Generated // 溫暖 / 成長</div>
-    </div>
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4 text-left">Important Storyboards</h1>
+
+  <div class="grid grid-cols-3 gap-6 h-full mb-8">
+    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
+      <img src="./raw_data/images/scene1.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
+      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_01: Library Abyss</div>
+    </AuraFrame>
+    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
+      <img src="./raw_data/images/scene2.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
+      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_02: Portal Glow</div>
+    </AuraFrame>
+    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
+      <img src="./raw_data/images/scene3.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
+      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_03: Archipelago</div>
+    </AuraFrame>
+  </div>
+
+  <div class="text-[10px] opacity-40 text-left font-mono uppercase tracking-[0.2em] text-white">
+    // Checkpoint: Recording visual composition ideas & AI iteration process.
   </div>
 </div>
 
 ---
+
+<!-- Add more content about the methodology here. -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center text-white">
   <AuraPill status="active" class="mb-12">Process Roadmap</AuraPill>
@@ -330,31 +329,6 @@ graph LR
     style E fill:none,stroke:#10b981,stroke-width:2px,color:#fff
 ```
 
-  </div>
-</div>
-
----
-
-<div class="h-full w-full p-16 flex flex-col items-center justify-center relative text-center text-white">
-  <AuraPill status="active" class="mb-12">Phase 4: Delivery & Caring</AuraPill>
-  
-  <div class="mb-16 max-w-3xl text-white">
-    <h1 class="text-7xl font-black tracking-tighter mb-4 uppercase text-white">Open-Campus Portal</h1>
-    <p class="text-slate-400 text-base leading-relaxed text-white opacity-80">我們不只是要做一個平台，而是要重建校園的「幸福傳承」。</p>
-  </div>
-
-  <div class="grid grid-cols-3 gap-8 w-full">
-    <AuraCard v-for="f in [
-      { icon: 'i-carbon:send-alt', title: '匿名傳送門', desc: '打破私藏潛規則，透過 QR Code 讓筆記與趨勢成為真正自由流動的校園公共傳承。' },
-      { icon: 'i-carbon:document-sentiment', title: '電子便利貼', desc: '「加油，你一定能撐過這學期」。透過匿名的溫暖留言，建立跨時空的互助情感連結。' },
-      { icon: 'i-carbon:network-4', title: '星網效應', desc: '讓校園不再是零和競爭的叢林。認知到成績不完全代表個人價值，穩穩接住每一個無助靈魂。' }
-    ]" :key="f.title" class="flex flex-col items-center p-8 transition-all hover:-translate-y-2 border-white/5 hover:border-blue-400/30">
-      <div class="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mb-6 text-blue-400 text-white opacity-100 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-        <div :class="f.icon" class="text-4xl text-white" />
-      </div>
-      <div class="font-black text-xl text-white mb-4 uppercase tracking-tighter">{{ f.title }}</div>
-      <p class="text-xs opacity-70 leading-relaxed text-slate-300 text-white">{{ f.desc }}</p>
-    </AuraCard>
   </div>
 </div>
 
@@ -388,27 +362,55 @@ graph LR
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <AuraPill status="active" class="mb-8">Phase 4: Delivery & Caring</AuraPill>
   
-  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4 text-left">Important Storyboards</h1>
+  <div class="grid grid-cols-2 gap-12 items-center h-full">
+    <div class="flex flex-col justify-center text-white">
+      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Lyrics:<br/><span class="text-blue-400 text-white opacity-100">連上彼此</span></h1>
+      <p class="text-base text-slate-400 leading-relaxed mb-8 border-l-2 border-blue-400 pl-6 text-white opacity-90">
+        「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
+      </p>
+      <!-- <div class="flex gap-4">
+        <AuraPill variant="glass" status="active">▶ AUDIO_PLAYBACK_V3</AuraPill>
+        <AuraPill variant="outline">VIEW_ITERATIONS</AuraPill>
+      </div> this is not implemented for now -->
+    </div>
+    <div class="flex flex-col gap-4">
+      <AuraCard class="p-8 bg-black/40">
+        <blockquote class="text-sm leading-loose m-0 border-none bg-transparent p-0 text-white opacity-90">
+          凌晨兩點的圖書館，螢幕亮著還沒關<br/>
+          一學分像一座山，壓得人快失去方向<br/>
+          有人早就拿到答案，而我還在反覆試算<br/>
+          努力是不是太廉價？孤單的人沒人回答
+        </blockquote>
+      </AuraCard>
+      <div class="text-[10px] opacity-40 font-mono text-center uppercase tracking-widest text-white">Gemini Lyrics & Suno Music</div>
+    </div>
+  </div>
+</div>
 
-  <div class="grid grid-cols-3 gap-6 h-full mb-8">
-    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
-      <img src="./raw_data/images/scene1.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
-      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_01: Library Abyss</div>
-    </AuraFrame>
-    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
-      <img src="./raw_data/images/scene2.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
-      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_02: Portal Glow</div>
-    </AuraFrame>
-    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
-      <img src="./raw_data/images/scene3.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
-      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_03: Archipelago</div>
-    </AuraFrame>
+---
+
+<div class="h-full w-full p-16 flex flex-col items-center justify-center relative text-center text-white">
+  <AuraPill status="active" class="mb-6 w-full">Phase 4: Delivery & Caring</AuraPill>
+  
+  <div class="mb-6 max-w-3xl text-white">
+    <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Open-Campus Platform</h1>
+    <p class="text-slate-400 text-base leading-relaxed text-white opacity-80">我們不只是要做一個平台，而是要重建校園的「幸福傳承」。</p>
   </div>
 
-  <div class="text-[10px] opacity-40 text-left font-mono uppercase tracking-[0.2em] text-white">
-    // Checkpoint: Recording visual composition ideas & AI iteration process.
+  <div class="grid grid-cols-3 gap-6 w-full">
+    <AuraCard v-for="f in [
+      { icon: 'i-carbon:send-alt', title: '匿名傳送門', desc: '打破私藏潛規則，透過 QR Code 讓筆記與趨勢成為真正自由流動的校園公共傳承。' },
+      { icon: 'i-carbon:document-sentiment', title: '電子便利貼', desc: '「加油，你一定能撐過這學期」。透過匿名的溫暖留言，建立跨時空的互助情感連結。' },
+      { icon: 'i-carbon:network-4', title: '星網效應', desc: '讓校園不再是零和競爭的叢林。認知到成績不完全代表個人價值，穩穩接住每一個無助靈魂。' }
+    ]" :key="f.title" class="flex flex-col items-center p-8 transition-all hover:-translate-y-2 border-white/5 hover:border-blue-400/30">
+      <div class="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mb-6 text-blue-400 text-white opacity-100 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+        <div :class="f.icon" class="text-4xl text-white" />
+      </div>
+      <div class="font-black text-xl text-white mb-4 uppercase tracking-tighter">{{ f.title }}</div>
+      <p class="text-xs opacity-70 leading-relaxed text-slate-300 text-white">{{ f.desc }}</p>
+    </AuraCard>
   </div>
 </div>
 
@@ -519,16 +521,17 @@ graph LR
 
 ---
 
+<!-- Use a similar layout as before -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center overflow-hidden text-white">
   <AuraBackground />
   <div class="font-mono text-[10px] text-blue-400 uppercase tracking-[0.5em] mb-4 opacity-50 text-white">[ MISSION_COMPLETE ]</div>
   <h1 class="text-[10rem] font-black tracking-tighter leading-[0.8] text-white uppercase mb-8">
-    Break the<br/><span class="text-blue-400 text-white opacity-100 font-black tracking-tighter">Bubble.</span>
+    Break the<br/><span class="text-blue-400 text-white opacity-100 font-black tracking-tighter">Bubble</span>
   </h1>
   <p class="max-w-lg mx-auto text-slate-400 mb-12 text-lg text-white opacity-80 font-bold tracking-tight">讓努力重回應有的對等價值。</p>
   
   <div class="flex flex-col items-center gap-6">
     <AuraPill status="active" class="px-12 py-3 scale-125 border-emerald-400/20 text-emerald-400 text-white shadow-[0_0_20px_rgba(52,211,153,0.3)]">幸福實踐：接住每一個靈魂</AuraPill>
-    <div class="text-[9px] font-mono opacity-20 uppercase tracking-[0.5em] mt-8 text-white">© 2026 Campus Temperature Designers</div>
   </div>
 </div>
