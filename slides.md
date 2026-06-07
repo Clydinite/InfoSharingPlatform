@@ -34,11 +34,10 @@ fonts:
 ---
 
 <!-- TODO: add more colors and icons -->
-
 <div class="h-full w-full p-12 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-4">Phase 1: Empathize & Define</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-left">
-    Team Brainstorming
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-left flex items-center gap-4">
+    <i class="i-carbon:brain-circuit text-blue-400"></i> Team Brainstorming
   </h1>
   <div class="grid grid-cols-2 gap-4 flex-1 text-white">
     <AuraCard v-for="m in [
@@ -50,7 +49,9 @@ fonts:
       <div class="flex justify-between items-start mb-4 border-b border-white/10 pb-2">
         <div class="text-blue-400 font-semibold uppercase text-[10px] tracking-[0.3em] text-white opacity-100">{{ m.name }} // {{ m.major }}</div>
       </div>
-      <div class="text-lg font-semibold text-white mb-2 leading-tight uppercase tracking-tighter">{{ m.title }}</div>
+      <div class="text-lg font-semibold text-white mb-2 leading-tight uppercase tracking-tighter flex items-center gap-2">
+        <i class="i-carbon:tag text-xs text-slate-500"></i> {{ m.title }}
+      </div>
       <p class="text-[11px] opacity-80 leading-relaxed text-slate-300 font-bold">{{ m.desc }}</p>
     </AuraCard>
   </div>
@@ -287,11 +288,96 @@ fonts:
 
 ---
 
-<!-- TODO: persona verification -->
+<!-- Persona Verification -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test // Persona Verification</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Interview</h1>
+  <div class="grid grid-cols-2 gap-8">
+    <AuraCard class="p-6">
+      <div class="text-blue-400 font-bold mb-2">關於「匿名」的必要性</div>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果平台需要實名，我絕對不敢點進去。匿名是我唯一的避風港，它讓我可以不用假裝堅強，單純地在深夜被別人的善意接住。」</p>
+    </AuraCard>
+    <AuraCard class="p-6">
+      <div class="text-pink-400 font-bold mb-2">關於平台的隱憂</div>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果大家都把這裡當作『抄答案』的新途徑，那我們的集體趨同只會引來教授的全面封殺。我們必須學會『保持獨立思考』。」</p>
+    </AuraCard>
+  </div>
+</div>
 
 ---
 
-<!-- TODO: replace data to @raw_data/persona_interview.md -->
+<!-- Methodology Diagram -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="info" class="mb-8">Research Methodology</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interaction Diagram</h1>
+  <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
+  <div class="scale-250">
+
+```mermaid
+graph LR
+    A[Persona 資料] --> C((Gemini AI))
+    B[角色故事] --> C
+    C --> D[互動對話]
+    D --> E((Feedback Loop))
+    E --> C
+    style C fill:#1e3a8a,stroke:#3b82f6,color:#fff
+    style A fill:#4c1d95,stroke:#8b5cf6,color:#fff
+    style B fill:#4c1d95,stroke:#8b5cf6,color:#fff
+    style D fill:#831843,stroke:#ec4899,color:#fff
+```
+
+  </div>
+  </div>
+</div>
+
+---
+
+<!-- Full Interview Interaction -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white overflow-y-auto">
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-5 uppercase text-white">Full Interaction Log</h1>
+  
+  <div class="space-y-8">
+    <div class="flex flex-col gap-2">
+      <div class="text-[10px] text-blue-400 uppercase tracking-widest font-bold">User / Interviewer</div>
+      <div class="p-4 bg-white/10 rounded-xl rounded-tl-none border border-white/10 text-sm italic">
+        "What is the core problem that you faced as a freshman?"
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 items-end">
+      <div class="text-[10px] text-pink-400 uppercase tracking-widest font-bold">林小宇 / Persona</div>
+      <div class="p-4 bg-pink-900/30 rounded-xl rounded-tr-none border border-pink-500/30 text-sm">
+        「我覺得……最核心的問題是『資訊不對稱帶來的強烈剝奪感』……那種孤立無援、被制度和人脈排擠的無力感，就是我大一最大的噩夢。」
+      </div>
+    </div>
+    <div class="flex flex-col gap-2">
+      <div class="text-[10px] text-blue-400 uppercase tracking-widest font-bold">User / Interviewer</div>
+      <div class="p-4 bg-white/10 rounded-xl rounded-tl-none border border-white/10 text-sm italic">
+        "But what's the reason you still go on?"
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 items-end">
+      <div class="text-[10px] text-pink-400 uppercase tracking-widest font-bold">林小宇 / Persona</div>
+      <div class="p-4 bg-pink-900/30 rounded-xl rounded-tr-none border border-pink-500/30 text-sm">
+        「之所以還能繼續撐著，很大一部分是因為不甘心吧。我不相信認真的人注定只能被淹沒……直到看到那個 QR Code，拿到筆記，才感覺自己不是一個人在黑暗裡瞎摸。」
+      </div>
+    </div>
+    <div class="flex flex-col gap-2">
+      <div class="text-[10px] text-blue-400 uppercase tracking-widest font-bold">User / Interviewer</div>
+      <div class="p-4 bg-white/10 rounded-xl rounded-tl-none border border-white/10 text-sm italic">
+        "How is it being anonymous of any relevance to you?"
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 items-end">
+      <div class="text-[10px] text-pink-400 uppercase tracking-widest font-bold">林小宇 / Persona</div>
+      <div class="p-4 bg-pink-900/30 rounded-xl rounded-tr-none border border-pink-500/30 text-sm">
+        「『匿名』就像是一件保護衣，也是唯一能讓我卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為我跟每個人都一樣平等。」
+      </div>
+    </div>
+  </div>
+</div>
+
+---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
@@ -356,7 +442,21 @@ fonts:
 
 ---
 
-<!-- TODO: Add more content about the methodology here. -->
+<!-- Methodology -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="info" class="mb-8">Methodology & Iteration</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Methodology</h1>
+  <div class="space-y-6">
+    <AuraCard class="p-6">
+      <h3 class="text-xl font-bold text-blue-400 mb-2">Persona-Driven Testing</h3>
+      <p class="text-sm opacity-80 text-slate-300">透過與 AI 扮演的 Persona (林小宇) 進行深度訪談，我們挖掘出許多初期團隊未曾察覺的「無惡意破壞模式」，如集體抄襲造成的同質性風險。</p>
+    </AuraCard>
+    <AuraCard class="p-6">
+      <h3 class="text-xl font-bold text-pink-400 mb-2">Iterative Feedback Loop</h3>
+      <p class="text-sm opacity-80 text-slate-300">我們將訪談結果迅速反饋至系統原型中，從單純的「資源下載」轉向強調「獨立思考與審核」的社群機制，提升平台永續性。</p>
+    </AuraCard>
+  </div>
+</div>
 
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center text-white">
   <AuraPill status="active" class="mb-12">Process Roadmap</AuraPill>
@@ -568,8 +668,7 @@ graph LR
 
 ---
 
-<!-- TODO: Use a similar layout as before -->
-
+<!-- Conclusion & Mission -->
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center overflow-hidden text-white">
   <AuraBackground />
   <div class="font-mono text-[10px] text-blue-400 uppercase tracking-[0.5em] mb-4 opacity-50 text-white">[ MISSION_COMPLETE ]</div>
@@ -580,5 +679,12 @@ graph LR
   
   <div class="flex flex-col items-center gap-6">
     <AuraPill status="active" class="px-12 py-3 scale-125 border-emerald-400/20 text-emerald-400 text-white shadow-[0_0_20px_rgba(52,211,153,0.3)]">幸福實踐：接住每一個靈魂</AuraPill>
+  </div>
+  
+  <div class="absolute bottom-12 left-0 w-full flex justify-center gap-8 text-[10px] uppercase tracking-[0.2em] opacity-40">
+    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Empathy</span>
+    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Ideation</span>
+    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Prototyping</span>
+    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Delivery</span>
   </div>
 </div>
