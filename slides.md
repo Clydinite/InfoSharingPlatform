@@ -33,7 +33,8 @@ fonts:
 
 ---
 
-<!-- TODO: add more colors and icons -->
+<!-- TODO: add more colors in theme -->
+
 <div class="h-full w-full p-12 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-4">Phase 1: Empathize & Define</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-left flex items-center gap-4">
@@ -166,7 +167,7 @@ fonts:
 
 ---
 
-<!-- add mermaid -->
+<!-- TODO: add mermaid on a separate slide -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
@@ -331,6 +332,8 @@ graph LR
 </div>
 
 ---
+
+<!-- FIXME: Not readable, it's not scrolling. on click it should scroll? or if you can't just add it on the next slide. Also, please pick 3 representative continious interactions. -->
 
 <!-- Full Interview Interaction -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white overflow-y-auto">
@@ -665,26 +668,3 @@ graph LR
     </div>
   </div>
 </div> -->
-
----
-
-<!-- Conclusion & Mission -->
-<div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center overflow-hidden text-white">
-  <AuraBackground />
-  <div class="font-mono text-[10px] text-blue-400 uppercase tracking-[0.5em] mb-4 opacity-50 text-white">[ MISSION_COMPLETE ]</div>
-  <h1 class="text-[10rem] font-black tracking-tighter leading-[0.8] text-white uppercase mb-8">
-    Break the<br/><span class="text-blue-400 text-white opacity-100 font-black tracking-tighter">Bubble</span>
-  </h1>
-  <p class="max-w-lg mx-auto text-slate-400 mb-12 text-lg text-white opacity-80 font-bold tracking-tight">讓努力重回應有的對等價值。</p>
-  
-  <div class="flex flex-col items-center gap-6">
-    <AuraPill status="active" class="px-12 py-3 scale-125 border-emerald-400/20 text-emerald-400 text-white shadow-[0_0_20px_rgba(52,211,153,0.3)]">幸福實踐：接住每一個靈魂</AuraPill>
-  </div>
-  
-  <div class="absolute bottom-12 left-0 w-full flex justify-center gap-8 text-[10px] uppercase tracking-[0.2em] opacity-40">
-    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Empathy</span>
-    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Ideation</span>
-    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Prototyping</span>
-    <span class="flex items-center gap-2"><i class="i-carbon:checkmark-filled text-emerald-400"></i> Delivery</span>
-  </div>
-</div>
