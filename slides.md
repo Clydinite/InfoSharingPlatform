@@ -293,7 +293,7 @@ graph LR
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="active" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
   <div class="grid grid-cols-2 gap-12 items-center h-full">
     <div class="flex flex-col justify-center text-white">
@@ -318,7 +318,7 @@ graph LR
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4 text-left">Important Storyboards</h1>
 
@@ -341,7 +341,7 @@ graph LR
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interview Flow</h1>
   <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
   <div class="scale-200">
@@ -453,7 +453,7 @@ graph LR
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <div class="grid grid-cols-2 gap-12 h-full text-white">
     <div class="flex flex-col justify-center">
       <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Feedback</h1>
