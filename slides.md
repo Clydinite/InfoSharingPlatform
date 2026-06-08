@@ -168,7 +168,6 @@ fonts:
 ---
 
 <!-- Stakeholder Map -->
-<!-- Stakeholder Map -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Stakeholder Map</h1>
@@ -251,8 +250,6 @@ graph LR
 
 ---
 
-<!-- A redesign of the visualization is required here. -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center text-white">
   <AuraPill status="info" class="mb-8">Phase 2: Ideate</AuraPill>
   <AuraCard class="p-12 max-w-4xl border-blue-400/30 bg-blue-400/5">
@@ -266,10 +263,6 @@ graph LR
 </div>
 
 ---
-
-<!-- Change the story to him using the resources from the platform. and only supply the notes when he got better. -->
-
-<!-- The story iteration also requires a mermaid diagram. we first used our experiences to generate the persona. then we used gemini ai to generate the story. then we used gemini to generate the lyrics and suno ai to realize the music. the process of suno ai and gemini ai lyrics generation is iterative. -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
@@ -322,37 +315,13 @@ graph LR
       <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_03: Archipelago</div>
     </AuraFrame>
   </div>
-
-  <div class="text-[10px] opacity-40 text-left font-mono uppercase tracking-[0.2em] text-white">
-    // Checkpoint: Recording visual composition ideas & AI iteration process.
-  </div>
 </div>
 
 ---
 
-<!-- This should be integrated into the interview section. It feels disjointed as it is right now. -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test // Persona Verification</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Interview</h1>
-  <div class="grid grid-cols-2 gap-8">
-    <AuraCard class="p-6">
-      <div class="text-blue-400 font-bold mb-2">關於「匿名」的必要性</div>
-      <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果平台需要實名，我絕對不敢點進去。匿名是我唯一的避風港，它讓我可以不用假裝堅強，單純地在深夜被別人的善意接住。」</p>
-    </AuraCard>
-    <AuraCard class="p-6">
-      <div class="text-pink-400 font-bold mb-2">關於平台的隱憂</div>
-      <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果大家都把這裡當作『抄答案』的新途徑，那我們的集體趨同只會引來教授的全面封殺。我們必須學會『保持獨立思考』。」</p>
-    </AuraCard>
-  </div>
-</div>
-
----
-
-<!-- Methodology Diagram -->
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Research Methodology</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interaction Flow</h1>
+  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interview Flow</h1>
   <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
   <div class="scale-200">
 
@@ -381,7 +350,7 @@ graph LR
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Chat Record</h1>
-  <div class="space-y-6 overflow-y-auto max-h-[50vh] pr-4">
+  <div class="space-y-6 overflow-y-auto max-h-[45vh] pr-4">
     <!-- 1 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
@@ -420,81 +389,18 @@ graph LR
 
 ---
 
-<!-- FIXME: this should be part of the insights from the interview, the placeholder data should be swapped with the real one. -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  
-  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4">Pressure Test</h1>
-  
-  <div class="grid grid-cols-2 gap-12 h-full">
-    <div class="space-y-6">
-      <div class="flex items-center gap-6" v-click>
-        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-mono text-xs opacity-50 text-white">01</div>
-        <AuraCard class="flex-1 py-4 border-l-4 border-l-blue-400">
-          <div class="text-xs uppercase tracking-widest text-blue-400 mb-1 font-bold opacity-90 text-white">Hoarding Senior</div>
-          <div class="font-bold text-white text-sm italic">「我有大量資料，為什麼要分享？」</div>
-        </AuraCard>
-      </div>
-      <div class="flex items-center gap-6" v-click>
-        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-mono text-xs opacity-50 text-white">02</div>
-        <AuraCard class="flex-1 py-4 border-l-4 border-l-blue-400">
-          <div class="text-xs uppercase tracking-widest text-blue-400 mb-1 font-bold opacity-90 text-white">Academic Integrity</div>
-          <div class="font-bold text-white text-sm italic">教授擔心學生抄襲而非理解，防範惡意資訊。</div>
-        </AuraCard>
-      </div>
-    </div>
-    <div class="flex flex-col justify-center" v-click>
-      <AuraCard class="p-8 border-pink-400/30 bg-pink-400/5 shadow-[0_0_30px_rgba(236,72,153,0.1)]">
-        <div class="text-xs uppercase tracking-widest text-pink-400 mb-4 font-bold font-mono opacity-90 text-white">Iteration_Result</div>
-        <h3 class="text-2xl font-black text-white mb-4 uppercase">開源審核機制</h3>
-        <p class="text-xs text-slate-400 leading-relaxed text-white opacity-80">
-          加入「社群回報」與「開源審核」，確保資訊正確性。利用匿名便利貼的溫暖連結引發「傳承動力」，讓分享行為從利益驅動轉向情感驅動。
-        </p>
-      </AuraCard>
-    </div>
-  </div>
-</div>
-
----
-
-<!-- Methodology -->
-
-<!-- This should be moved to a previous section on the interview. -->
-
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Methodology & Iteration</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Methodology</h1>
-  <div class="space-y-6">
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Persona Verification</h1>
+  <div class="grid grid-cols-2 gap-8">
     <AuraCard class="p-6">
-      <h3 class="text-xl font-bold text-blue-400 mb-2">Persona-Driven Testing</h3>
-      <p class="text-sm opacity-80 text-slate-300">透過與 AI 扮演的 Persona (林小宇) 進行深度訪談，我們挖掘出許多初期團隊未曾察覺的「無惡意破壞模式」，如集體抄襲造成的同質性風險。</p>
+      <div class="text-blue-400 font-bold mb-2">關於「匿名」的必要性</div>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果平台需要實名，我絕對不敢點進去。匿名是我唯一的避風港，它讓我可以不用假裝堅強，單純地在深夜被別人的善意接住。」</p>
     </AuraCard>
     <AuraCard class="p-6">
-      <h3 class="text-xl font-bold text-pink-400 mb-2">Iterative Feedback Loop</h3>
-      <p class="text-sm opacity-80 text-slate-300">我們將訪談結果迅速反饋至系統原型中，從單純的「資源下載」轉向強調「獨立思考與審核」的社群機制，提升平台永續性。</p>
+      <div class="text-pink-400 font-bold mb-2">關於平台的隱憂</div>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果大家都把這裡當作『抄答案』的新途徑，那我們的集體趨同只會引來教授的全面封殺。我們必須學會『保持獨立思考』。」</p>
     </AuraCard>
-  </div>
-</div>
-
-<div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center text-white">
-  <AuraPill status="active" class="mb-12">Process Roadmap</AuraPill>
-  
-  <div class="w-full max-w-4xl bg-white/[0.02] border border-white/10 p-8 rounded-lg">
-
-```mermaid
-graph LR
-    A[生之歷程 Brainstorming] --> B[AI 解決方案生成 Discussion]
-    B --> C[想法融合 Summary]
-    C --> D[音樂歌詞迭代 Gemini]
-    D --> E[最終產出 Suno Music]
-    style A fill:none,stroke:#60a5fa,stroke-width:2px,color:#fff
-    style B fill:none,stroke:#60a5fa,stroke-width:2px,color:#fff
-    style C fill:none,stroke:#60a5fa,stroke-width:2px,color:#fff
-    style D fill:none,stroke:#f472b6,stroke-width:2px,color:#fff
-    style E fill:none,stroke:#10b981,stroke-width:2px,color:#fff
-```
-
   </div>
 </div>
 
@@ -504,57 +410,45 @@ graph LR
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  
   <div class="grid grid-cols-2 gap-12 h-full text-white">
     <div class="flex flex-col justify-center">
-      <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Student Response</h1>
-      <p class="text-base text-slate-400 mb-10 text-white opacity-80">對原型（Prototype）的真實反饋與洞察紀錄。</p>
+      <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Feedback</h1>
       <div class="space-y-4">
-        <div class="p-4 border-l-2 border-emerald-400 bg-white/5 rounded-r text-xs text-white/70 text-white opacity-90">
+        <div class="p-4 border-l-2 border-emerald-400 bg-white/5 rounded-r text-sm">
           "這正是我們需要的！看到有人願意匿名分享扣分標準，真的很有安全感。"
         </div>
-        <div class="p-4 border-l-2 border-amber-400 bg-white/5 rounded-r text-xs text-white/70 text-white opacity-90">
-          "如果能確保資料不會過期或錯誤就更好了。"
+        <div class="p-4 border-l-2 border-amber-400 bg-white/5 rounded-r text-sm">
+          "如果全班都抄同份，真的會被助教抓到，我們需要的是思路地圖，不是懶人包。"
         </div>
       </div>
     </div>
-    <div class="flex items-center justify-center">
-      <AuraFrame class="w-full h-64 border border-dashed border-white/20 flex flex-col items-center justify-center text-slate-500 text-sm text-center p-8 bg-black/40 text-white">
-        <div class="i-carbon:user-talk text-5xl mb-4 opacity-50 text-blue-400 text-white shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
-        <div class="opacity-60">[ 填寫區：訪談真實同學的回饋紀錄 ]</div>
-      </AuraFrame>
+    <div class="flex items-center justify-center bg-black/40 border border-dashed border-white/20 p-8 text-center text-sm opacity-60">
+      [ 訪談紀錄：我們不再強求完美抄襲，轉而推廣「獨立思考的防呆路徑」 ]
     </div>
   </div>
 </div>
 
 ---
 
-<!-- A detailed flowchart on the iteration process should be included. -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="active" class="mb-8">Phase 4: Delivery & Caring</AuraPill>
   
   <div class="grid grid-cols-2 gap-12 items-center h-full">
     <div class="flex flex-col justify-center text-white">
-      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Music:<br/><span class="text-blue-400 text-white opacity-100">《連上彼此》</span></h1>
-      <p class="text-base text-slate-400 leading-relaxed mb-8 border-l-2 border-blue-400 pl-6 text-white opacity-90">
+      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Music:<br/><span class="text-blue-400">《連上彼此》</span></h1>
+      <p class="text-lg text-slate-300 mb-8 border-l-2 border-blue-400 pl-6 bg-blue-500/5 py-4">
         「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
       </p>
-      <!-- <div class="flex gap-4">
-        <AuraPill variant="glass" status="active">▶ AUDIO_PLAYBACK_V3</AuraPill>
-        <AuraPill variant="outline">VIEW_ITERATIONS</AuraPill>
-      </div> this is not implemented for now -->
     </div>
     <div class="flex flex-col gap-4">
       <AuraCard class="p-8 bg-black/40">
-        <blockquote class="text-sm leading-loose m-0 border-none bg-transparent p-0 text-white opacity-90">
+        <blockquote class="text-sm leading-loose m-0 text-white opacity-90">
           凌晨兩點的圖書館，螢幕亮著還沒關<br/>
           一學分像一座山，壓得人快失去方向<br/>
           有人早就拿到答案，而我還在反覆試算<br/>
           努力是不是太廉價？孤單的人沒人回答
         </blockquote>
       </AuraCard>
-      <div class="text-[10px] opacity-40 font-mono text-center uppercase tracking-widest text-white">Gemini Lyrics & Suno Music</div>
     </div>
   </div>
 </div>
@@ -573,46 +467,36 @@ graph LR
 
   <div class="grid grid-cols-3 gap-6 w-full">
     <AuraCard v-for="f in [
-      { icon: 'i-carbon:send-alt', title: '匿名傳送門', desc: '打破私藏潛規則，透過 QR Code 讓筆記與趨勢成為真正自由流動的校園公共傳承。' },
-      { icon: 'i-carbon:document-sentiment', title: '電子便利貼', desc: '「加油，你一定能撐過這學期」。透過匿名的溫暖留言，建立跨時空的互助情感連結。' },
-      { icon: 'i-carbon:network-4', title: '星網效應', desc: '讓校園不再是零和競爭的叢林。認知到成績不完全代表個人價值，穩穩接住每一個無助靈魂。' }
-    ]" :key="f.title" class="flex flex-col items-center p-8 transition-all hover:-translate-y-2 border-white/5 hover:border-blue-400/30">
-      <div class="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mb-6 text-blue-400 text-white opacity-100 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-        <div :class="f.icon" class="text-4xl text-white" />
-      </div>
-      <div class="font-black text-xl text-white mb-4 uppercase tracking-tighter">{{ f.title }}</div>
-      <p class="text-xs opacity-70 leading-relaxed text-slate-300 text-white">{{ f.desc }}</p>
+        { icon: 'i-carbon:send-alt', title: '匿名傳送門', desc: '打破私藏潛規則，透過 QR Code 讓筆記與趨勢成為真正自由流動的校園公共傳承。' },
+        { icon: 'i-carbon:document-sentiment', title: '電子便利貼', desc: '「加油，你一定能撐過這學期」。透過匿名的溫暖留言，建立跨時空的互助情感連結。' },
+        { icon: 'i-carbon:network-4', title: '星網效應', desc: '讓校園不再是零和競爭的叢林。認知到成績不完全代表個人價值，穩穩接住每一個無助靈魂。' }
+      ]" :key="f.title" class="flex flex-col items-center p-8 transition-all hover:-translate-y-2 border-white/5 hover:border-blue-400/30">
+        <div class="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center mb-6 text-blue-400 text-white opacity-100 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+          <div :class="f.icon" class="text-4xl text-white" />
+        </div>
+        <div class="font-black text-xl text-white mb-4 uppercase tracking-tighter">{{ f.title }}</div>
+        <p class="text-xs opacity-70 leading-relaxed text-slate-300 text-white">{{ f.desc }}</p>
     </AuraCard>
   </div>
 </div>
 
 ---
 
-<!-- A visual redesign is required here to make it aligned with the usual design -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill class="mb-8" status="active">Phase 4: Delivery & Caring</AuraPill>
-
-  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white text-left">Happiness Practice Guide</h1>
-
-  <div class="grid grid-cols-2 gap-8 mt-4 text-white">
-    <div class="space-y-6">
-      <AuraCard class="p-8 border-l-4 border-l-blue-400 bg-blue-400/5">
-        <div class="text-blue-400 font-bold text-xl mb-4 uppercase text-white opacity-100">自我照護 (Self-Care)</div>
-        <p class="text-xs text-slate-300 leading-loose text-white opacity-80">
-          認知到成績不完全代表個人價值，有時候只是系統性的「資訊差」。<br/><br/>
-          透過開發本專案，成員學習到如何調節「無法掌控結果」的焦慮，並確信問題根源於體制，減少對自我的質疑與自責。
-        </p>
-      </AuraCard>
-    </div>
-    <div class="space-y-6 text-white">
-      <AuraCard class="p-8 border-l-4 border-l-pink-400 bg-pink-400/5">
-        <div class="text-pink-400 font-bold text-xl mb-4 uppercase text-white opacity-100">支持他人 (Caring for Others)</div>
-        <p class="text-xs text-slate-300 leading-loose text-white opacity-80">
-          方案本質是「接住」那些沒有人脈網路支援的同學。透過匿名便利貼降低求助門檻。<br/><br/>
-          讓校園中不再有資訊邊緣人，將私有的「秘笈」轉化為公共資產，讓每個發光的努力都能被彼此看見。
-        </p>
-      </AuraCard>
-    </div>
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Happiness Practice Guide</h1>
+  <div class="grid grid-cols-2 gap-8 text-white">
+    <AuraCard class="p-8 border-l-4 border-l-blue-400 bg-blue-400/5">
+      <div class="text-blue-400 font-bold text-xl mb-4 uppercase">自我照護 (Self-Care)</div>
+      <p class="text-xs leading-loose opacity-80">
+        認清體制性的「資訊差」，減少對自我能力的質疑。我們不僅優化學習，更守護情緒。
+      </p>
+    </AuraCard>
+    <AuraCard class="p-8 border-l-4 border-l-pink-400 bg-pink-400/5">
+      <div class="text-pink-400 font-bold text-xl mb-4 uppercase">支持他人 (Caring for Others)</div>
+      <p class="text-xs leading-loose opacity-80">
+        讓私有「秘笈」轉化為公共資產，讓邊緣人不再孤單，每個人的努力都能被看見。
+      </p>
+    </AuraCard>
   </div>
 </div>
