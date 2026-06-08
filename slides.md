@@ -43,9 +43,9 @@ fonts:
   <div class="grid grid-cols-2 gap-4 flex-1 text-white">
     <AuraCard v-for="m in [
       { name: '郭彥均', major: '化學系', title: '破碎資源與低投報勞動', desc: '實驗課僅 1 學分，卻需耗費 6+ 小時抄寫結預報。資源破碎不共享，努力在繁瑣勞動中被磨損。' },
-      { name: '吳柏宏', major: '課程架構', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。' },
+      { name: '吳柏宏', major: '化工系', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。' },
       { name: '徐愉皓', major: '機械系', title: '同儕競爭與知識工具化', desc: '必修比例過高導致學習淪為應付考試。資源分配不均，理論與實作斷裂，學了卻不知道怎麼用。' },
-      { name: '洪楷傑', major: '資訊壁壘', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓沒人脈的學生陷入迷失。' }
+      { name: '洪楷傑', major: '生科系', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓沒人脈的學生陷入迷失。' }
     ]" :key="m.name" class="p-8 transition-all hover:bg-white/10 hover:border-blue-400/40 hover:-translate-y-1">
       <div class="flex justify-between items-start mb-4 border-b border-white/10 pb-2">
         <div class="text-blue-400 font-semibold uppercase text-[10px] tracking-[0.3em] text-white opacity-100">{{ m.name }} // {{ m.major }}</div>
@@ -251,6 +251,8 @@ graph LR
 
 ---
 
+<!-- A redesign of the visualization is required here. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-center items-center justify-center text-white">
   <AuraPill status="info" class="mb-8">Phase 2: Ideate</AuraPill>
   <AuraCard class="p-12 max-w-4xl border-blue-400/30 bg-blue-400/5">
@@ -265,16 +267,20 @@ graph LR
 
 ---
 
+<!-- Change the story to him using the resources from the platform. and only supply the notes when he got better. -->
+
+<!-- The story iteration also requires a mermaid diagram. we first used our experiences to generate the persona. then we used gemini ai to generate the story. then we used gemini to generate the lyrics and suno ai to realize the music. the process of suno ai and gemini ai lyrics generation is iterative. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
   <div class="grid grid-cols-2 gap-12 items-center">
     <div class="flex flex-col justify-center">
       <h1 class="text-7xl font-black tracking-tighter mb-8 uppercase text-white leading-[0.85]">The<br/><span class="text-blue-400">Story</span></h1>
-      <p class="text-lg text-slate-300 mb-10 leading-relaxed border-l-4 border-blue-500 pl-6 bg-blue-500/5 py-4 text-white opacity-90">
+      <p class="text-lg text-slate-300 mb-5 leading-relaxed border-l-4 border-blue-500 pl-6 bg-blue-500/5 py-4 text-white opacity-90">
         「從一座注定被淹沒的孤島，到發現彼此連結的星網。」
       </p>
-      <div class="space-y-4">
+      <div class="space-y-3">
         <div v-for="(item, i) in ['深淵：小宇熬夜手寫預報，眼看別人輕鬆宵夜。', '微光：發現 QR Code，看見陌生學長姐留下的溫暖。', '接住：小宇上傳防呆筆記，接住了同樣崩潰的晴晴。', '共創：校園不再是叢林，而是互相支撐的共好圈。']" 
              :key="i" v-click class="flex gap-4 items-center">
           <div class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,1)]"></div>
@@ -297,7 +303,35 @@ graph LR
 
 ---
 
-<!-- Persona Verification -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  
+  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4 text-left">Important Storyboards</h1>
+
+  <div class="grid grid-cols-3 gap-6 h-full mb-8">
+    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
+      <img src="./raw_data/images/scene1.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
+      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_01: Library Abyss</div>
+    </AuraFrame>
+    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
+      <img src="./raw_data/images/scene2.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
+      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_02: Portal Glow</div>
+    </AuraFrame>
+    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
+      <img src="./raw_data/images/scene3.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
+      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_03: Archipelago</div>
+    </AuraFrame>
+  </div>
+
+  <div class="text-[10px] opacity-40 text-left font-mono uppercase tracking-[0.2em] text-white">
+    // Checkpoint: Recording visual composition ideas & AI iteration process.
+  </div>
+</div>
+
+---
+
+<!-- This should be integrated into the interview section. It feels disjointed as it is right now. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test // Persona Verification</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Interview</h1>
@@ -318,7 +352,7 @@ graph LR
 <!-- Methodology Diagram -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Research Methodology</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">互動流程圖</h1>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interaction Flow</h1>
   <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
   <div class="scale-200">
 
@@ -342,13 +376,11 @@ graph LR
 
 ---
 
-<!-- FIXME: Not readable, it's not scrolling. on click it should scroll? or if you can't just add it on the next slide. Also, please pick 3 representative continious interactions. -->
+<!-- FIXME: The chat is too fake. you should use the real data. -->
 
-<!-- Full Interview Interaction -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test // 深度對話紀錄</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">對話紀錄</h1>
-  
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Chat Record</h1>
   <div class="space-y-6 overflow-y-auto max-h-[50vh] pr-4">
     <!-- 1 -->
     <div class="flex flex-col gap-1">
@@ -388,6 +420,8 @@ graph LR
 
 ---
 
+<!-- FIXME: this should be part of the insights from the interview, the placeholder data should be swapped with the real one. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
@@ -424,34 +458,10 @@ graph LR
 
 ---
 
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  
-  <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4 text-left">Important Storyboards</h1>
-
-  <div class="grid grid-cols-3 gap-6 h-full mb-8">
-    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
-      <img src="./raw_data/images/scene1.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
-      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_01: Library Abyss</div>
-    </AuraFrame>
-    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
-      <img src="./raw_data/images/scene2.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
-      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_02: Portal Glow</div>
-    </AuraFrame>
-    <AuraFrame class="p-0 overflow-hidden relative aspect-square bg-black/60 group border-white/10">
-      <img src="./raw_data/images/scene3.png" class="object-cover w-full h-full opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" />
-      <div class="absolute bottom-4 left-4 bg-black/80 px-2 py-1 text-[9px] font-mono text-blue-400 uppercase border border-white/10 text-white opacity-90">Scene_03: Archipelago</div>
-    </AuraFrame>
-  </div>
-
-  <div class="text-[10px] opacity-40 text-left font-mono uppercase tracking-[0.2em] text-white">
-    // Checkpoint: Recording visual composition ideas & AI iteration process.
-  </div>
-</div>
-
----
-
 <!-- Methodology -->
+
+<!-- This should be moved to a previous section on the interview. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Methodology & Iteration</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Methodology</h1>
@@ -490,6 +500,8 @@ graph LR
 
 ---
 
+<!-- Add a section on how we failed to find 3 person for the iteration process so we used the persona interview data instead. Just add the stuff from the interview dialogue. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
@@ -517,12 +529,14 @@ graph LR
 
 ---
 
+<!-- A detailed flowchart on the iteration process should be included. -->
+
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="active" class="mb-8">Phase 4: Delivery & Caring</AuraPill>
   
   <div class="grid grid-cols-2 gap-12 items-center h-full">
     <div class="flex flex-col justify-center text-white">
-      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Lyrics:<br/><span class="text-blue-400 text-white opacity-100">連上彼此</span></h1>
+      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Music:<br/><span class="text-blue-400 text-white opacity-100">《連上彼此》</span></h1>
       <p class="text-base text-slate-400 leading-relaxed mb-8 border-l-2 border-blue-400 pl-6 text-white opacity-90">
         「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
       </p>
@@ -546,6 +560,8 @@ graph LR
 </div>
 
 ---
+
+<!-- There's a massive problem here. we would frame it as that this platform is the iteration result. the orginal is actually a in-person study group. the persona should be found to reject the idea and only then do we think of the platform. -->
 
 <div class="h-full w-full p-16 flex flex-col items-center justify-center relative text-center text-white">
   <AuraPill status="active" class="mb-6 w-full">Phase 4: Delivery & Caring</AuraPill>
@@ -571,6 +587,8 @@ graph LR
 </div>
 
 ---
+
+<!-- A visual redesign is required here to make it aligned with the usual design -->
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill class="mb-8" status="active">Phase 4: Delivery & Caring</AuraPill>
@@ -598,80 +616,3 @@ graph LR
     </div>
   </div>
 </div>
-
-<!-- ---
-
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill class="mb-8">Appendix A: AI Collaboration Log</AuraPill>
-  
-  <h1 class="text-5xl font-black tracking-tighter mb-8 uppercase text-white text-left">Prompt List & Benefits</h1>
-
-  <div class="mt-4 flex-1 text-white">
-    <table class="w-full text-left border-collapse">
-      <thead>
-        <tr class="border-b border-white/10 text-blue-400 font-mono text-[10px] uppercase tracking-widest text-white opacity-90">
-          <th class="py-4">Design Phase</th>
-          <th class="py-4">Key Prompt Strategy</th>
-          <th class="py-4">Optimization Benefit</th>
-        </tr>
-      </thead>
-      <tbody class="text-slate-300 text-[11px] text-white opacity-80">
-        <tr class="border-b border-white/5">
-          <td class="py-4 font-bold uppercase text-white">同理 / Persona</td>
-          <td class="py-4 text-white">"你現在是一位深受社交焦慮困擾的..."</td>
-          <td class="py-4 text-white">將雜亂訪談收斂成「林小宇」核心情緒</td>
-        </tr>
-        <tr class="border-b border-white/5">
-          <td class="py-4 font-bold uppercase text-white">發想 / Ideate</td>
-          <td class="py-4 text-white">"請提供 10 個結合心理健康與遊戲化的..."</td>
-          <td class="py-4 text-white">突破團隊思維限制，生成傳送門概念</td>
-        </tr>
-        <tr class="border-b border-white/5">
-          <td class="py-4 font-bold uppercase text-white">原型 / Test</td>
-          <td class="py-4 text-white">"請扮演一位極度挑剔的資深學長..."</td>
-          <td class="py-4 text-white">提前預判執行盲點並完成機制優化</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- --- -->
-
-<!-- Appendix B: Division of Labor -->
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill class="mb-8" status="info">Appendix B: Division of Labor</AuraPill>
-  
-  <div class="grid grid-cols-2 gap-12 mt-12 flex-1 text-white">
-    <div class="text-white">
-      <div class="text-xs text-blue-400 mb-6 uppercase tracking-[0.4em] font-black italic opacity-90">// 專案迭代歷程</div>
-      <div class="space-y-4 border-l border-white/10 pl-6">
-        <div class="relative">
-          <div class="absolute -left-[27px] top-1 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,1)]"></div>
-          <div class="text-xs font-bold text-white uppercase">V1.0 概念期</div>
-          <div class="text-[9px] opacity-60 italic mt-1 font-mono uppercase tracking-widest text-white">完成初期腦力激盪</div>
-        </div>
-        <div class="relative">
-          <div class="absolute -left-[27px] top-1 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,1)]"></div>
-          <div class="text-xs font-bold text-white uppercase">V1.5 AI 轉向</div>
-          <div class="text-[9px] opacity-60 italic mt-1 font-mono uppercase tracking-widest text-white">新增知識傳送門與使用者角色</div>
-        </div>
-        <div class="relative">
-          <div class="absolute -left-[27px] top-1 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,1)]"></div>
-          <div class="text-xs font-bold text-white uppercase">V2.0 最終稿</div>
-          <div class="text-[9px] opacity-60 italic mt-1 font-mono uppercase tracking-widest text-white">完成故事整合與視覺產出</div>
-        </div>
-      </div>
-    </div>
-    <div class="text-white">
-      <div class="text-xs text-pink-400 mb-6 uppercase tracking-[0.4em] font-black italic opacity-90">// 團隊分工</div>
-      <div class="grid grid-cols-1 gap-3">
-        <div v-for="name in ['郭彥均', '吳柏宏', '徐愉皓', '洪楷傑']" :key="name" 
-             class="flex justify-between items-center p-3 bg-white/5 border border-white/10 rounded transition-all hover:bg-white/10">
-          <span class="text-xs font-bold text-white">{{ name }}</span>
-          <span class="text-[9px] font-mono text-slate-400 uppercase tracking-tighter italic opacity-60 font-bold tracking-widest">研究與產出 (25%)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
