@@ -33,8 +33,6 @@ fonts:
 
 ---
 
-<!-- TODO: add more colors in theme -->
-
 <div class="h-full w-full p-12 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-4">Phase 1: Empathize & Define</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-left flex items-center gap-4">
@@ -42,13 +40,13 @@ fonts:
   </h1>
   <div class="grid grid-cols-2 gap-4 flex-1 text-white">
     <AuraCard v-for="m in [
-      { name: '郭彥均', major: '化學系', title: '破碎資源與低投報勞動', desc: '實驗課僅 1 學分，卻需耗費 6+ 小時抄寫結預報。資源破碎不共享，努力在繁瑣勞動中被磨損。' },
-      { name: '吳柏宏', major: '化工系', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。' },
-      { name: '徐愉皓', major: '機械系', title: '同儕競爭與知識工具化', desc: '必修比例過高導致學習淪為應付考試。資源分配不均，理論與實作斷裂，學了卻不知道怎麼用。' },
-      { name: '洪楷傑', major: '生科系', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓沒人脈的學生陷入迷失。' }
-    ]" :key="m.name" class="p-8 transition-all hover:bg-white/10 hover:border-blue-400/40 hover:-translate-y-1">
+      { name: '郭彥均', major: '化學系', title: '破碎資源與低投報勞動', desc: '實驗課僅 1 學分，卻需耗費 6+ 小時抄寫結預報。資源破碎不共享，努力在繁瑣勞動中被磨損。', color: 'text-blue-400', border: 'hover:border-blue-400/40' },
+      { name: '吳柏宏', major: '化工系', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。', color: 'text-emerald-400', border: 'hover:border-emerald-400/40' },
+      { name: '徐愉皓', major: '機械系', title: '同儕競爭與知識工具化', desc: '必修比例過高導致學習淪為應付考試。資源分配不均，理論與實作斷裂，學了卻不知道怎麼用。', color: 'text-amber-400', border: 'hover:border-amber-400/40' },
+      { name: '洪楷傑', major: '生科系', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓沒人脈的學生陷入迷失。', color: 'text-pink-400', border: 'hover:border-pink-400/40' }
+    ]" :key="m.name" class="p-8 transition-all hover:bg-white/10 hover:-translate-y-1" :class="m.border">
       <div class="flex justify-between items-start mb-4 border-b border-white/10 pb-2">
-        <div class="text-blue-400 font-semibold uppercase text-[10px] tracking-[0.3em] text-white opacity-100">{{ m.name }} // {{ m.major }}</div>
+        <div class="font-semibold uppercase text-[10px] tracking-[0.3em] opacity-100" :class="m.color">{{ m.name }} // {{ m.major }}</div>
       </div>
       <div class="text-lg font-semibold text-white mb-2 leading-tight uppercase tracking-tighter flex items-center gap-2">
         <i class="i-carbon:tag text-xs text-slate-500"></i> {{ m.title }}
@@ -167,7 +165,6 @@ fonts:
 
 ---
 
-<!-- Stakeholder Map -->
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Stakeholder Map</h1>
@@ -219,7 +216,6 @@ graph LR
   </div>
 </div>
 </div>
-
 
 ---
 
@@ -297,6 +293,31 @@ graph LR
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="active" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  
+  <div class="grid grid-cols-2 gap-12 items-center h-full">
+    <div class="flex flex-col justify-center text-white">
+      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Music:<br/><span class="text-blue-400">《連上彼此》</span></h1>
+      <p class="text-lg text-slate-300 mb-8 border-l-2 border-blue-400 pl-6 bg-blue-500/5 py-4">
+        「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
+      </p>
+    </div>
+    <div class="flex flex-col gap-4">
+      <AuraCard class="p-8 bg-black/40">
+        <blockquote class="text-sm leading-loose m-0 text-white opacity-90">
+          凌晨兩點的圖書館，螢幕亮著還沒關<br/>
+          一學分像一座山，壓得人快失去方向<br/>
+          有人早就拿到答案，而我還在反覆試算<br/>
+          努力是不是太廉價？孤單的人沒人回答
+        </blockquote>
+      </AuraCard>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white border-b border-white/10 pb-4 text-left">Important Storyboards</h1>
@@ -345,8 +366,6 @@ graph LR
 
 ---
 
-<!-- FIXME: The chat is too fake. you should use the real data. -->
-
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Chat Record</h1>
@@ -354,34 +373,34 @@ graph LR
     <!-- 1 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-4 bg-white/10 rounded-lg text-sm italic">"你知道當初直屬制度安排一個學長姐的本意，與匿名平台的差異嗎？"</div>
+      <div class="p-4 bg-white/10 rounded-lg text-sm italic text-slate-200">"你知道當初制度上之所以會為你安排一個固定的學長姐，而不是採用這種匿名平台的方式，其最初的本意是什麼嗎？"</div>
     </div>
     <div class="flex flex-col gap-1 items-end">
       <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm">
-        「直屬制度的本意是希望新生能有個溫暖依靠，透過革命情感薪火相傳。但它太依賴運氣，如果遇到『幽靈直屬』，線就斷了。匿名平台是為了接住這些被制度漏掉的靈魂。」
+      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm text-slate-100">
+        「我知道。其實我冷靜下來想過，學校當初設計『直屬制度』，初衷應該是非常溫暖、非常具有人性關懷的。這原本應該是一種『薪火相傳的革命情感』。但問題就出在，這種美好的制度，它太依賴『運氣』了。... Open-Campus 其實是實體制度崩壞後的『無奈備案』與『安全網』。」
       </div>
     </div>
     <!-- 2 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-4 bg-white/10 rounded-lg text-sm italic">"你覺得直屬制度是不是為了隱蔽集體抄襲的防彈衣？"</div>
+      <div class="p-4 bg-white/10 rounded-lg text-sm italic text-slate-200">"我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。"</div>
     </div>
     <div class="flex flex-col gap-1 items-end">
       <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm">
-        「這觀點太諷刺但也太真實了。實體直屬網絡變成了『分散式作弊系統』，每個模板都不同，教授很難抓。而平台集中化後，如果全班抄同份筆記，就是把脖子伸到刀口下。」
+      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm text-slate-100">
+        「（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種『精準的分布式作弊網路』。... 這種分散的結構，反而成了那些現充同學最好的『防彈衣』。」
       </div>
     </div>
     <!-- 3 -->
     <div class="flex flex-col gap-1">
       <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-4 bg-white/10 rounded-lg text-sm italic">"這聽起來很不樂觀，你覺得該怎麼辦？"</div>
+      <div class="p-4 bg-white/10 rounded-lg text-sm italic text-slate-200">"啊，謝謝你指出這一點。這確實會是一個很大的問題。"</div>
     </div>
     <div class="flex flex-col gap-1 items-end">
       <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm">
-        「我們得鼓勵『拿了火把，自己探路』的文化。平台只應提供地圖與指南，而非直接給答案。唯有保持獨立思考，我們才能在匿名的保護下，安全地存活在教授的雷達之外。」
+      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm text-slate-100">
+        「如果這個平台未來要活下去... 我們得想辦法在平台上培養出一種『拿了火把，就要自己去探路』的社群文化。只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。」
       </div>
     </div>
   </div>
@@ -406,7 +425,32 @@ graph LR
 
 ---
 
-<!-- Add a section on how we failed to find 3 person for the iteration process so we used the persona interview data instead. Just add the stuff from the interview dialogue. -->
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test Constraints</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Testing Constraints Pivot</h1>
+  <div class="grid grid-cols-2 gap-12 h-full text-white items-center">
+    <div class="flex flex-col justify-center">
+      <h2 class="text-3xl font-bold mb-4 text-pink-400">招募真實使用者的困難</h2>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300 mb-6">
+        在快速迭代階段，我們原定招募 3 位符合條件的邊緣新生進行深度訪談。但因目標受眾具有高隱蔽性（邊緣、不擅社交），難以在短時間內觸及並取得信任。
+      </p>
+      <h2 class="text-3xl font-bold mb-4 text-blue-400">AI Persona 深度訪談取代</h2>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300">
+        我們轉而利用以真實經驗訓練出的 Gemini AI Persona「林小宇」，進行對話式的概念驗證（Proof of Concept）。透過深度的 Prompting，AI 給出了出乎意料的真實盲點回饋。
+      </p>
+    </div>
+    <AuraCard class="p-8 border border-white/20 bg-black/40">
+      <div class="text-blue-400 text-xs font-mono font-bold mb-4 uppercase tracking-widest">System Log // Iteration Method</div>
+      <ul class="space-y-4 text-sm text-slate-300">
+        <li class="flex gap-3"><div class="i-carbon:close-outline text-red-400 mt-1" /> 實體招募 3 位測試者失敗。</li>
+        <li class="flex gap-3"><div class="i-carbon:checkmark-outline text-emerald-400 mt-1" /> 啟動虛擬人物誌 (Virtual Persona) 互動測試。</li>
+        <li class="flex gap-3"><div class="i-carbon:warning-alt text-amber-400 mt-1" /> AI 指出了「無惡意的破壞（如全班抄同份被抓）」等我們未曾設想的盲點。</li>
+      </ul>
+    </AuraCard>
+  </div>
+</div>
+
+---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 3: Prototype & Test</AuraPill>
@@ -428,34 +472,41 @@ graph LR
   </div>
 </div>
 
+
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="active" class="mb-8">Phase 4: Delivery & Caring</AuraPill>
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Iteration</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Pivot: The Rejected Idea</h1>
   
-  <div class="grid grid-cols-2 gap-12 items-center h-full">
-    <div class="flex flex-col justify-center text-white">
-      <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white leading-tight">Music:<br/><span class="text-blue-400">《連上彼此》</span></h1>
-      <p class="text-lg text-slate-300 mb-8 border-l-2 border-blue-400 pl-6 bg-blue-500/5 py-4">
-        「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
+  <div class="grid grid-cols-2 gap-12 items-center">
+    <AuraCard class="p-8 border-l-4 border-l-red-500 bg-red-500/5">
+      <div class="text-red-400 font-bold text-xl mb-4 uppercase flex items-center gap-2">
+        <div class="i-carbon:close-filled" /> 原型構想：實體讀書會
+      </div>
+      <p class="text-sm opacity-80 leading-relaxed text-slate-300 mb-4">
+        我們最初假設：建立一個「In-Person Study Group（實體讀書會）」能解決學生的課業孤島問題，透過面對面交流傳承知識。
       </p>
-    </div>
+      <div class="text-xs text-red-300 bg-red-900/30 p-3 rounded">
+        Result: Rejected by Persona
+      </div>
+    </AuraCard>
     <div class="flex flex-col gap-4">
-      <AuraCard class="p-8 bg-black/40">
-        <blockquote class="text-sm leading-loose m-0 text-white opacity-90">
-          凌晨兩點的圖書館，螢幕亮著還沒關<br/>
-          一學分像一座山，壓得人快失去方向<br/>
-          有人早就拿到答案，而我還在反覆試算<br/>
-          努力是不是太廉價？孤單的人沒人回答
-        </blockquote>
-      </AuraCard>
+      <div class="text-blue-400 font-bold text-sm uppercase tracking-widest mb-2 font-mono">Persona Interview Feedback</div>
+      <div class="p-5 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm italic text-slate-200">
+        「對我這種內向又不太會社交的人，要主動走進一個實體的群體裡，心理壓力真的非常大。如果我在讀書會裡問了一個大家都懂的盲點，大家會不會覺得我很笨？」
+      </div>
+      <div class="p-5 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm italic text-slate-200">
+        「在被平台『接住』之前，比起實體讀書會，我寧可選擇在深夜裡一個人當孤島。」
+      </div>
+      <div class="mt-2 text-emerald-400 font-bold flex items-center gap-2">
+        <div class="i-carbon:arrow-right" /> 結論：轉向去中心化的「匿名線上平台」
+      </div>
     </div>
   </div>
 </div>
 
 ---
-
-<!-- There's a massive problem here. we would frame it as that this platform is the iteration result. the orginal is actually a in-person study group. the persona should be found to reject the idea and only then do we think of the platform. -->
 
 <div class="h-full w-full p-16 flex flex-col items-center justify-center relative text-center text-white">
   <AuraPill status="active" class="mb-6 w-full">Phase 4: Delivery & Caring</AuraPill>
