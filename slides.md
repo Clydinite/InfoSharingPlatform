@@ -46,7 +46,7 @@ fonts:
       { name: '吳柏宏', major: '化工系', title: '量多質重複的窒息感', desc: '必修與選修內容高度重疊。在 AI 時代仍被迫背誦瑣碎知識，缺乏實作導向的優化學習路徑。', color: 'text-emerald-400', border: 'hover:border-emerald-400/40' },
       { name: '徐愉皓', major: '機械系', title: '同儕競爭與知識工具化', desc: '必修比例過高導致學習淪為應付考試。資源分配不均，理論與實作斷裂，學了卻不知道怎麼用。', color: 'text-amber-400', border: 'hover:border-amber-400/40' },
       { name: '洪楷傑', major: '生科系', title: '人脈即分數的壟斷', desc: '有無考古題極大影響成績公平性。教授隱藏教材規則強迫聽課，卻讓沒人脈的學生陷入迷失。', color: 'text-pink-400', border: 'hover:border-pink-400/40' }
-    ]" :key="m.name" class="p-8 transition-all hover:bg-white/10 hover:-translate-y-1" :class="m.border">
+    ]" :key="m.name" class="p-6 transition-all hover:bg-white/10 hover:-translate-y-1" :class="m.border">
       <div class="flex justify-between items-start mb-4 border-b border-white/10 pb-2">
         <div class="font-semibold uppercase text-[10px] tracking-[0.3em] opacity-100" :class="m.color">{{ m.name }} // {{ m.major }}</div>
       </div>
@@ -60,7 +60,7 @@ fonts:
 
 ---
 
-<div class="h-full w-full p-8 flex flex-col relative text-white">
+<div class="h-full w-full p-12 flex flex-col relative text-white">
   <AuraPill status="info" class="mb-8">Phase 1: Empathize & Define</AuraPill>
   <h1 class="text-7xl font-semibold tracking-tighter mb-6 leading-tight uppercase text-white">Issue Summary</h1>
   <p class="text-sm text-slate-400 leading-relaxed mb-10 text-white opacity-70">
@@ -134,19 +134,19 @@ fonts:
   <div class="grid grid-cols-2 gap-12 items-start">
     <div class="flex flex-col justify-center">
       <p class="text-sm text-slate-300 leading-relaxed mb-6 text-white opacity-70">
-        林小宇抽到了不回訊息的「幽靈直屬」，面對 1 學分卻需耗費 6 小時的實驗課，他必須獨自查閱繁雜的 MSDS 資訊並手寫預報。
+        林小宇抽到了不回訊息的「幽靈直屬」，面對 1 學分卻需耗費 6 小時的實驗課，他必須獨自查閱繁雜的 SDS 資訊並手寫預報。
       </p>
       <div class="space-y-4">
         <div class="p-4 border-l-2 border-blue-400 bg-white/5 rounded-r">
           <div class="text-blue-400 text-[10px] font-semibold uppercase mb-1 font-mono tracking-widest opacity-90 text-white">The Frustration</div>
           <div class="text-xs text-white opacity-70 leading-relaxed text-white">
-            "按部就班每一步都很合理，卻摸不透教授隱藏的扣分標準，總是得不到應有的分數。"
+            「按部就班每一步都很合理，卻摸不透助教隱藏的扣分標準，總是得不到應有的分數。」
           </div>
         </div>
         <div class="p-4 border-l-2 border-pink-400 bg-white/5 rounded-r">
           <div class="text-pink-400 text-[10px] font-semibold uppercase mb-1 font-mono tracking-widest opacity-90 text-white">The Gap</div>
           <div class="text-xs text-white opacity-70 leading-relaxed text-white">
-            "同班那些跟學長姐混得很熟的同學，拿著內線考古題與模板提早交卷，去慶祝勝利。"
+            「同班那些跟學長姐混得很熟的同學，拿著內線考古題與模板提早交卷，去慶祝勝利。」
           </div>
         </div>
       </div>
@@ -168,48 +168,49 @@ fonts:
 ---
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="info" class="mb-8">Phase 1: Empathy & Define</AuraPill>
-  <h1 class="text-6xl font-semibold tracking-tighter mb-12 uppercase text-white">Stakeholder Map</h1>
+  <AuraPill status="info" class="mb-4">Phase 1: Empathy & Define</AuraPill>
+  <h1 class="text-6xl font-semibold tracking-tighter mb-6 uppercase text-white">Stakeholder Map</h1>
   <div class="h-[45vh] flex items-center justify-center">
-  <div class="scale-250%">
+  <div class="scale-190%">
 
 ```mermaid
 graph LR
-    subgraph Core [【 核心圈：直接體驗與互助層 】]
-        XY((林小宇<br>大一化學系新生))
-        QQ((晴晴<br>同屆新生/受助者))
+    subgraph Core [ 核心圈 ]
+        XY((小宇<br>大一化學系新生))
         ANON_SJ((匿名學長姐<br>開源筆記提供者))
         OC_PLAT[Open-Campus<br>匿名資訊分享平台]
     end
 
-    subgraph Direct [【 直接圈：校園人際與對比生態 】]
+    subgraph Direct [ 直接圈 ]
         TA((實驗課助教 TA<br>掌管結報評分))
         GHOST_SJ((幽靈直屬學長<br>斷裂的傳承))
-        XC_PEERS((班上現充同學<br>靠人脈拿模板))
+        XC_PEERS((班上同學<br>靠人脈拿模板))
     end
 
-    subgraph Indirect [【 間接圈：制度與壓力來源 】]
+    subgraph Indirect [ 間接圈 ]
+        NORM_XJ((正常直屬學長<br>傳承模板))
         PROF((化學系教授<br>訂定評分規則))
         SYS((大學體制<br>畢業門檻/學分壓力))
     end
 
     XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
     ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
-    OC_PLAT -->|解救實驗數據| QQ
-    XY -.->|深夜螢幕共鳴| QQ
     GHOST_SJ -.->|冷漠/零互動| XY
     XC_PEERS -->|限動炫耀考古題| XY
     TA -->|狂扣結報分數| XY
-    TA -.->|私下傳承模板| XC_PEERS
+    NORM_XJ -.->|傳承模板| XC_PEERS
     PROF -->|評分標準施壓| TA
     SYS -->|必修課負擔| XY
 
+    style Core rx:10px, ry:10px
+    style Direct rx:10px, ry:10px
+    style Indirect rx:10px, ry:10px
     style OC_PLAT fill:#34d399,stroke:#065f46,color:#fff
     style XY fill:#60a5fa,stroke:#1e3a8a,color:#fff
-    style QQ fill:#60a5fa,stroke:#1e3a8a,color:#fff
     style ANON_SJ fill:#60a5fa,stroke:#1e3a8a,color:#fff
     style TA fill:#f472b6,stroke:#831843,color:#fff
     style GHOST_SJ fill:#f472b6,stroke:#831843,color:#fff
+    style NORM_XJ fill:#9ca3af,stroke:#831843,color:#fff
     style XC_PEERS fill:#f472b6,stroke:#831843,color:#fff
     style PROF fill:#9ca3af,stroke:#374151,color:#fff
     style SYS fill:#9ca3af,stroke:#374151,color:#fff
@@ -224,7 +225,7 @@ graph LR
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-8">Phase 2: Ideate</AuraPill>
   
-  <div class="flex flex-col justify-center h-full max-w-5xl mx-auto">
+  <div class="flex flex-col justify-center h-full">
     <div class="mb-12">
       <h1 class="text-6xl font-semibold tracking-tighter mb-4 uppercase text-white">Jobs To Be Done</h1>
       <p class="text-slate-400 opacity-70 text-white">我們如何讓努力重回應有的價值？</p>
@@ -315,6 +316,7 @@ graph LR
     style E fill:#065f46,stroke:#34d399,color:#fff
 ```
 
+  </div>
   </div>
 </div>
 
