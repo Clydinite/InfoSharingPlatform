@@ -319,77 +319,113 @@ graph LR
 
 ---
 
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+<div class="h-full w-full p-8 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Core Problem</h1>
-  <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
-    <div v-for="(chat, i) in [
-      { user: 'User', msg: '剛進大一的時候，你面臨最核心的問題是什麼？', isUser: true },
-      { user: '林小宇', msg: '我覺得……最核心的問題是「資訊不對稱帶來的強烈剝奪感」。我一個人坐在 K 書中心查 MSDS、手寫步驟，每一次都花超過 6 個小時，寫到眼睛都是血絲。但我根本不知道那些教授和助教心裡「隱藏的扣分標準」是什麼。', isUser: false },
-      { user: '林小宇', msg: '最讓我痛苦的是，那些提早加入宿營、很會跟學長姐打交道社交的同學，他們明明沒花多少時間，只是複製貼上學長姐私下傳承的「祖傳完美結報模板」，就能輕鬆拿到 A+。', isUser: false },
-      { user: 'User', msg: '但究竟是什麼原因，讓你那時候還能選擇繼續堅持下去？', isUser: true },
-      { user: '林小宇', msg: '我不斷問自己：「我辛辛苦苦考上這間大學，難道我的努力真的這麼廉價、這麼不值錢嗎？」我不相信認真的人注定只能被淹沒。直到後來在走廊散心時看到那個 QR Code，抱著最後一絲希望點進平台……我才第一次感覺到自己冰冷的手掌裡有了一點溫度。', isUser: false }
-    ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
-      <div class="text-[10px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="px-4 py-3 rounded-2xl text-sm max-w-[80%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
-        {{ chat.msg }}
+  <div class="grid grid-cols-2 gap-12">
+    <div class="flex flex-col justify-center space-y-6">
+      <div class="p-6 bg-blue-900/20 border border-blue-500/30 rounded-xl">
+        <h3 class="text-blue-400 font-bold mb-2">核心洞察：資訊不對稱的剝奪感</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">林小宇面臨的最大痛苦並非課業本身，而是「努力被廉價化」。當他獨自花費 6 小時查閱 MSDS 時，現充同學僅靠「祖傳模板」即可輕鬆獲取 A+，這種結構性的不公平導致了強烈的孤立感與自我懷疑。</p>
+      </div>
+      <div class="p-6 bg-pink-900/20 border border-pink-500/30 rounded-xl">
+        <h3 class="text-pink-400 font-bold mb-2">堅持的動力</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">支撐他堅持下去的並非熱情，而是「不甘心」。他不相信認真的人注定被淹沒，直到在走廊發現 QR Code，才第一次感受到被接住的溫度。</p>
       </div>
     </div>
-    <div class="flex items-center gap-2 mt-2 opacity-50">
-      <div class="h-8 w-full border border-dashed border-white/20 rounded-full flex items-center px-4 text-xs text-white/50">Type a message...</div>
-      <div class="i-carbon:send text-xl text-blue-400" />
+    <div class="flex justify-center items-center">
+      <div class="w-[400px] h-[300px] bg-black/80 rounded-[1rem] border-8 border-slate-800 p-6 overflow-y-auto shadow-2xl">
+        <div class="flex flex-col gap-4">
+          <div v-for="(chat, i) in [
+            { user: 'User', msg: '剛進大一的時候，你面臨最核心的問題是什麼？', isUser: true },
+            { user: '林小宇', msg: '我覺得……最核心的問題是「資訊不對稱帶來的強烈剝奪感」。我一個人坐在 K 書中心查 MSDS、手寫步驟，每一次都花超過 6 個小時，寫到眼睛都是血絲。但我根本不知道那些教授和助教心裡「隱藏的扣分標準」是什麼。', isUser: false },
+            { user: '林小宇', msg: '最讓我痛苦的是，那些提早加入宿營、很會跟學長姐打交道社交的同學，他們明明沒花多少時間，只是複製貼上學長姐私下傳承的「祖傳完美結報模板」，就能輕鬆拿到 A+。', isUser: false },
+            { user: 'User', msg: '但究竟是什麼原因，讓你那時候還能選擇繼續堅持下去？', isUser: true },
+            { user: '林小宇', msg: '我不斷問自己：「我辛辛苦苦考上這間大學，難道我的努力真的這麼廉價、這麼不值錢嗎？」我不相信認真的人注定只能被淹沒。直到後來在走廊散心時看到那個 QR Code，抱著最後一絲希望點進平台……我才第一次感覺到自己冰冷的手掌裡有了一點溫度。', isUser: false }
+          ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
+            <div class="text-[8px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+            <div class="px-3 py-2 rounded-xl text-[10px] max-w-[90%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
+              {{ chat.msg }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 ---
 
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+<div class="h-full w-full p-8 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Platform's Role</h1>
-  <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
-    <div v-for="(chat, i) in [
-      { user: 'User', msg: '你會說，那時候的你會想要參加一個實體的讀書會嗎？', isUser: true },
-      { user: '林小宇', msg: '說實話……那時候的我，其實對「實體讀書會」是充滿抗拒和恐懼的。如果我在讀書會裡問了一個大家都懂、只有我不懂的實驗盲點，大家會不會覺得我很笨？會不會在背後貼我標籤？', isUser: false },
-      { user: 'User', msg: '啊，所以這就是這個平台對你來說這麼有用的原因，對吧？', isUser: true },
-      { user: '林小宇', msg: '對，完全沒錯。它把原本被少數現充圈子壟斷的學長姐資源，變成了每個人都能平等拿到的東西。我不需要去討好任何人，不需要假裝自己很外向，只要掃個碼，就能拿到真正有用的普化實驗重點。', isUser: false },
-      { user: 'User', msg: '對你而言，「匿名」這件事究竟有什麼特別的意義和重要性？', isUser: true },
-      { user: '林小宇', msg: '「匿名」就像是一件保護衣，也是唯一能讓我卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為在網頁上，我跟每個人都一樣平等。', isUser: false }
-    ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
-      <div class="text-[10px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="px-4 py-3 rounded-2xl text-sm max-w-[80%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
-        {{ chat.msg }}
+  <h1 class="text-6xl font-black tracking-tighter mb-4 uppercase text-white">Interview: Platform's Role</h1>
+  <div class="grid grid-cols-2 gap-12 h-[60vh]">
+    <div class="flex flex-col justify-center space-y-6">
+      <div class="p-6 bg-blue-900/20 border border-blue-500/30 rounded-xl">
+        <h3 class="text-blue-400 font-bold mb-2">匿名性的關鍵意義</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">對林小宇而言，匿名是「保護衣」。實體讀書會對他來說是高壓的社交修羅場，而匿名平台則打破了人脈特權，讓他能在不需討好他人的情況下，安全地獲取知識並貢獻微光。</p>
+      </div>
+      <div class="p-6 bg-pink-900/20 border border-pink-500/30 rounded-xl">
+        <h3 class="text-pink-400 font-bold mb-2">歸屬感的建立</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">平台不僅是工具，更是歸屬。當他收到其他同學「謝謝原 PO 救了我」的留言時，他第一次感受到自己不需要改變內向個性，也能在大學裡找到價值。</p>
       </div>
     </div>
-    <div class="flex items-center gap-2 mt-2 opacity-50">
-      <div class="h-8 w-full border border-dashed border-white/20 rounded-full flex items-center px-4 text-xs text-white/50">Type a message...</div>
-      <div class="i-carbon:send text-xl text-blue-400" />
+    <div class="flex justify-center items-center">
+      <div class="w-[400px] h-[300px] bg-black/80 rounded-[1rem] border-8 border-slate-800 p-6 overflow-y-auto shadow-2xl">
+        <div class="flex flex-col gap-4">
+          <div v-for="(chat, i) in [
+            { user: 'User', msg: '你會說，那時候的你會想要參加一個實體的讀書會嗎？', isUser: true },
+            { user: '林小宇', msg: '說實話……那時候的我，其實對「實體讀書會」是充滿抗拒和恐懼的。如果我在讀書會裡問了一個大家都懂、只有我不懂的實驗盲點，大家會不會覺得我很笨？會不會在背後貼我標籤？', isUser: false },
+            { user: 'User', msg: '啊，所以這就是這個平台對你來說這麼有用的原因，對吧？', isUser: true },
+            { user: '林小宇', msg: '對，完全沒錯。它把原本被少數現充圈子壟斷的學長姐資源，變成了每個人都能平等拿到的東西。我不需要去討好任何人，不需要假裝自己很外向，只要掃個碼，就能拿到真正有用的普化實驗重點。', isUser: false },
+            { user: 'User', msg: '對你而言，「匿名」這件事究竟有什麼特別的意義和重要性？', isUser: true },
+            { user: '林小宇', msg: '「匿名」就像是一件保護衣，也是唯一能讓我卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為在網頁上，我跟每個人都一樣平等。', isUser: false }
+          ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
+            <div class="text-[8px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+            <div class="px-3 py-2 rounded-xl text-[10px] max-w-[90%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
+              {{ chat.msg }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 ---
 
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+<div class="h-full w-full p-8 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Risks & Reality</h1>
-  <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
-    <div v-for="(chat, i) in [
-      { user: 'User', msg: '我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。', isUser: true },
-      { user: '林小宇', msg: '（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種「精準的分布式作弊網路」。這種分散的結構，反而成了那些現充同學最好的「防彈衣」。', isUser: false },
-      { user: 'User', msg: '哇，這確實是我們從來沒想過的事情。那你會怎麼說，如果有人「甚至在沒有惡意的情況下」，也可能不小心毀掉這個平台？', isUser: true },
-      { user: '林小宇', msg: '第一，是「過度依賴造成的伸手黨巨嬰化」。第二，是「全班答案趨同化的自爆效應」。第三，是「出於炫耀或好心的過度推廣」。這些無惡意的破壞，往往才是把一個脆弱的互助生態系推向毀滅的最快方法。', isUser: false },
-      { user: 'User', msg: '謝謝你指出這一點。這確實會是一個很大的問題。', isUser: true },
-      { user: '林小宇', msg: '如果這個平台未來要活下去，我們得想辦法在平台上培養出一種「拿了火把，就要自己去探路」的社群文化。只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。', isUser: false }
-    ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
-      <div class="text-[10px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="px-4 py-3 rounded-2xl text-sm max-w-[80%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
-        {{ chat.msg }}
+  <h1 class="text-6xl font-black tracking-tighter mb-4 uppercase text-white">Interview: Risks & Reality</h1>
+  <div class="grid grid-cols-2 gap-12 h-[60vh]">
+    <div class="flex flex-col justify-center space-y-6">
+      <div class="p-6 bg-blue-900/20 border border-blue-500/30 rounded-xl">
+        <h3 class="text-blue-400 font-bold mb-2">分布式作弊網路的諷刺</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">實體直屬制度在現實中反而成了「分布式作弊網路」，每個人抄不同模板以分散風險。而集中式的匿名平台若被濫用，反而會因「答案趨同」而成為教授眼中的標靶。</p>
+      </div>
+      <div class="p-6 bg-pink-900/20 border border-pink-500/30 rounded-xl">
+        <h3 class="text-pink-400 font-bold mb-2">無惡意的毀滅</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">「伸手黨巨嬰化」、「全班答案趨同」以及「過度推廣」，這些無惡意的行為往往才是毀滅互助生態系的最快路徑。平台必須培養「拿了火把，就要自己去探路」的文化。</p>
       </div>
     </div>
-    <div class="flex items-center gap-2 mt-2 opacity-50">
-      <div class="h-8 w-full border border-dashed border-white/20 rounded-full flex items-center px-4 text-xs text-white/50">Type a message...</div>
-      <div class="i-carbon:send text-xl text-blue-400" />
+    <div class="flex justify-center items-center">
+      <div class="w-[400px] h-[300px] bg-black/80 rounded-[1rem] border-8 border-slate-800 p-6 overflow-y-auto shadow-2xl">
+        <div class="flex flex-col gap-4">
+          <div v-for="(chat, i) in [
+            { user: 'User', msg: '我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。', isUser: true },
+            { user: '林小宇', msg: '（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種「精準的分布式作弊網路」。這種分散的結構，反而成了那些現充同學最好的「防彈衣」。', isUser: false },
+            { user: 'User', msg: '哇，這確實是我們從來沒想過的事情。那你會怎麼說，如果有人「甚至在沒有惡意的情況下」，也可能不小心毀掉這個平台？', isUser: true },
+            { user: '林小宇', msg: '第一，是「過度依賴造成的伸手黨巨嬰化」。第二，是「全班答案趨同化的自爆效應」。第三，是「出於炫耀或好心的過度推廣」。這些無惡意的破壞，往往才是把一個脆弱的互助生態系推向毀滅的最快方法。', isUser: false },
+            { user: 'User', msg: '謝謝你指出這一點。這確實會是一個很大的問題。', isUser: true },
+            { user: '林小宇', msg: '如果這個平台未來要活下去，我們得想辦法在平台上培養出一種「拿了火把，就要自己去探路」的社群文化。只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。', isUser: false }
+          ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
+            <div class="text-[8px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+            <div class="px-3 py-2 rounded-xl text-[10px] max-w-[90%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
+              {{ chat.msg }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
