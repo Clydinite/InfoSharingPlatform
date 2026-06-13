@@ -262,19 +262,56 @@ graph LR
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  
+  <div class="grid grid-cols-2 gap-12 items-center">
+    <div class="flex flex-col justify-center">
+      <h1 class="text-7xl font-black tracking-tighter mb-8 uppercase text-white leading-[0.85]">The<br/><span class="text-blue-400">Story</span></h1>
+      <p class="text-lg text-slate-300 mb-5 leading-relaxed border-l-4 border-blue-500 pl-6 bg-blue-500/5 py-4 text-white opacity-90">
+        「從一座注定被淹沒的孤島，到發現彼此連結的星網。」
+      </p>
+      <div class="space-y-3">
+        <div v-for="(item, i) in ['深淵：小宇熬夜手寫預報，眼看別人輕鬆宵夜。', '微光：發現 QR Code，看見陌生學長姐留下的溫暖。', '接住：小宇上傳防呆筆記，接住了同樣崩潰的晴晴。', '共創：校園不再是叢林，而是互相支撐的共好圈。']" 
+             :key="i" v-click class="flex gap-4 items-center">
+          <div class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,1)]"></div>
+          <span class="text-sm text-white opacity-90">{{ item }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 justify-center">
+      <AuraFrame class="p-0 overflow-hidden bg-black/60 aspect-video flex items-center justify-center border-white/5">
+        <img src="./raw_data/images/light.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity" />
+      </AuraFrame>
+      <SystemLog v-click :logs="[
+        { time: 'EVENT_01', msg: '晴晴上傳了防呆筆記。' },
+        { time: 'EVENT_02', msg: '林小宇掃描了匿名分享傳送門。' },
+        { time: 'EVENT_03', msg: '下載檔案：化學實驗重點筆記.pdf' },
+        { time: 'FEEDBACK', msg: '林小宇：你的筆記救了我的實驗！😭' }
+      ]" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Core Problem</h1>
-  <div class="space-y-6 overflow-y-auto max-h-[45vh] pr-4">
+  <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
     <div v-for="(chat, i) in [
       { user: 'User', msg: '剛進大一的時候，你面臨最核心的問題是什麼？', isUser: true },
       { user: '林小宇', msg: '我覺得……最核心的問題是「資訊不對稱帶來的強烈剝奪感」。我一個人坐在 K 書中心查 MSDS、手寫步驟，每一次都花超過 6 個小時，寫到眼睛都是血絲。但我根本不知道那些教授和助教心裡「隱藏的扣分標準」是什麼。', isUser: false },
       { user: '林小宇', msg: '最讓我痛苦的是，那些提早加入宿營、很會跟學長姐打交道社交的同學，他們明明沒花多少時間，只是複製貼上學長姐私下傳承的「祖傳完美結報模板」，就能輕鬆拿到 A+。', isUser: false },
       { user: 'User', msg: '但究竟是什麼原因，讓你那時候還能選擇繼續堅持下去？', isUser: true },
       { user: '林小宇', msg: '我不斷問自己：「我辛辛苦苦考上這間大學，難道我的努力真的這麼廉價、這麼不值錢嗎？」我不相信認真的人注定只能被淹沒。直到後來在走廊散心時看到那個 QR Code，抱著最後一絲希望點進平台……我才第一次感覺到自己冰冷的手掌裡有了一點溫度。', isUser: false }
-    ]" :key="i" class="flex flex-col gap-1" :class="chat.isUser ? '' : 'items-end'">
-      <div class="text-[10px] font-bold uppercase" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="p-4 rounded-lg text-sm" :class="chat.isUser ? 'bg-white/10 italic text-slate-200' : 'bg-blue-600/20 border border-blue-500/30 text-slate-100'">
+    ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
+      <div class="text-[10px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+      <div class="px-4 py-3 rounded-2xl text-sm max-w-[80%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
         {{ chat.msg }}
       </div>
+    </div>
+    <div class="flex items-center gap-2 mt-2 opacity-50">
+      <div class="h-8 w-full border border-dashed border-white/20 rounded-full flex items-center px-4 text-xs text-white/50">Type a message...</div>
+      <div class="i-carbon:send text-xl text-blue-400" />
     </div>
   </div>
 </div>
@@ -284,7 +321,7 @@ graph LR
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Platform's Role</h1>
-  <div class="space-y-6 overflow-y-auto max-h-[45vh] pr-4">
+  <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
     <div v-for="(chat, i) in [
       { user: 'User', msg: '你會說，那時候的你會想要參加一個實體的讀書會嗎？', isUser: true },
       { user: '林小宇', msg: '說實話……那時候的我，其實對「實體讀書會」是充滿抗拒和恐懼的。如果我在讀書會裡問了一個大家都懂、只有我不懂的實驗盲點，大家會不會覺得我很笨？會不會在背後貼我標籤？', isUser: false },
@@ -292,11 +329,15 @@ graph LR
       { user: '林小宇', msg: '對，完全沒錯。它把原本被少數現充圈子壟斷的學長姐資源，變成了每個人都能平等拿到的東西。我不需要去討好任何人，不需要假裝自己很外向，只要掃個碼，就能拿到真正有用的普化實驗重點。', isUser: false },
       { user: 'User', msg: '對你而言，「匿名」這件事究竟有什麼特別的意義和重要性？', isUser: true },
       { user: '林小宇', msg: '「匿名」就像是一件保護衣，也是唯一能讓我卸下防備的避風港。在匿名的世界裡，我不需要去嫉妒那些有考古題的同學，因為在網頁上，我跟每個人都一樣平等。', isUser: false }
-    ]" :key="i" class="flex flex-col gap-1" :class="chat.isUser ? '' : 'items-end'">
-      <div class="text-[10px] font-bold uppercase" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="p-4 rounded-lg text-sm" :class="chat.isUser ? 'bg-white/10 italic text-slate-200' : 'bg-blue-600/20 border border-blue-500/30 text-slate-100'">
+    ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
+      <div class="text-[10px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+      <div class="px-4 py-3 rounded-2xl text-sm max-w-[80%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
         {{ chat.msg }}
       </div>
+    </div>
+    <div class="flex items-center gap-2 mt-2 opacity-50">
+      <div class="h-8 w-full border border-dashed border-white/20 rounded-full flex items-center px-4 text-xs text-white/50">Type a message...</div>
+      <div class="i-carbon:send text-xl text-blue-400" />
     </div>
   </div>
 </div>
@@ -306,7 +347,7 @@ graph LR
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Risks & Reality</h1>
-  <div class="space-y-6 overflow-y-auto max-h-[45vh] pr-4">
+  <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
     <div v-for="(chat, i) in [
       { user: 'User', msg: '我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。', isUser: true },
       { user: '林小宇', msg: '（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種「精準的分布式作弊網路」。這種分散的結構，反而成了那些現充同學最好的「防彈衣」。', isUser: false },
@@ -314,11 +355,15 @@ graph LR
       { user: '林小宇', msg: '第一，是「過度依賴造成的伸手黨巨嬰化」。第二，是「全班答案趨同化的自爆效應」。第三，是「出於炫耀或好心的過度推廣」。這些無惡意的破壞，往往才是把一個脆弱的互助生態系推向毀滅的最快方法。', isUser: false },
       { user: 'User', msg: '謝謝你指出這一點。這確實會是一個很大的問題。', isUser: true },
       { user: '林小宇', msg: '如果這個平台未來要活下去，我們得想辦法在平台上培養出一種「拿了火把，就要自己去探路」的社群文化。只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。', isUser: false }
-    ]" :key="i" class="flex flex-col gap-1" :class="chat.isUser ? '' : 'items-end'">
-      <div class="text-[10px] font-bold uppercase" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="p-4 rounded-lg text-sm" :class="chat.isUser ? 'bg-white/10 italic text-slate-200' : 'bg-blue-600/20 border border-blue-500/30 text-slate-100'">
+    ]" :key="i" class="flex flex-col" :class="chat.isUser ? 'items-end' : 'items-start'">
+      <div class="text-[10px] font-bold uppercase mb-1" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+      <div class="px-4 py-3 rounded-2xl text-sm max-w-[80%]" :class="chat.isUser ? 'bg-blue-600 text-white rounded-br-none' : 'bg-white/10 text-slate-100 rounded-bl-none'">
         {{ chat.msg }}
       </div>
+    </div>
+    <div class="flex items-center gap-2 mt-2 opacity-50">
+      <div class="h-8 w-full border border-dashed border-white/20 rounded-full flex items-center px-4 text-xs text-white/50">Type a message...</div>
+      <div class="i-carbon:send text-xl text-blue-400" />
     </div>
   </div>
 </div>
@@ -394,26 +439,6 @@ graph LR
 ```
 
   </div>
-  </div>
-</div>
-
----
-
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Chat Record</h1>
-  <div class="space-y-6 overflow-y-auto max-h-[45vh] pr-4">
-    <div v-for="(chat, i) in [
-      { user: 'User', msg: '我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。', isUser: true },
-      { user: '林小宇', msg: '（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種『精準的分布式作弊網路』。這種分散的結構，反而成了那些現充同學最好的『防彈衣』。', isUser: false },
-      { user: 'User', msg: '如果這個平台未來要活下去，我們得想辦法在平台上培養出一種「拿了火把，就要自己去探路」的社群文化。', isUser: true },
-      { user: '林小宇', msg: '只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。', isUser: false }
-    ]" :key="i" class="flex flex-col gap-1" :class="chat.isUser ? '' : 'items-end'">
-      <div class="text-[10px] font-bold uppercase" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
-      <div class="p-4 rounded-lg text-sm" :class="chat.isUser ? 'bg-white/10 italic text-slate-200' : 'bg-blue-600/20 border border-blue-500/30 text-slate-100'">
-        {{ chat.msg }}
-      </div>
-    </div>
   </div>
 </div>
 
