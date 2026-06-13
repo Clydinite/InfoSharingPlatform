@@ -295,6 +295,32 @@ graph LR
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
+  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interview Flow</h1>
+  <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
+  <div class="scale-200">
+
+```mermaid
+graph LR
+    A[Persona 資料] --> C((Gemini AI))
+    B[角色故事與情境] --> C
+    C --> D[互動對話輸出]
+    D --> E((回饋迭代))
+    E --> C
+    style C fill:#1e3a8a,stroke:#60a5fa,color:#fff
+    style A fill:#4c1d95,stroke:#8b5cf6,color:#fff
+    style B fill:#4c1d95,stroke:#8b5cf6,color:#fff
+    style D fill:#831843,stroke:#ec4899,color:#fff
+    style E fill:#065f46,stroke:#34d399,color:#fff
+```
+
+  </div>
+  </div>
+</div>
+
+---
+
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Interview: Core Problem</h1>
   <div class="flex flex-col gap-4 h-[45vh] overflow-y-auto pr-4">
     <div v-for="(chat, i) in [
@@ -420,32 +446,6 @@ graph LR
 
 <div class="h-full w-full p-16 flex flex-col relative text-left text-white">
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Interview Flow</h1>
-  <div class="bg-white/5 border border-white/10 p-8 rounded-lg flex items-center justify-center h-80">
-  <div class="scale-200">
-
-```mermaid
-graph LR
-    A[Persona 資料] --> C((Gemini AI))
-    B[角色故事與情境] --> C
-    C --> D[互動對話輸出]
-    D --> E((回饋迭代))
-    E --> C
-    style C fill:#1e3a8a,stroke:#60a5fa,color:#fff
-    style A fill:#4c1d95,stroke:#8b5cf6,color:#fff
-    style B fill:#4c1d95,stroke:#8b5cf6,color:#fff
-    style D fill:#831843,stroke:#ec4899,color:#fff
-    style E fill:#065f46,stroke:#34d399,color:#fff
-```
-
-  </div>
-  </div>
-</div>
-
----
-
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-12 uppercase text-white">Persona Verification</h1>
   <div class="grid grid-cols-2 gap-8">
     <AuraCard class="p-6">
@@ -485,29 +485,6 @@ graph LR
     </AuraCard>
   </div>
 </div>
-
----
-
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
-  <div class="grid grid-cols-2 gap-12 h-full text-white">
-    <div class="flex flex-col justify-center">
-      <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Feedback</h1>
-      <div class="space-y-4">
-        <div class="p-4 border-l-2 border-emerald-400 bg-white/5 rounded-r text-sm">
-          "這正是我們需要的！看到有人願意匿名分享扣分標準，真的很有安全感。"
-        </div>
-        <div class="p-4 border-l-2 border-amber-400 bg-white/5 rounded-r text-sm">
-          "如果全班都抄同份，真的會被助教抓到，我們需要的是思路地圖，不是懶人包。"
-        </div>
-      </div>
-    </div>
-    <div class="flex items-center justify-center bg-black/40 border border-dashed border-white/20 p-8 text-center text-sm opacity-60">
-      [ 訪談紀錄：我們不再強求完美抄襲，轉而推廣「獨立思考的防呆路徑」 ]
-    </div>
-  </div>
-</div>
-
 
 ---
 
