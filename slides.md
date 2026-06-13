@@ -167,19 +167,15 @@ fonts:
 
 ---
 
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+<div class="h-full w-full p-8 flex flex-col relative text-left text-white">
   <AuraPill status="info" class="mb-4">Phase 1: Empathy & Define</AuraPill>
-  <h1 class="text-6xl font-semibold tracking-tighter mb-6 uppercase text-white">Stakeholder Map</h1>
+  <h1 class="text-6xl font-semibold tracking-tighter mb-12 uppercase text-white">Stakeholder Map</h1>
   <div class="h-[45vh] flex items-center justify-center">
-  <div class="scale-190%">
+  <div class="scale-140%">
 
 ```mermaid
 graph LR
-    subgraph Core [ 核心圈 ]
-        XY((小宇<br>大一化學系新生))
-        ANON_SJ((匿名學長姐<br>開源筆記提供者))
-        OC_PLAT[Open-Campus<br>匿名資訊分享平台]
-    end
+    XY((小宇<br>大一化學系新生))
 
     subgraph Direct [ 直接圈 ]
         TA((實驗課助教 TA<br>掌管結報評分))
@@ -193,8 +189,6 @@ graph LR
         SYS((大學體制<br>畢業門檻/學分壓力))
     end
 
-    XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
-    ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
     GHOST_SJ -.->|冷漠/零互動| XY
     XC_PEERS -->|限動炫耀考古題| XY
     TA -->|狂扣結報分數| XY
@@ -202,15 +196,12 @@ graph LR
     PROF -->|評分標準施壓| TA
     SYS -->|必修課負擔| XY
 
-    style Core rx:10px, ry:10px
     style Direct rx:10px, ry:10px
     style Indirect rx:10px, ry:10px
-    style OC_PLAT fill:#34d399,stroke:#065f46,color:#fff
     style XY fill:#60a5fa,stroke:#1e3a8a,color:#fff
-    style ANON_SJ fill:#60a5fa,stroke:#1e3a8a,color:#fff
     style TA fill:#f472b6,stroke:#831843,color:#fff
     style GHOST_SJ fill:#f472b6,stroke:#831843,color:#fff
-    style NORM_XJ fill:#9ca3af,stroke:#831843,color:#fff
+    style NORM_XJ fill:#9ca3af,stroke:#374151,color:#fff
     style XC_PEERS fill:#f472b6,stroke:#831843,color:#fff
     style PROF fill:#9ca3af,stroke:#374151,color:#fff
     style SYS fill:#9ca3af,stroke:#374151,color:#fff
@@ -553,6 +544,61 @@ graph LR
         <div class="font-semibold text-xl text-white mb-4 uppercase tracking-tighter">{{ f.title }}</div>
         <p class="text-xs opacity-70 leading-relaxed text-slate-300 text-white">{{ f.desc }}</p>
     </AuraCard>
+  </div>
+</div>
+
+---
+
+<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
+  <AuraPill status="info" class="mb-4">Phase 4: Delivery & Caring</AuraPill>
+  <h1 class="text-6xl font-semibold tracking-tighter mb-6 uppercase text-white">New Stakeholder Map</h1>
+  <div class="h-[45vh] flex items-center justify-center">
+  <div class="scale-190%">
+
+```mermaid
+graph LR
+    subgraph Core [ 核心圈 ]
+        XY((小宇<br>大一化學系新生))
+        ANON_SJ((匿名學長姐<br>開源筆記提供者))
+        OC_PLAT[Open-Campus<br>匿名資訊分享平台]
+    end
+
+    subgraph Direct [ 直接圈 ]
+        TA((實驗課助教 TA<br>掌管結報評分))
+        GHOST_SJ((幽靈直屬學長<br>斷裂的傳承))
+        XC_PEERS((班上同學<br>靠人脈拿模板))
+    end
+
+    subgraph Indirect [ 間接圈 ]
+        NORM_XJ((正常直屬學長<br>傳承模板))
+        PROF((化學系教授<br>訂定評分規則))
+        SYS((大學體制<br>畢業門檻/學分壓力))
+    end
+
+    XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
+    ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
+    GHOST_SJ -.->|冷漠/零互動| XY
+    XC_PEERS -->|限動炫耀考古題| XY
+    TA -->|狂扣結報分數| XY
+    NORM_XJ -.->|傳承模板| XC_PEERS
+    PROF -->|評分標準施壓| TA
+    SYS -->|必修課負擔| XY
+
+    style Core rx:10px, ry:10px
+    style Direct rx:10px, ry:10px
+    style Indirect rx:10px, ry:10px
+    style OC_PLAT fill:#34d399,stroke:#065f46,color:#fff
+    style XY fill:#60a5fa,stroke:#1e3a8a,color:#fff
+    style ANON_SJ fill:#60a5fa,stroke:#1e3a8a,color:#fff
+    style TA fill:#f472b6,stroke:#831843,color:#fff
+    style GHOST_SJ fill:#f472b6,stroke:#831843,color:#fff
+    style NORM_XJ fill:#9ca3af,stroke:#831843,color:#fff
+    style XC_PEERS fill:#f472b6,stroke:#831843,color:#fff
+    style PROF fill:#9ca3af,stroke:#374151,color:#fff
+    style SYS fill:#9ca3af,stroke:#374151,color:#fff
+```
+
+  </div>
   </div>
 </div>
 
