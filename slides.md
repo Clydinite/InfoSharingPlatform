@@ -175,11 +175,7 @@ fonts:
 
 ```mermaid
 graph LR
-    subgraph Core [ 核心圈 ]
-        XY((小宇<br>大一化學系新生))
-        ANON_SJ((匿名學長姐<br>開源筆記提供者))
-        OC_PLAT[Open-Campus<br>匿名資訊分享平台]
-    end
+    XY((小宇<br>大一化學系新生))
 
     subgraph Direct [ 直接圈 ]
         TA((實驗課助教 TA<br>掌管結報評分))
@@ -193,8 +189,6 @@ graph LR
         SYS((大學體制<br>畢業門檻/學分壓力))
     end
 
-    XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
-    ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
     GHOST_SJ -.->|冷漠/零互動| XY
     XC_PEERS -->|限動炫耀考古題| XY
     TA -->|狂扣結報分數| XY
@@ -202,15 +196,12 @@ graph LR
     PROF -->|評分標準施壓| TA
     SYS -->|必修課負擔| XY
 
-    style Core rx:10px, ry:10px
     style Direct rx:10px, ry:10px
     style Indirect rx:10px, ry:10px
-    style OC_PLAT fill:#34d399,stroke:#065f46,color:#fff
     style XY fill:#60a5fa,stroke:#1e3a8a,color:#fff
-    style ANON_SJ fill:#60a5fa,stroke:#1e3a8a,color:#fff
     style TA fill:#f472b6,stroke:#831843,color:#fff
     style GHOST_SJ fill:#f472b6,stroke:#831843,color:#fff
-    style NORM_XJ fill:#9ca3af,stroke:#831843,color:#fff
+    style NORM_XJ fill:#9ca3af,stroke:#374151,color:#fff
     style XC_PEERS fill:#f472b6,stroke:#831843,color:#fff
     style PROF fill:#9ca3af,stroke:#374151,color:#fff
     style SYS fill:#9ca3af,stroke:#374151,color:#fff
