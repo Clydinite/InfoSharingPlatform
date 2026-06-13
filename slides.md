@@ -17,7 +17,7 @@ fonts:
 <div class="h-full w-full p-16 flex flex-col justify-center text-left relative overflow-hidden text-white">
   <div class="relative z-10 max-w-4xl">
     <AuraPill status="active" class="mb-8 text-white">Initialize Presentation</AuraPill>
-    <h1 class="text-8xl font-black tracking-tighter mb-4 leading-[0.9] text-white uppercase">
+    <h1 class="text-8xl font-black tracking-tighter mb-4 leading-[0.9] uppercase">
       Break the<br/>
       <span class="text-blue-400">Bubble.</span>
     </h1>
