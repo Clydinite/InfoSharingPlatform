@@ -175,7 +175,11 @@ fonts:
 
 ```mermaid
 graph LR
-    XY((小宇<br>大一化學系新生))
+    subgraph Core [ 核心圈 ]
+        XY((小宇<br>大一化學系新生))
+        ANON_SJ((匿名學長姐<br>開源筆記提供者))
+        OC_PLAT[Open-Campus<br>匿名資訊分享平台]
+    end
 
     subgraph Direct [ 直接圈 ]
         TA((實驗課助教 TA<br>掌管結報評分))
@@ -189,6 +193,8 @@ graph LR
         SYS((大學體制<br>畢業門檻/學分壓力))
     end
 
+    XY <-->|掃碼下載 / 匿名上傳| OC_PLAT
+    ANON_SJ -->|貢獻普化實驗重點| OC_PLAT
     GHOST_SJ -.->|冷漠/零互動| XY
     XC_PEERS -->|限動炫耀考古題| XY
     TA -->|狂扣結報分數| XY
@@ -196,12 +202,15 @@ graph LR
     PROF -->|評分標準施壓| TA
     SYS -->|必修課負擔| XY
 
+    style Core rx:10px, ry:10px
     style Direct rx:10px, ry:10px
     style Indirect rx:10px, ry:10px
+    style OC_PLAT fill:#34d399,stroke:#065f46,color:#fff
     style XY fill:#60a5fa,stroke:#1e3a8a,color:#fff
+    style ANON_SJ fill:#60a5fa,stroke:#1e3a8a,color:#fff
     style TA fill:#f472b6,stroke:#831843,color:#fff
     style GHOST_SJ fill:#f472b6,stroke:#831843,color:#fff
-    style NORM_XJ fill:#9ca3af,stroke:#374151,color:#fff
+    style NORM_XJ fill:#9ca3af,stroke:#831843,color:#fff
     style XC_PEERS fill:#f472b6,stroke:#831843,color:#fff
     style PROF fill:#9ca3af,stroke:#374151,color:#fff
     style SYS fill:#9ca3af,stroke:#374151,color:#fff
@@ -436,15 +445,51 @@ graph LR
         「原來這座孤島 終於連成了群，原來我從未真正 一個人 走過這場雨。」
       </p>
     </div>
-    <div class="flex flex-col gap-4">
-      <AuraCard class="p-8 bg-black/40">
-        <blockquote class="text-sm leading-loose m-0 text-white opacity-90">
-          凌晨兩點的圖書館，螢幕亮著還沒關<br/>
-          一學分像一座山，壓得人快失去方向<br/>
-          有人早就拿到答案，而我還在反覆試算<br/>
-          努力是不是太廉價？孤單的人沒人回答
-        </blockquote>
-      </AuraCard>
+    <div class="flex flex-col gap-4 overflow-y-auto h-[400px] p-4 bg-black/20 rounded-lg">
+      <blockquote class="text-sm leading-loose m-0 text-white opacity-90">
+        《連上彼此》<br><br>
+        Verse 1<br>
+        凌晨兩點的圖書館<br>
+        螢幕亮著還沒關<br>
+        一學分像一座山<br>
+        壓得人快失去方向<br><br>
+        有人早就拿到答案<br>
+        而我還在反覆試算<br>
+        努力是不是太廉價<br>
+        孤單的人沒人回答<br><br>
+        Chorus<br>
+        直到我看見<br>
+        那道陌生的連結<br>
+        有人留下筆記和留言<br>
+        寫著「你一定能撐過這幾天」<br><br>
+        原來我們都一樣<br>
+        在黑夜裡跌跌撞撞<br>
+        把自己的微光<br>
+        放進彼此手掌<br><br>
+        Verse 2<br>
+        我把整理好的重點<br>
+        匿名上傳到雲端裡面<br>
+        幾分鐘後通知出現<br>
+        「你的筆記救了我的實驗」<br><br>
+        原來熬過的那些夜<br>
+        真的有人能夠理解<br>
+        校園不再是競爭<br>
+        而是一起向前<br><br>
+        Bridge<br>
+        有人留下問題<br>
+        有人留下答案<br>
+        孤單的人最後<br>
+        也能找到陪伴<br><br>
+        Final Chorus<br>
+        原來我們不是孤島<br>
+        而是在人海裡互相擁抱<br>
+        那些沒說出口的疲憊<br>
+        終於有人知道<br><br>
+        當無數微光<br>
+        慢慢連成了星光<br>
+        我們終於學會<br>
+        怎麼一起成長
+      </blockquote>
     </div>
   </div>
 </div>
