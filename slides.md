@@ -371,37 +371,15 @@ graph LR
   <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test</AuraPill>
   <h1 class="text-6xl font-black tracking-tighter mb-8 uppercase text-white">Chat Record</h1>
   <div class="space-y-6 overflow-y-auto max-h-[45vh] pr-4">
-    <!-- 1 -->
-    <div class="flex flex-col gap-1">
-      <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-4 bg-white/10 rounded-lg text-sm italic text-slate-200">"你知道當初制度上之所以會為你安排一個固定的學長姐，而不是採用這種匿名平台的方式，其最初的本意是什麼嗎？"</div>
-    </div>
-    <div class="flex flex-col gap-1 items-end">
-      <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm text-slate-100">
-        「我知道。其實我冷靜下來想過，學校當初設計『直屬制度』，初衷應該是非常溫暖、非常具有人性關懷的。這原本應該是一種『薪火相傳的革命情感』。但問題就出在，這種美好的制度，它太依賴『運氣』了。... Open-Campus 其實是實體制度崩壞後的『無奈備案』與『安全網』。」
-      </div>
-    </div>
-    <!-- 2 -->
-    <div class="flex flex-col gap-1">
-      <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-4 bg-white/10 rounded-lg text-sm italic text-slate-200">"我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。"</div>
-    </div>
-    <div class="flex flex-col gap-1 items-end">
-      <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm text-slate-100">
-        「（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種『精準的分布式作弊網路』。... 這種分散的結構，反而成了那些現充同學最好的『防彈衣』。」
-      </div>
-    </div>
-    <!-- 3 -->
-    <div class="flex flex-col gap-1">
-      <div class="text-[10px] text-blue-400 font-bold uppercase">User</div>
-      <div class="p-4 bg-white/10 rounded-lg text-sm italic text-slate-200">"啊，謝謝你指出這一點。這確實會是一個很大的問題。"</div>
-    </div>
-    <div class="flex flex-col gap-1 items-end">
-      <div class="text-[10px] text-pink-400 font-bold uppercase">林小宇</div>
-      <div class="p-4 bg-blue-600/20 border border-blue-500/30 rounded-lg text-sm text-slate-100">
-        「如果這個平台未來要活下去... 我們得想辦法在平台上培養出一種『拿了火把，就要自己去探路』的社群文化。只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。」
+    <div v-for="(chat, i) in [
+      { user: 'User', msg: '我覺得直屬制度的另一個目的，是為了防止教授發現每個人都在抄襲，因為每個人抄的都是不同學長姐的模板。', isUser: true },
+      { user: '林小宇', msg: '（苦笑）天啊。你這個觀點……真的太一針見血、太諷刺了。原來實體的直屬制度，在現實中反而變成了一種『精準的分布式作弊網路』。這種分散的結構，反而成了那些現充同學最好的『防彈衣』。', isUser: false },
+      { user: 'User', msg: '如果這個平台未來要活下去，我們得想辦法在平台上培養出一種「拿了火把，就要自己去探路」的社群文化。', isUser: true },
+      { user: '林小宇', msg: '只有每個人都保持獨立思考，我們才能在匿名的保護下，既拿到好成績，又安全地隱藏在教授的雷達之外。', isUser: false }
+    ]" :key="i" class="flex flex-col gap-1" :class="chat.isUser ? '' : 'items-end'">
+      <div class="text-[10px] font-bold uppercase" :class="chat.isUser ? 'text-blue-400' : 'text-pink-400'">{{ chat.user }}</div>
+      <div class="p-4 rounded-lg text-sm" :class="chat.isUser ? 'bg-white/10 italic text-slate-200' : 'bg-blue-600/20 border border-blue-500/30 text-slate-100'">
+        {{ chat.msg }}
       </div>
     </div>
   </div>
