@@ -66,7 +66,7 @@ fonts:
   </p>
   <div class="grid grid-cols-2 gap-12 items-start h-full">
     <div class="flex flex-col justify-center h-full text-white">
-      <div class="space-y-6">
+      <div class="space-y-6 p-6">
         <div class="flex items-start gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shadow-[0_0_8px_rgba(59,130,246,0.8)] text-white"></div>
           <div>
@@ -214,7 +214,7 @@ graph LR
 ```
 
   </div>
-</div>
+  </div>
 </div>
 
 ---
@@ -234,11 +234,11 @@ graph LR
         { type: '情感需求', goal: '不再感到被制度排擠，降低對未來不確定性的焦慮。' },
         { type: '情感需求', goal: '獲得公平競爭的安心感與努力方向的確定感。' }
       ]" :key="i" class="p-6">
-        <div class="text-[9px] font-mono font-bold tracking-[0.2em] mb-2 text-white opacity-90" 
-             :class="job.type === '功能需求' ? 'text-blue-400' : 'text-pink-400'">
+        <div class="text-md font-semibold mb-2 opacity-90" 
+             :class="job.type === '功能需求' ? 'text-blue-400 ' : 'text-pink-400'">
           {{ job.type }}
         </div>
-        <p class="text-sm font-bold text-white leading-relaxed">{{ job.goal }}</p>
+        <p class="text-sm font-mediums text-white leading-relaxed">{{ job.goal }}</p>
       </AuraCard>
     </div>
   </div>
@@ -273,7 +273,7 @@ graph LR
         <div v-for="(item, i) in ['深淵：小宇熬夜手寫預報，眼看別人輕鬆宵夜。', '微光：發現 QR Code，看見陌生學長姐留下的溫暖。', '接住：小宇上傳防呆筆記，接住了同樣崩潰的晴晴。', '共創：校園不再是叢林，而是互相支撐的共好圈。']" 
              :key="i" v-click class="flex gap-4 items-center">
           <div class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,1)]"></div>
-          <span class="text-sm font-medium text-white opacity-90">{{ item }}</span>
+          <span class="text-sm text-white opacity-90">{{ item }}</span>
         </div>
       </div>
     </div>
@@ -281,10 +281,11 @@ graph LR
       <AuraFrame class="p-0 overflow-hidden bg-black/60 aspect-video flex items-center justify-center border-white/5">
         <img src="./raw_data/images/light.png" class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity" />
       </AuraFrame>
-      <SystemLog :logs="[
-        { time: 'EVENT_01', msg: '林小宇掃描了匿名分享傳送門。' },
-        { time: 'EVENT_02', msg: '下載檔案：化學實驗重點筆記.pdf' },
-        { time: 'FEEDBACK', msg: '晴晴回覆：你的筆記救了我的實驗！😭' }
+      <SystemLog v-click :logs="[
+        { time: 'EVENT_01', msg: '晴晴上傳了防呆筆記。' },
+        { time: 'EVENT_02', msg: '林小宇掃描了匿名分享傳送門。' },
+        { time: 'EVENT_03', msg: '下載檔案：化學實驗重點筆記.pdf' },
+        { time: 'FEEDBACK', msg: '林小宇：你的筆記救了我的實驗！😭' }
       ]" />
     </div>
   </div>
