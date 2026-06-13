@@ -31,6 +31,8 @@ fonts:
   </div>
 </div>
 
+<AuraGlobe />
+
 ---
 
 <div class="h-full w-full p-12 flex flex-col relative text-white">
@@ -491,33 +493,6 @@ graph LR
     <AuraCard class="p-6">
       <div class="text-pink-400 font-bold mb-2">關於平台的隱憂</div>
       <p class="text-sm opacity-80 leading-relaxed text-slate-300">「如果大家都把這裡當作『抄答案』的新途徑，那我們的集體趨同只會引來教授的全面封殺。我們必須學會『保持獨立思考』。」</p>
-    </AuraCard>
-  </div>
-</div>
-
----
-
-<div class="h-full w-full p-16 flex flex-col relative text-left text-white">
-  <AuraPill status="warning" class="mb-8">Phase 3: Prototype & Test Constraints</AuraPill>
-  <h1 class="text-6xl font-black tracking-tighter mb-6 uppercase text-white">Testing Constraints Pivot</h1>
-  <div class="grid grid-cols-2 gap-12 h-full text-white items-center">
-    <div class="flex flex-col justify-center">
-      <h2 class="text-3xl font-bold mb-4 text-pink-400">招募真實使用者的困難</h2>
-      <p class="text-sm opacity-80 leading-relaxed text-slate-300 mb-6">
-        在快速迭代階段，我們原定招募 3 位符合條件的邊緣新生進行深度訪談。但因目標受眾具有高隱蔽性（邊緣、不擅社交），難以在短時間內觸及並取得信任。
-      </p>
-      <h2 class="text-3xl font-bold mb-4 text-blue-400">AI Persona 深度訪談取代</h2>
-      <p class="text-sm opacity-80 leading-relaxed text-slate-300">
-        我們轉而利用以真實經驗訓練出的 Gemini AI Persona「林小宇」，進行對話式的概念驗證（Proof of Concept）。透過深度的 Prompting，AI 給出了出乎意料的真實盲點回饋。
-      </p>
-    </div>
-    <AuraCard class="p-8 border border-white/20 bg-black/40">
-      <div class="text-blue-400 text-xs font-mono font-bold mb-4 uppercase tracking-widest">System Log // Iteration Method</div>
-      <ul class="space-y-4 text-sm text-slate-300">
-        <li class="flex gap-3"><div class="i-carbon:close-outline text-red-400 mt-1" /> 實體招募 3 位測試者失敗。</li>
-        <li class="flex gap-3"><div class="i-carbon:checkmark-outline text-emerald-400 mt-1" /> 啟動虛擬人物誌 (Virtual Persona) 互動測試。</li>
-        <li class="flex gap-3"><div class="i-carbon:warning-alt text-amber-400 mt-1" /> AI 指出了「無惡意的破壞（如全班抄同份被抓）」等我們未曾設想的盲點。</li>
-      </ul>
     </AuraCard>
   </div>
 </div>
